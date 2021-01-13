@@ -9,8 +9,8 @@ const choices = new Choices(selectOne, {
 
 // Табы (переключение языка в секции Catalog):
 
-const langBtn = document.querySelectorAll('.language__btn');
-const langItems = document.querySelectorAll('.catalog__tab-lang');
+const langBtn = document.querySelectorAll('.country__btn');
+const langItems = document.querySelectorAll('.catalog-tabs__country');
 
 langBtn.forEach(selectLang);
 
@@ -18,7 +18,7 @@ function selectLang(item) {
   item.addEventListener('click', function () {
     let currentLang = item;
     let parent = item.parentNode;
-    let tabId = currentLang.getAttribute('data-lang');
+    let tabId = currentLang.getAttribute('data-country');
     let currentTab = document.querySelector(tabId);
 
     if (!parent.classList.contains('selected')) {
@@ -37,7 +37,7 @@ function selectLang(item) {
   });
 }
 
-document.querySelector('.language__btn--russian').click();
+document.querySelector('.country__btn--italian').click();
 
 // Табы (переключение художников в секции Catalog):
 
@@ -54,14 +54,14 @@ document.querySelectorAll('.accordion-artist__link').forEach((item) => {
   });
 });
 
-let startTab = document.querySelector('.catalog__tab-lang.active .accordion-artist__list .accordion-artist__item:nth-child(12) .accordion-artist__link');
+let startTab = document.querySelector('.catalog-tabs__country.active .accordion-artist__list .accordion-artist__item:nth-child(12) .accordion-artist__link');
 startTab.click();
 
 langBtn.forEach(selectTab);
 
 function selectTab(item) {
   item.addEventListener('click', function () {
-    let activeTab = document.querySelector('.catalog__tab-lang.active .accordion-artist__list .accordion-artist__item:nth-child(2) .accordion-artist__link');
+    let activeTab = document.querySelector('.catalog-tabs__country.active .accordion-artist__list .accordion-artist__item:nth-child(2) .accordion-artist__link');
     activeTab.click();
   })
 };
