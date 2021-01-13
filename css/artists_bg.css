@@ -1,81 +1,81 @@
 /* Backgrounds for Artists Menu */
 
-.realism__one {
+.artist__link--realism-one {
   background-image: url('../img/header_artists/realism/1.jpg');
 }
 
-.realism__two {
+.artist__link--realism-two {
   background-image: url('../img/header_artists/realism/2.jpg');
 }
 
-.realism__three {
+.artist__link--realism-three {
   background-image: url('../img/header_artists/realism/3.jpg');
 }
 
-.realism__four {
+.artist__link--realism-four {
   background-image: url('../img/header_artists/realism/4.jpg');
 }
 
-.impress__one {
+.artist__link--impress-one {
   background-image: url('../img/header_artists/impress/1.jpg');
 }
 
-.impress__two {
+.artist__link--impress-two {
   background-image: url('../img/header_artists/impress/2.jpg');
 }
 
-.impress__three {
+.artist__link--impress-three {
   background-image: url('../img/header_artists/impress/3.jpg');
 }
 
-.impress__four {
+.artist__link--impress-four {
   background-image: url('../img/header_artists/impress/4.jpg');
 }
 
-.postimpress__one {
+.artist__link--postimpress-one {
   background-image: url('../img/header_artists/postimpress/1.jpg');
 }
 
-.postimpress__two {
+.artist__link--postimpress-two {
   background-image: url('../img/header_artists/postimpress/2.jpg');
 }
 
-.postimpress__three {
+.artist__link--postimpress-three {
   background-image: url('../img/header_artists/postimpress/3.jpg');
 }
 
-.postimpress__four {
+.artist__link--postimpress-four {
   background-image: url('../img/header_artists/postimpress/4.jpg');
 }
 
-.avantgarde__one {
+.artist__link--avantgarde-one {
   background-image: url('../img/header_artists/avantgarde/1.jpg');
 }
 
-.avantgarde__two {
+.artist__link--avantgarde-two {
   background-image: url('../img/header_artists/avantgarde/2.jpg');
 }
 
-.avantgarde__three {
+.artist__link--avantgarde-three {
   background-image: url('../img/header_artists/avantgarde/3.jpg');
 }
 
-.avantgarde__four {
+.artist__link--avantgarde-four {
   background-image: url('../img/header_artists/avantgarde/4.jpg');
 }
 
-.futurism__one {
+.artist__link--futurism-one {
   background-image: url('../img/header_artists/futurism/1.jpg');
 }
 
-.futurism__two {
+.artist__link--futurism-two {
   background-image: url('../img/header_artists/futurism/2.jpg');
 }
 
-.futurism__three {
+.artist__link--futurism-three {
   background-image: url('../img/header_artists/futurism/3.jpg');
 }
 
-.futurism__four {
+.artist__link--futurism-four {
   background-image: url('../img/header_artists/futurism/4.jpg');
 }

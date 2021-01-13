@@ -1,7 +1,7 @@
 "use strict";
 
-const slider = document.querySelector('.swiper-container__hero');
-const sliderTwo = document.querySelector('.swiper-container__gallery');
+const slider = document.querySelector('.hero__swiper-container');
+const sliderTwo = document.querySelector('.gallery__swiper-container');
 
 // Swiper initialization:
 

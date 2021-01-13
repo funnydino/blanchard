@@ -13,330 +13,341 @@
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/simplebar.min.css">
   <link rel="stylesheet" href="./css/choices.min.css">
-  <link rel="stylesheet" href="./css/fonts.css">
-  <link rel="stylesheet" href="./css/basic.css">
-  <link rel="stylesheet" href="./css/keyframes.css">
   <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="./css/artists_bg.css">
   <link rel="icon" type="image/png" href="./img/logo.png">
 </head>
 
 <body>
-
+  <div class="overlay"></div>
   <header class="header" id="header">
-
     <div class="header__inner">
       <div class="header__top">
-        <div class="container header__top-container">
-          <div class="header__logo"></div>
-          <nav class="nav">
+        <div class="container header__container">
+          <button class="header__burger burger" aria-label="Открыть меню">
+            <span></span>
+          </button>
+          <img src="./img/svg/logo.svg" alt="Логотип сайта" class="header__logo">
+          <nav class="nav header__nav">
             <ul class="nav__list">
-              <li class="nav__list-item"><a href="#" class="nav__list-link">О нас</a></li>
-              <li class="nav__list-item"><a href="#" class="nav__list-link">Галерея</a></li>
-              <li class="nav__list-item"><a href="#" class="nav__list-link">Каталог</a></li>
-              <li class="nav__list-item"><a href="#" class="nav__list-link">События</a></li>
-              <li class="nav__list-item"><a href="#" class="nav__list-link">Издания</a></li>
-              <li class="nav__list-item"><a href="#" class="nav__list-link">Проекты</a></li>
-              <li class="nav__list-item"><a href="#" class="nav__list-link">Контакты</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">События</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Издания</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Проекты</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
             </ul>
+            <div class="personal__account">
+              <a href="#" class="account__link">
+                <svg class="enter__svg" width="18" height="13" viewbox="0 0 18 13" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path id="enter__svg"
+                    d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H4.5V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"
+                    fill="#fff" />
+                </svg>
+                Войти
+              </a>
+            </div>
           </nav>
-          <div class="personal__account">
-            <a href="#" class="personal__account-link">
-              <svg class="enter__svg" width="18" height="13" viewbox="0 0 18 13" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path id="enter__svg"
-                  d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H4.5V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"
-                  fill="#fff" />
+          <form class="search search--top" method="GET" tabindex="0" aria-label="Поиск по сайту">
+            <button class="search__btn" type="submit" aria-label="Поиск" tabindex="-1" disabled>
+              <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect id="search__rect--top" width="6.8678" height="1.71695"
+                  transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+                <path id="search__path--top" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                  fill="white" />
               </svg>
-              Войти
-            </a>
-          </div>
+            </button>
+            <input class="searchbar" type="search" name="searcharea" autocomplete="off" placeholder="Поиск по сайту"
+              tabindex="0">
+          </form>
         </div>
       </div>
       <div class="header__bottom">
-        <div class="container header__bottom-container">
+        <div class="container header__container">
           <nav class="artists__nav">
-            <ul class="artists__nav-list">
-              <li class="artists__nav-item">
-                <a href="#" class="artists__nav-link realism__link">Реализм</a>
-                <ul class="artist__list realism__list" data-simplebar>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link realism__one">
+            <ul class="artists__list">
+              <li class="artists__item">
+                <a href="#" class="artists__link">Реализм</a>
+                <ul class="artists__dropdown-list" data-simplebar>
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--realism-one">
                       <span class="artist__name">Тинторетто</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link realism__two">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--realism-two">
                       <span class="artist__name">Фридрих</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link realism__three">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--realism-three">
                       <span class="artist__name">Леонардо</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link realism__four">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--realism-four">
                       <span class="artist__name">Верроккьо</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link realism__one">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--realism-one">
                       <span class="artist__name">Тинторетто</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link realism__two">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--realism-two">
                       <span class="artist__name">Фридрих</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link realism__three">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--realism-three">
                       <span class="artist__name">Леонардо</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link realism__four">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--realism-four">
                       <span class="artist__name">Верроккьо</span>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class="artists__nav-item">
-                <a href="#" class="artists__nav-link impress__link">Импрессионизм</a>
-                <ul class="artist__list impress__list" data-simplebar>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link impress__one">
+              <li class="artists__item">
+                <a href="#" class="artists__link">Импрессионизм</a>
+                <ul class="artists__dropdown-list" data-simplebar>
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--impress-one">
                       <span class="artist__name">Моне</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link impress__two">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--impress-two">
                       <span class="artist__name">Сислей</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link impress__three">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--impress-three">
                       <span class="artist__name">Мане</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link impress__four">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--impress-four">
                       <span class="artist__name">Ренуар</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link impress__one">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--impress-one">
                       <span class="artist__name">Моне</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link impress__two">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--impress-two">
                       <span class="artist__name">Сислей</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link impress__three">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--impress-three">
                       <span class="artist__name">Мане</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link impress__four">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--impress-four">
                       <span class="artist__name">Ренуар</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link impress__one">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--impress-one">
                       <span class="artist__name">Моне</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link impress__two">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--impress-two">
                       <span class="artist__name">Сислей</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link impress__three">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--impress-three">
                       <span class="artist__name">Мане</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link impress__four">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--impress-four">
                       <span class="artist__name">Ренуар</span>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class="artists__nav-item">
-                <a href="#" class="artists__nav-link postimpress__link">Постимпрессионизм</a>
-                <ul class="artist__list postimpress__list" data-simplebar>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link postimpress__one">
+              <li class="artists__item">
+                <a href="#" class="artists__link">Постимпрессионизм</a>
+                <ul class="artists__dropdown-list" data-simplebar>
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--postimpress-one">
                       <span class="artist__name">Ван Гог</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link postimpress__two">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--postimpress-two">
                       <span class="artist__name">Сезанн</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link postimpress__three">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--postimpress-three">
                       <span class="artist__name">Гоген</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link postimpress__four">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--postimpress-four">
                       <span class="artist__name">Сёра</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link postimpress__one">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--postimpress-one">
                       <span class="artist__name">Ван Гог</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link postimpress__two">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--postimpress-two">
                       <span class="artist__name">Сезанн</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link postimpress__three">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--postimpress-three">
                       <span class="artist__name">Гоген</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link postimpress__four">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--postimpress-four">
                       <span class="artist__name">Сёра</span>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class="artists__nav-item">
-                <a href="#" class="artists__nav-link avantgarde__link">Авангард</a>
-                <ul class="artist__list avantgarde__list" data-simplebar>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__one">
+              <li class="artists__item">
+                <a href="#" class="artists__link">Авангард</a>
+                <ul class="artists__dropdown-list" data-simplebar>
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-one">
                       <span class="artist__name">Кандинский</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__two">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-two">
                       <span class="artist__name">Маринетти</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__three">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-three">
                       <span class="artist__name">Малевич</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__four">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-four">
                       <span class="artist__name">Пикассо</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__one">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-one">
                       <span class="artist__name">Кандинский</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__two">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-two">
                       <span class="artist__name">Маринетти</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__three">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-three">
                       <span class="artist__name">Малевич</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__four">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-four">
                       <span class="artist__name">Пикассо</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__one">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-one">
                       <span class="artist__name">Кандинский</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__two">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-two">
                       <span class="artist__name">Маринетти</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__three">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-three">
                       <span class="artist__name">Малевич</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__four">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-four">
                       <span class="artist__name">Пикассо</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__one">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-one">
                       <span class="artist__name">Кандинский</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__two">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-two">
                       <span class="artist__name">Маринетти</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__three">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-three">
                       <span class="artist__name">Малевич</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link avantgarde__four">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--avantgarde-four">
                       <span class="artist__name">Пикассо</span>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class="artists__nav-item">
-                <a href="#" class="artists__nav-link futurism__link">Футуризм</a>
-                <ul class="artist__list futurism__list" data-simplebar>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link futurism__one">
+              <li class="artists__item">
+                <a href="#" class="artists__link">Футуризм</a>
+                <ul class="artists__dropdown-list" data-simplebar>
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--futurism-one">
                       <span class="artist__name">Карра</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link futurism__two">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--futurism-two">
                       <span class="artist__name">Прателла</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link futurism__three">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--futurism-three">
                       <span class="artist__name">Северини</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link futurism__four">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--futurism-four">
                       <span class="artist__name">Балла</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link futurism__one">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--futurism-one">
                       <span class="artist__name">Карра</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link futurism__two">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--futurism-two">
                       <span class="artist__name">Прателла</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link futurism__three">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--futurism-three">
                       <span class="artist__name">Северини</span>
                     </a>
                   </li>
-                  <li class="artist__item">
-                    <a href="#" class="artist__link futurism__four">
+                  <li class="artists__dropdown-item">
+                    <a href="#" class="artists__dropdown-link artists__dropdown-link--futurism-four">
                       <span class="artist__name">Балла</span>
                     </a>
                   </li>
@@ -371,7 +382,7 @@
       <section class="hero">
         <h1 class="visually-hidden">Художественная галерея Blanchard</h1>
         <div class="hero__inner">
-          <div class="swiper-container swiper-container__hero">
+          <div class="swiper-container hero__swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide slide slide__one">
               </div>
@@ -382,12 +393,12 @@
             </div>
           </div>
           <div class="container">
-            <h2 class="hero__title">Прикоснитесь к прекрасному</h2>
+            <h2 class="hero__title">Прикоснитесь к&nbsp;прекрасному</h2>
             <p class="main__text">
               Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт
               предпосылки для новых предложений.
             </p>
-            <a href="#" class="btn subscribe__btn">Подписаться на рассылку</a>
+            <a href="#" class="btn subscribe-btn">Подписаться на рассылку</a>
           </div>
         </div>
       </section> <!-- /.hero -->
@@ -396,8 +407,8 @@
 
       <section class="about">
         <div class="container">
-          <h2 class="section__title">О нас</h2>
-          <p class="about__text section__text">
+          <h2 class="section-title">О нас</h2>
+          <p class="about__text section-text">
             Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
             участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
             Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс
@@ -415,20 +426,9 @@
       <section class="gallery">
         <div class="container">
           <div class="gallery__inner">
-            <div class="gallery__top">
-              <div class="gallery__left">
-                <h2 class="gallery__title section__title">Галерея</h2>
-              </div>
-              <div class="gallery__right">
-                <div class="slider__buttons">
-                  <button class="swiper-button-prev swiper-button-gallery__prev"></button>
-                  <div class="swiper-pagination swiper-pagination__gallery"></div>
-                  <button class="swiper-button-next swiper-button-gallery__next"></button>
-                </div>
-              </div>
-            </div>
-            <div class="gallery__bottom">
-              <div class="gallery__left">
+            <div class="gallery__left">
+              <div>
+                <h2 class="gallery__title section-title">Галерея</h2>
                 <div class="gallery__select">
                   <span class="gallery__select-text">Фильтровать по:</span>
                   <select name="gallery__select-item" id="select__one">
@@ -437,139 +437,1802 @@
                     <option value="technique">Техника</option>
                   </select>
                 </div>
-                <p class="gallery__text section__text">
-                  Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
-                  <a href="#" class="section__link">авторизуйтесь,</a> либо воспользуйтесь лицензией.
-                </p>
               </div>
-              <div class="gallery__right swiper-container swiper-container__gallery">
-                <ul class="paintings__slider swiper-wrapper">
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/1/1.1.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/1/1.2.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/1/1.3.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/1/1.4.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/1/1.5.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/1/1.6.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/2/2.1.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/2/2.2.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/2/2.3.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/2/2.4.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/2/2.5.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/2/2.6.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/3/3.1.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/3/3.2.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/3/3.3.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/3/3.4.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/3/3.5.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/3/3.6.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/4/4.1.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/4/4.2.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/4/4.3.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/4/4.4.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/4/4.5.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/4/4.6.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/5/5.1.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/5/5.2.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/5/5.3.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/5/5.4.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/5/5.5.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                  <li class="painting__item swiper-slide"><a href="#" class="painting__item-link">
-                      <img src="./img/gallery/pictures/5/5.6.jpg" alt="Изображение картины" class="painting__image">
-                    </a>
-                  </li>
-                </ul>
+              <p class="gallery__text section-text">
+                Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+                <a href="#" class="section__link">авторизуйтесь,</a> либо воспользуйтесь лицензией.
+              </p>
+            </div>
+            <div class="gallery__right swiper-container gallery__swiper-container">
+              <div class="slider__buttons">
+                <button class="swiper-button-prev swiper-button-gallery__prev"></button>
+                <div class="swiper-pagination swiper-pagination__gallery"></div>
+                <button class="swiper-button-next swiper-button-gallery__next"></button>
               </div>
+              <ul class="paintings-slider swiper-wrapper">
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/1/1.1.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/1/1.2.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/1/1.3.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/1/1.4.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/1/1.5.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/1/1.6.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/2/2.1.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/2/2.2.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/2/2.3.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/2/2.4.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/2/2.5.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/2/2.6.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/3/3.1.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/3/3.2.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/3/3.3.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/3/3.4.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/3/3.5.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/3/3.6.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/4/4.1.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/4/4.2.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/4/4.3.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/4/4.4.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/4/4.5.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/4/4.6.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/5/5.1.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/5/5.2.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/5/5.3.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/5/5.4.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/5/5.5.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+                <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
+                    <img src="./img/gallery/pictures/5/5.6.jpg" alt="Изображение картины" class="paintings__item-image">
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section> <!-- /.gallery -->
+
+      <!-- Catalog Section -->
+
+      <section class="catalog">
+        <div class="container">
+          <div class="catalog__heading">
+            <h2 class="section-title catalog__section-title">Каталог</h2>
+            <ul class="languages-list" aria-label="Выберите язык">
+              <li class="languages__item" aria-label="Французский язык">
+                <button class="language__btn language__btn--french" data-lang="#tab_french">
+                </button>
+              </li>
+              <li class="languages__item" aria-label="Немецикй язык">
+                <button class="language__btn language__btn--germany" data-lang="#tab_german">
+                </button>
+              </li>
+              <li class="languages__item" aria-label="Итальянский язык">
+                <button class="language__btn language__btn--italian" data-lang="#tab_italian">
+                </button>
+              </li>
+              <li class="languages__item" aria-label="Российский язык">
+                <button class="language__btn language__btn--russian" data-lang="#tab_russian">
+                </button>
+              </li>
+              <li class="languages__item" aria-label="Бельгийский язык">
+                <button class="language__btn language__btn--belgium" data-lang="#tab_belgium">
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="catalog-tabs">
+            <div class="catalog__tab-lang" id="tab_french" lang="fr">
+              <p class="catalog__section-text section-text">
+                Actionnaires des plus grandes entreprises, qui sont un exemple frappant du type d'Europe continentale
+                la culture politique sera déclarée violant les normes universelles d'éthique et de moralité. Être tout
+                seulement partie de la grande image, essayer de remplacer la production traditionnelle,
+                la nanotechnologie à ce jour rester le sort des libéraux qui aspirent à être
+                fonctionnellement divisés en éléments indépendants.
+              </p>
+              <div class="catalog__inner">
+                <ul class="catalog__tab-list">
+                  <li class="catalog__tab-artist" id="boltraffio--fr">
+                    <img src="./img/catalog/artists/boltraffio.jpg" alt="Image de l'artiste"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Giovanni Antonio Boltraffio
+                      &lpar;Beltraffio&rpar;</h3>
+                    <p class="artist__years">1466 ou 1467, Milan - 1516, ibid.</p>
+                    <p class="section-text">
+                      Vasari rapporte que l'artiste est issu d'une famille aristocratique. Élevé en
+                      traditions de Foppa, Bernardo Zenale et Ambrogio Bergognone, il a été formé
+                      atelier de Leonardo. Son premier ouvrage, "La résurrection du Christ, Saint-Léonard
+                      et Sainte Lucie "exécuté en 1491 avec Marco d'Ojono pour le Milan
+                      églises de San Giovanni sul Muro. Il était le peintre de la cour de Lodovico Moro et
+                      était célèbre leurs portraits psychologiques.
+                    </p>
+                    <p class="section-text">
+                      Boltraffio est mort à l'âge de 49 ans et a été enterré dans le cimetière de l'église de St. Paula
+                      à Comito.
+                    </p>
+                    <p class="section-text">
+                      Certains historiens de l'art suggèrent que la figure d'un bébé dans la peinture de Léonard de
+                      Vinci "Madonna Litta" par Giovanni Antonio Boltraffio. Dessins préparatoires connus
+                      de Giovanni Antonio Boltraffio, qui reproduit exactement ce chiffre.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="biagio--fr">
+                    <img src="./img/catalog/artists/biagio.jpg" alt="Image de l'artiste" class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Biagio d'Antonio Tucci</h3>
+                    <p class="artist__years">1446, Florence - 1er juin 1516, ibid.</p>
+                    <p class="section-text">
+                      Peintre de la Renaissance italienne. Son travail a été inspiré par les œuvres de Filippo
+                      Lippi, Andrea Verrocchio, Domenico Ghirlandaio.
+                    </p>
+                    <p class="section-text">
+                      ПLe dernier quart du 15e siècle, il a travaillé à Faenza, mais dans son style, il y a peu
+                      d'éléments de la florentine style - l'influence de la peinture hollandaise primitive peut
+                      être retracée.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="verrocchio--fr">
+                    <img src="./img/catalog/artists/verrocchio.jpg" alt="Image de l'artiste"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Andrea del Verrocchio, présent nom Andrea
+                      di Michele Choni</h3>
+                    <p class="artist__years">1435 Florence, République de Florence - 10 octobre 1488,
+                      Venise, République de Venise</p>
+                    <p class="section-text">
+                      Sculpteur et peintre de la Renaissance, représentant de l'école florentine. Parmi ses
+                      étudiants - Sandro Botticelli, Pietro Perugino, Leonardo da Vinci et Lorenzo di Credi.
+                    </p>
+                    <p class="section-text">
+                      АAndrea del Verrocchio est né et a travaillé à Florence. Son nom &lpar; del Verrocchio - "de
+                      Verrocchio "&rpar;, il a reçu de son professeur, le joaillier Verrocchio. Spécialisé dans
+                      sculpture, mais se tourne également vers la peinture.
+                    </p>
+                    <p class="section-text">
+                      Au début de la Renaissance, les artistes travaillaient presque exclusivement sur commande, donc à
+                      cela A cette époque, le rôle des mécènes était grand. Cette pratique s'est surtout répandue à
+                      Florence au XVe siècle,
+                      où les ateliers d'art exécutaient toutes les commandes des clients - de la peinture des plats à
+                      projets architecturaux. Verrocchio était considéré comme un décorateur et directeur inégalé des
+                      courtisans festivités.
+                    </p>
+                    <p class="section-text">
+                      En 1465, il créa la pierre tombale de Cosme Médicis &lpar; 1389-1464 &rpar;. En 1467-1483, il a
+                      travaillé sur composition sculpturale "Confiance de Thomas &lpar;Verrocchio &rpar;"
+                      pour l'église d'Orsanmichele.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="ghirlandaio--fr">
+                    <img src="./img/catalog/artists/ghirlandaio.jpg" alt="Image de l'artiste"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Domenico Ghirlandaio</h3>
+                    <p class="artist__years">2 juin 1448 - 11 janvier 1494.</p>
+                    <p class="section-text">
+                      L'un des principaux peintres florentins Quattrocento, fondateur de la dynastie artistique, qui
+                      poursuivi par son frère David et son fils Ridolfo. Chef de l'atelier d'art, où le jeune
+                      Michel-Ange à maîtrise des compétences professionnelles au cours de l'année. L'auteur de
+                      cycles de fresques, dans lesquels convexes, avec la vie à la maison des personnages
+                      bibliques &lpar; dans leur rôle est montrée dans tous les détails possibles acte noble
+                      citoyens de Florence en costumes de l'époque &rpar;.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="gozzoli--fr">
+                    <img src="./img/catalog/artists/gozzoli.jpg" alt="Image de l'artiste" class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Benozzo Gozzoli &lpar;vrai nom Benozzo
+                      di Lese di Sandro&rpar;</h3>
+                    <p class="artist__years">1420. Florence - 1497, Pistoia</p>
+                    <p class="section-text">
+                      Artiste italien, auteur de nombreux cycles de fresques, représentant de l'école florentine
+                      La peinture. L'activité créative indépendante de Benozzo Gozzoli a commencé dans les années 1450.
+                      est-il connu principalement comme l'auteur de nombreuses fresques, dont la plus célèbre est la
+                      peinture Chapelles des mages au Palazzo Medici Riccardi à Florence. Cette fresque représente
+                      la procession des mages et est une composition unique qui occupe trois murs d'une petite
+                      chapelle. La peinture murale abonde détails soigneusement écrits: les mages avec une grande
+                      suite, des cavaliers en vêtements luxueux, arbres, animaux, oiseaux, châteaux, monastères,
+                      bosquets, rochers, etc. Malgré un certain idéalisation
+                      images, dans les participants à la procession, il est habituel de voir des images de véritables
+                      personnages historiques, y compris membres de la famille Médicis. Sur la photo, l'artiste
+                      s'est représenté: c'est un homme au chapeau rouge.
+                      avec l'inscription Opus Benotii, fixant un regard sur le spectateur.</p>
+                    <p class="section-text">
+                      Cette œuvre, à la décoration raffinée et à la richesse festive des couleurs, est la seule à
+                      le travail de l'artiste. Dans le reste de ses œuvres, il adhère aux traditions gothiques tardives.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="granacci--fr">
+                    <img src="./img/catalog/artists/granacci.jpg" alt="Image de l'artiste"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">ФFrancesco Granacci</h3>
+                    <p class="artist__years">23 juillet 1469, Florence - 30 novembre 1543, ibid.</p>
+                    <p class="section-text">
+                      ИтальяArtiste italien. Francesco Granacci a étudié à l'atelier de Domenico Ghirlandaio et l'a aidé
+                      à peindre ses peintures en utilisant des peintures à l'huile au lieu de la tempera. Commande de
+                      Lorenzo Medici Granacci a participé à la peinture du Florentin San Marco. Il a ensuite travaillé
+                      avec Léonard de Vinci, Michel-Ange et Raphael.
+                      En 1508, Granacci s'installe à Rome, où, avec d'autres artistes, il aide Michel-Ange à
+                      peintures murales Chapelle Sixtine. Le style de Granacci a été influencé par Filippino Lippi
+                      et Fra Bartolomeo.
+                    </p>
+                    <p class="section-text">
+                      Granacci est mentionné dans les Biographies d'artistes de Giorgio Vasari.
+                      Également mentionné dans le roman de Michelangelo Irving Stone "Tourment and Joy".
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="di_paolo--fr">
+                    <img src="./img/catalog/artists/di_paolo.jpg" alt="Image de l'artiste"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Giovanni di Paolo</h3>
+                    <p class="artist__years">vers 1403-1482, Sienne</p>
+                    <p class="section-text">
+                      Peintre italien de l'ère Quattrocento, l'un des plus grands adeptes de la Sienne
+                      écoles de peinture. Ses œuvres se caractérisent par une expression accrue, jusqu'à l'exaltation,
+                      et fantaisie fantaisiste.
+                    </p>
+                    <p class="section-text">
+                      Très peu d'informations sur la vie de l'artiste ont survécu. Giovanni di Paolo est né à Sienne
+                      autour de
+                      1403 ans. La date exacte de naissance est inconnue; le premier document existant dans lequel
+                      apparaît
+                      son nom est daté de 1417. Apparemment, le professeur de Giovanni di Paolo était Taddeo
+                      di Bartolo. Di Paolo a commencé sa carrière créative en tant que miniaturiste. Florissant
+                      son activité tombe dans les années 1440-1450: à cette époque, l'artiste crée le plus
+                      oeuvres célébres. Tout au long de sa vie, Giovanni di Paolo n'a pas
+                      quitta sa ville natale et mourut à Sienne en 1482.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="giorgione--fr">
+                    <img src="./img/catalog/artists/giorgione.jpg" alt="Image de l'artiste"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Giorgio Barbarelli da Castelfranco</h3>
+                    <p class="artist__years">1477/1478—1510</p>
+                    <p class="section-text">
+                      Artiste italien, représentant de l'école vénitienne de peinture; l'un des plus grands maîtres
+                      Haute Renaissance.
+                    </p>
+                    <p class="section-text">
+                      Giorgione est né dans la petite ville de Castelfranco Veneto, près de Venise. En 1493
+                      s'installe à Venise et devient l'élève de Giovanni Bellini. En 1497, sa première
+                      travail indépendant - "Le Christ portant la croix". Selon Vasari, en avril 1500
+                      rencontré Léonard de Vinci. En 1504, il se produit dans sa ville natale de Castelfranco
+                      à lui le retable "Madonna de Castelfranco", destiné à la chapelle familiale de St.
+                      George à la cathédrale locale pour perpétuer la mémoire de Matteo Costanzo. Par ordre
+                      Le Sénat de la République en 1507-1508 a été impliqué dans les fresques de la cour allemande
+                      &lpar; il y a un fragment d'une figure féminine &rpar;, le travail a été achevé comme
+                      ceci est attesté par un document officiel daté du 14 décembre 1508. Décédé d'octobre à novembre
+                      1510 ans après la peste.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="perugino--fr">
+                    <img src="./img/catalog/artists/perugino.jpg" alt="Image de l'artiste"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Pietro Perugino &lpar;ital. Pietro
+                      Perugino,
+                      littéralement "Pérouse", de son vrai nom Pietro di Cristoforo Vannucci&rpar;</h3>
+                    <p class="artist__years">1446—1524</p>
+                    <p class="section-text">
+                      Peintre de la Renaissance italienne, représentant de l'école ombrienne.
+                    </p>
+                    <p class="section-text">
+                      Né à Citta della Pieve, à 35 km de Pérouse. Après avoir appris d'un local
+                      peintre en 1470 est venu à Florence et est entré dans l'atelier d'Andrea Verrocchio.
+                      En 1481, étant déjà un maître célèbre, il est invité par le pape à faire partie des meilleurs
+                      artistes d'Italie Sixtus IV à Rome pour participer à la décoration de la Chapelle Sixtine.
+                      Il a travaillé dans de nombreuses villes d'Italie, mais surtout à Pérouse, où il était à
+                      la tête d'un grand atelier. DANS 1480-1490-s Perugino était l'un des artistes les plus
+                      célèbres d'Italie. Exactement pareil célèbre de ses élèves - Rafael Santi.
+                      Les meilleures œuvres du Pérugin sont considérées comme celles créées avant 1500. Fresque en
+                      surbrillance "Présentation clefs de l'apôtre Pierre ", qui se distingue par sa composition
+                      harmonieuse. L'une des peintures les plus célèbres - Lamentation du Christ.
+                      Après la mort de Raphaël en 1520, le professeur acheva les fresques non terminées par son grand
+                      élève en églises de Pérouse. Le Pérugin est mort de la peste à Pérouse en 1524.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="peruzzi--fr">
+                    <img src="./img/catalog/artists/peruzzi.jpg" alt="Image de l'artiste" class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Baldassare Tommaso Peruzzi</h3>
+                    <p class="artist__years">15 janvier 1481, Sienne - 6 janvier 1536, Rome</p>
+                    <p class="section-text">
+                      Architecte et peintre italien de la Haute Renaissance et du début du maniérisme.
+                    </p>
+                    <p class="section-text">
+                      Né dans une petite ville près de Sienne. À partir de 1503, il travaille à Rome. Vite
+                      a reçu la reconnaissance en tant qu'architecte et maître des peintures murales illusoires créant
+                      l'effet de la continuation de l'espace architectural. Par conséquent, Peruzzi croit
+                      le créateur de l'école romaine de peintures de façades, principalement en grisaille, mais elles
+                      n'ont pas survécu à notre époque. Initialement, Peruzzi a travaillé avec Donato
+                      Bramante, mais est ensuite allé à Raphael. Les biographes considèrent l'auteur du célèbre
+                      "Lettres de Raphaël" au pape Léon X - Introduction au plan archéologique de l'ancien
+                      Rome est exactement Peruzzi.
+                    </p>
+                  </li>
+                </ul>
+                <div class="catalog__accordion">
+                  <ul class="accordion__list">
+                    <li class="accordion__item accordion__item--open" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>De 1400 à 1499</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        <ul class="accordion-artist__list">
+                          <li class="accordion-artist__item">
+                            <a href="#boltraffio--fr" class="accordion-artist__link">Boltraffio, Giovanni</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#biagio--fr" class="accordion-artist__link">Biagio d'Antonio Tucci</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#verrocchio--fr" class="accordion-artist__link">Andrea Verrocchio</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#ghirlandaio--fr" class="accordion-artist__link">Domenico Ghirlandaio</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#gozzoli--fr" class="accordion-artist__link">Benozzo Gozzoli</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#granacci--fr" class="accordion-artist__link">Granacci, Francesco</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#di_paolo--fr" class="accordion-artist__link">Giovanni di Paolo</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#giorgione--fr" class="accordion-artist__link">Giorgione</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#perugino--fr" class="accordion-artist__link">Pietro Perugino</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#peruzzi--fr" class="accordion-artist__link">Peruzzi, Baldassare</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>De 1500 à 1599</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat consectetur reprehenderit
+                        assumenda veritatis eius! Laboriosam.
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>De 1600 à 1699</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic itaque facilis aut quidem libero
+                        fugit, harum eos necessitatibus blanditiis placeat illum. Tenetur aut nobis corporis?
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>De 1700 à 1799</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa alias obcaecati veritatis numquam
+                        dignissimos atque dicta illum sint minima. Nam corrupti autem corporis delectus totam.
+                        Dignissimos, molestias mollitia magnam vel sint perferendis ducimus quidem tempore?
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>De 1800 à 1899</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis inventore magnam possimus vero!
+                        Asperiores tempore magnam tempora, porro veniam ea. Veritatis, illum ducimus? Sit illo soluta
+                        quia consequuntur quidem earum vitae recusandae consectetur eos nostrum. Quibusdam voluptas
+                        iusto tempora eos quo ad corporis mollitia dignissimos?
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>De 1900 à 1999</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta illum suscipit reiciendis sunt
+                        in consectetur, asperiores aspernatur quis corporis veniam doloremque nam ullam consequatur
+                        impedit obcaecati delectus blanditiis dolorum, nostrum aperiam aliquid expedita? Exercitationem
+                        culpa accusantium odio architecto nemo iste sunt deleniti voluptatem totam earum accusamus, eum
+                        odit iusto voluptate obcaecati consequuntur voluptatum vitae ut.
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>De 2000</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae blanditiis consequuntur nostrum.
+                        Porro atque laboriosam aperiam reiciendis illum, tempore natus similique magnam soluta adipisci
+                        assumenda quos a inventore, aliquid cum voluptatem repellat accusantium autem unde obcaecati
+                        exercitationem odit? Maxime amet ratione possimus iusto, incidunt nobis tenetur pariatur magnam
+                        error aliquam! Possimus ipsa ad optio voluptatibus veritatis impedit iste esse aperiam! Iste
+                        sint distinctio vitae fuga.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__tab-lang" id="tab_german" lang="de">
+              <p class="catalog__section-text section-text">
+                Aktionäre der größten Unternehmen, die ein anschauliches Beispiel für den kontinentaleuropäischen Typ
+                sind Die politische Kultur wird als Verstoß gegen die universellen Normen von Ethik und Moral erklärt.
+                Alles sein nur Teil des Gesamtbildes, das sich bemüht, die traditionelle Fertigung, die Nanotechnologie,
+                bis heute zu verdrängen bleiben übrig das Los der Liberalen, die sich danach sehnen, funktional in
+                unabhängige Elemente aufgeteilt zu werden.
+              </p>
+              <div class="catalog__inner">
+                <ul class="catalog__tab-list">
+                  <li class="catalog__tab-artist" id="boltraffio--de">
+                    <img src="./img/catalog/artists/boltraffio.jpg" alt="Künstlerbild" class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Giovanni Antonio Boltraffio
+                      &lpar;Beltraffio&rpar;
+                    </h3>
+                    <p class="artist__years">1466 oder 1467, Mailand - 1516, ebenda.</p>
+                    <p class="section-text">
+                      Vasari berichtet, dass der Künstler aus einer aristokratischen Familie stammt. Hoch in
+                      Traditionen von Foppa, Bernardo Zenale und Ambrogio Bergognone, wurde er gebildet
+                      Leonardos Werkstatt. Sein erstes Werk "Die Auferstehung Christi, Saint-Léonard
+                      und St. Lucia "1491 mit Marco d'Ojono für Mailand hingerichtet
+                      Kirchen von San Giovanni sul Muro. Er war der Hofmaler von Lodovico Moro und war berühmt
+                      ihre psychologischen Porträts.
+                    </p>
+                    <p class="section-text">
+                      Boltraffio starb im Alter von 49 Jahren und wurde auf dem Friedhof der Kirche St. Paula beigesetzt
+                      in Comito.
+                    </p>
+                    <p class="section-text">
+                      Einige Kunsthistoriker schlagen vor, dass die Figur eines Babys in Leonardos Gemälde von
+                      Vinci "Madonna Litta" von Giovanni Antonio Boltraffio. Bekannte vorbereitende Zeichnungen
+                      von Giovanni Antonio Boltraffio, der genau diese Figur wiedergibt.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="biagio--de">
+                    <img src="./img/catalog/artists/biagio.jpg" alt="Künstlerbild" class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Biagio von Antonio Tucci</h3>
+                    <p class="artist__years">1446, Florenz - 1. Juni 1516, ebenda.</p>
+                    <p class="section-text">
+                      Maler der italienischen Renaissance. Seine Arbeit wurde von den Werken von Filippo inspiriert
+                      Lippi, Andrea Verrocchio, Domenico Ghirlandaio.
+                    </p>
+                    <p class="section-text">
+                      Das letzte Viertel des 15. Jahrhunderts arbeitete er in Faenza, aber in seinem Stil gibt es wenig
+                      Elemente von Florentiner Stil - der Einfluss der frühen niederländischen Malerei kann verfolgt
+                      werden.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="verrocchio--de">
+                    <img src="./img/catalog/artists/verrocchio.jpg" alt="Künstlerbild" class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Andrea del Verrocchio, heutiger Name Andrea
+                      di
+                      Michele Choni</h3>
+                    <p class="artist__years">1435 Florenz, Republik Florenz - 10. Oktober 1488,
+                      Venedig, Republik Venedig</p>
+                    <p class="section-text">
+                      Bildhauer und Maler der Renaissance, Vertreter der Florentiner Schule. Unter seinen
+                      Studenten - Sandro Botticelli, Pietro Perugino, Leonardo da Vinci und Lorenzo di Credi.
+                    </p>
+                    <p class="section-text">
+                      Andrea del Verrocchio wurde in Florenz geboren und arbeitete dort. Sein Name &lpar;del
+                      Verrocchio - "aus Verrocchio"&rpar;, erhielt er von seinem Lehrer, dem Juwelier Verrocchio.
+                      Spezialisiert auf Skulptur, sondern wendet sich auch der Malerei zu.
+                    </p>
+                    <p class="section-text">
+                      Zu Beginn der Renaissance arbeiteten Künstler fast ausschließlich auf Bestellung
+                      diese Zu dieser Zeit war die Rolle der Gönner großartig. Diese Praxis war in Florenz besonders
+                      verbreitet im 15. Jahrhundert,
+                      wo Kunststudios alle Kundenaufträge erfüllten - vom Bemalen des Geschirrs bis zum
+                      Architekturprojekte. Verrocchio galt als konkurrenzloser Dekorateur und Regisseur von
+                      Höflinge Feierlichkeiten.
+                    </p>
+                    <p class="section-text">
+                      1465 schuf er den Grabstein von Cosme Medici &lpar; 1389-1464 &rpar; In den Jahren 1467-1483
+                      war er arbeiten an skulpturale Komposition "Vertrauen von Thomas &lpar;Verrocchio&rpar;"
+                      für die Kirche von Orsanmichele.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="ghirlandaio--de">
+                    <img src="./img/catalog/artists/ghirlandaio.jpg" alt="Künstlerbild" class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Domenico Ghirlandaio</h3>
+                    <p class="artist__years">2. Juni 1448 - 11. Januar 1494.</p>
+                    <p class="section-text">
+                      Einer der wichtigsten Florentiner Quattrocento-Maler, Gründer der künstlerischen Dynastie, der
+                      verfolgt von seinem Bruder David und seinem Sohn Ridolfo. Leiter der Kunstwerkstatt, wo die Jungen
+                      Michelangelo bei Beherrschung der beruflichen Fähigkeiten im Laufe des Jahres. Der Autor von
+                      Freskenzyklen, in welcher konvexen, mit das häusliche Leben der biblischen Figuren &lpar;
+                      in ihrer Rolle wird in allen gezeigt mögliche Details edle Aktbürger von Florenz in
+                      historischen Kostümen &rpar;
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="giorgione--de">
+                    <img src="./img/catalog/artists/giorgione.jpg" alt="Künstlerbild" class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Giorgio Barbarelli da Castelfranco</h3>
+                    <p class="artist__years">1477/1478—1510</p>
+                    <p class="section-text">
+                      Italienischer Künstler, Vertreter der venezianischen Malschule; einer der größten Meister
+                      Hochrenaissance.
+                    </p>
+                    <p class="section-text">
+                      GGiorgione wurde in der kleinen Stadt Castelfranco Veneto in der Nähe von Venedig geboren.
+                      Im Jahr 1493 lässt sich in Venedig nieder und wird Schüler von Giovanni Bellini. Im Jahr
+                      1497 sein erster selbständige Arbeit - "Christus trägt das Kreuz". Laut Vasari im April
+                      1500 traf Leonardo da Vinci. 1504 trat er in seiner Heimatstadt Castelfranco auf
+                      für ihn das Altarbild "Madonna von Castelfranco", das für die Familienkapelle des hl.
+                      George in der örtlichen Kathedrale, um die Erinnerung an Matteo Costanzo aufrechtzuerhalten.
+                      Nach Reienfolge Der Senat der Republik war 1507-1508 an den Fresken des deutschen Hofes
+                      beteiligt &lpar; Es gibt ein Fragment einer weiblichen Figur. Die Arbeit wurde als abgeschlossen
+                      Dies wird durch ein offizielles Dokument vom 14. Dezember 1508 bestätigt. Gestorben von Oktober
+                      bis November 1510 Jahre nach der Pest.
+                    </p>
+                  </li>
+                </ul>
+                <div class="catalog__accordion">
+                  <ul class="accordion__list">
+                    <li class="accordion__item accordion__item--open" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Von 1400 bis 1499</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        <ul class="accordion-artist__list">
+                          <li class="accordion-artist__item">
+                            <a href="#boltraffio--de" class="accordion-artist__link">Boltraffio, Giovanni</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#biagio--de" class="accordion-artist__link">Biagio
+                              von Antonio Tucci</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#verrocchio--de" class="accordion-artist__link">Andrea Verrocchio</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#ghirlandaio--de" class="accordion-artist__link">Domenico Ghirlandaio</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#giorgione--de" class="accordion-artist__link">Giorgione</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Von 1500 bis 1599</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos id ipsa at totam hic,
+                        sequi quia rerum fugit officia qui atque vero eum numquam praesentium!
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Von 1600 bis 1699</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, atque. Temporibus reiciendis
+                        ducimus inventore provident nihil, ea non ullam maiores et fugiat eius, nam tempora mollitia
+                        sunt eos in quibusdam officiis pariatur modi aut obcaecati molestias vero illum. Voluptas nihil
+                        ex ad aperiam blanditiis explicabo ullam veniam excepturi est vero doloremque magni pariatur
+                        perferendis vitae, porro laborum magnam odit amet quos, sunt tempora nesciunt delectus?
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Von 1700 bis 1799</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ex, nisi doloribus perspiciatis
+                        voluptas nam quaerat, perferendis similique dicta id expedita quo assumenda voluptatem
+                        exercitationem provident ullam nemo repellendus culpa eum voluptatibus iusto. Ipsam doloremque
+                        reiciendis enim, officiis neque dolores debitis libero, est impedit dolorem quam doloribus
+                        praesentium itaque voluptatem perspiciatis commodi? Excepturi, obcaecati omnis?
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Von 1800 bis 1899</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio quae possimus quisquam ratione
+                        eligendi aspernatur in id blanditiis excepturi maiores, est quam reiciendis officiis cupiditate
+                        adipisci perferendis? Voluptatem est molestias praesentium repellat placeat et obcaecati ratione
+                        nihil autem quas, porro facilis necessitatibus sunt voluptas saepe!
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Von 1900 bis 1999</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, animi dolor. Corrupti at
+                        praesentium, ad nemo vitae et dicta perspiciatis maiores excepturi nisi, est sunt deserunt.
+                        Dolor modi maxime vitae debitis facilis soluta excepturi magni?
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Von 2000</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci consequatur veniam molestiae
+                        voluptas illo inventore nostrum? Voluptatibus quos fuga optio, assumenda veniam nam nihil?
+                        Mollitia.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__tab-lang" id="tab_italian" lang="it">
+              <p class="catalog__section-text section-text">
+                Azionisti delle maggiori società, che sono un vivido esempio del tipo continentale europeo
+                si dichiarerà che la cultura politica viola le norme universali di etica e moralità. Essendo
+                tutto solo parte del quadro generale, sforzandosi di spostare la produzione tradizionale,
+                la nanotecnologia fino ad oggi rimanere la sorte dei liberali, che aspirano a essere
+                funzionalmente divisi in elementi indipendenti.
+              </p>
+              <div class="catalog__inner">
+                <ul class="catalog__tab-list">
+                  <li class="catalog__tab-artist" id="boltraffio--it">
+                    <img src="./img/catalog/artists/boltraffio.jpg" alt="Foto dell'artista"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Giovanni Antonio Boltraffio
+                      &lpar;Beltraffio&rpar;
+                    </h3>
+                    <p class="artist__years">1466 o 1467, Milano - 1516, ibid.</p>
+                    <p class="section-text">
+                      Vasari riferisce che l'artista proviene da una famiglia aristocratica. In alto
+                      Tradizioni di Foppa, Bernardo Zenale e Ambrogio Bergognone, si è formato
+                      La bottega di Leonardo. La sua prima opera "La risurrezione di Cristo, Saint-Léonard
+                      e Santa Lucia "eseguita nel 1491 con Marco d'Ojono per Milano
+                      Chiese di San Giovanni sul Muro. Fu il pittore di corte di Lodovico Moro ed era famoso
+                      i loro ritratti psicologici.
+                    </p>
+                    <p class="section-text">
+                      Boltraffio morì all'età di 49 anni e fu sepolto nel cimitero della Chiesa di Santa Paula
+                      a Comito.
+                    </p>
+                    <p class="section-text">
+                      Alcuni storici dell'arte suggeriscono che la figura di un bambino nel dipinto di Leonardo da
+                      Vinci "Madonna Litta" di Giovanni Antonio Boltraffio. Disegni preparatori noti
+                      di Giovanni Antonio Boltraffio, che riproduce esattamente questa figura.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="biagio--it">
+                    <img src="./img/catalog/artists/biagio.jpg" alt="Foto dell'artista" class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Biagio di Antonio Tucci</h3>
+                    <p class="artist__years">1446, Firenze - 1 giugno 1516, ibid.</p>
+                    <p class="section-text">
+                      Pittore rinascimentale italiano. Il suo lavoro è stato ispirato dalle opere di Filippo
+                      Lippi, Andrea Verrocchio, Domenico Ghirlandaio.
+                    </p>
+                    <p class="section-text">
+                      Ha lavorato a Faenza nell'ultimo quarto del XV secolo, ma nel suo stile c'è poco
+                      Elementi di stile fiorentino: è possibile risalire all'influenza della prima pittura olandese
+                      volere.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="verrocchio--it">
+                    <img src="./img/catalog/artists/verrocchio.jpg" alt="Foto dell'artista"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Andrea del Verrocchio, oggi si chiama
+                      Andrea di Michele Choni</h3>
+                    <p class="artist__years">1435 Firenze, Repubblica di Firenze - 10 ottobre 1488,
+                      Venezia, Repubblica di Venezia</p>
+                    <p class="section-text">
+                      Scultore e pittore rinascimentale, rappresentante della scuola fiorentina. Sotto il suo
+                      Studenti - Sandro Botticelli, Pietro Perugino, Leonardo da Vinci e Lorenzo di Credi.
+                    </p>
+                    <p class="section-text">
+                      Andrea del Verrocchio è nato a Firenze e lì ha lavorato. Il suo nome &lpar;del
+                      Verrocchio - "da Verrocchio"&rpar;, ha ricevuto dal suo maestro, il gioielliere Verrocchio.
+                      Si specializza in scultura ma si dedica anche alla pittura.
+                    </p>
+                    <p class="section-text">
+                      All'inizio del Rinascimento, gli artisti lavoravano quasi esclusivamente su ordinazione
+                      A quel tempo, il ruolo degli avventori era eccezionale. Questa pratica era speciale a Firenze
+                      diffuso nel XV secolo,
+                      dove gli studi d'arte hanno soddisfatto tutti gli ordini dei clienti, dalla pittura dei piatti al
+                      Progetti di architettura. Verrocchio era considerato un impareggiabile decoratore e direttore di
+                      Celebrazioni cortigiane.
+                    </p>
+                    <p class="section-text">
+                      Nel 1465 creò la lapide di Cosme Medici & lpar; 1389-1464? Negli anni 1467-1483
+                      stava lavorando alla composizione scultorea "Trust di Thomas &lpar;Verrocchio&rpar;"
+                      per la chiesa di Orsanmichele.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="ghirlandaio--it">
+                    <img src="./img/catalog/artists/ghirlandaio.jpg" alt="Foto dell'artista"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Domenico Ghirlandaio</h3>
+                    <p class="artist__years">2 giugno 1448-11 gennaio 1494.</p>
+                    <p class="section-text">
+                      Uno dei più importanti pittori fiorentini del Quattrocento, capostipite della dinastia artistica,
+                      il
+                      inseguito dal fratello David e dal figlio Ridolfo. Responsabile del laboratorio artistico dove i
+                      ragazzi
+                      Michelangelo nella padronanza delle capacità professionali durante l'anno. L'autore di
+                      Cicli di affreschi in cui convesso, con la vita domestica dei personaggi biblici &lpar;
+                      nel suo ruolo è mostrato in tutti i dettagli possibili nobili cittadini nudi di Firenze in
+                      costumi storici &rpar;
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="giorgione--it">
+                    <img src="./img/catalog/artists/giorgione.jpg" alt="Foto dell'artista"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Giorgio Barbarelli da Castelfranco</h3>
+                    <p class="artist__years">1477/1478—1510</p>
+                    <p class="section-text">
+                      Artista italiano, rappresentante della scuola di pittura veneziana; uno dei più grandi maestri
+                      Alto rinascimento.
+                    </p>
+                    <p class="section-text">
+                      Giorgione è nato nel piccolo comune di Castelfranco Veneto vicino a Venezia.
+                      Nel 1493 si stabilisce a Venezia e diventa allievo di Giovanni Bellini. Nell'anno
+                      1497 la sua prima opera indipendente - "Cristo porta la croce". Secondo Vasari in aprile
+                      1500 ha incontrato Leonardo da Vinci. Nel 1504 si esibì nella sua città natale Castelfranco
+                      per lui la pala "Madonna di Castelfranco", realizzata per la cappella di famiglia di S.
+                      George alla cattedrale locale per mantenere vivo il ricordo di Matteo Costanzo.
+                      Secondo l'ordine di successione Il Senato della Repubblica era 1507-1508 sugli affreschi della
+                      corte tedesca coinvolto &lpar; C'è un frammento di una figura femminile. Il lavoro è stato
+                      considerato completato Ciò è confermato da un documento ufficiale datato 14 dicembre 1508.
+                      Morto entro ottobre fino a novembre 1510 anni dopo la peste.
+                    </p>
+                  </li>
+                </ul>
+                <div class="catalog__accordion">
+                  <ul class="accordion__list">
+                    <li class="accordion__item accordion__item--open" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Dal 1400 al 1499</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        <ul class="accordion-artist__list">
+                          <li class="accordion-artist__item">
+                            <a href="#boltraffio--it" class="accordion-artist__link">Boltraffio, Giovanni</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#biagio--it" class="accordion-artist__link">Biagio di Antonio Tucci</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#verrocchio--it" class="accordion-artist__link">Andrea Verrocchio</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#ghirlandaio--it" class="accordion-artist__link">Domenico Ghirlandaio</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#giorgione--it" class="accordion-artist__link">Giorgione</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Dal 1500 al 1599</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio debitis eum similique facilis
+                        sunt sapiente rerum quibusdam error aperiam, voluptate eius cupiditate totam sint perspiciatis.
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Dal 1600 al 1699</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae aspernatur incidunt rerum
+                        doloremque magnam temporibus.
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Dal 1700 al 1799</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui excepturi sint perspiciatis ex
+                        corrupti maiores beatae quibusdam fuga maxime id ullam saepe recusandae aliquam porro, esse
+                        iste, omnis non vel nemo. Modi maiores inventore delectus?
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Dal 1800 al 1899</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptate adipisci unde minus,
+                        dolores magni aut voluptates numquam, iure minima sed deserunt distinctio pariatur cum assumenda
+                        dolor fugit itaque a! Optio distinctio, neque officiis quas laborum at, pariatur rem architecto
+                        corrupti eius facere nobis ipsum!
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Dal 1900 al 1999</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, consectetur eligendi ipsum
+                        explicabo ducimus rem autem animi, eius eveniet distinctio non ut, nemo sint quo! Voluptas ipsam
+                        maiores voluptatum cupiditate excepturi amet vero dicta ex hic commodi totam doloremque
+                        necessitatibus eligendi nam velit nemo voluptate inventore dolores, aliquid beatae fugit debitis
+                        repellat quas! Aliquam, quam.
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Dal 2000</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, molestiae ratione? Sequi earum
+                        facere a aliquam minus molestias quibusdam vel suscipit laudantium. Iste in recusandae
+                        temporibus facilis ex voluptates, eveniet eos rerum repudiandae nisi maxime.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__tab-lang" id="tab_russian" lang="ru">
+              <p class="catalog__section-text section-text">
+                Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+                политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего
+                лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей
+                день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
+              </p>
+              <div class="catalog__inner">
+                <ul class="catalog__tab-list">
+                  <li class="catalog__tab-artist" id="di_bindo--ru">
+                    <img src="./img/catalog/artists/di_bindo.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Бенедетто ди Биндо</h3>
+                    <p class="artist__years">ок. 1380—85, Кастильоне ди Вальдорча, близ
+                      Сиены — 19 сентября 1417, Перуджа</p>
+                    <p class="section-text">
+                      Итальянский художник сиенской школы. Бенедетто ди Биндо остался в истории искусства
+                      как сиенский художник, так сказать, «второго ряда», несмотря на то, что за свою
+                      короткую жизнь он выполнил ряд весьма престижных заказов, включая работы в
+                      Сиенском соборе &lpar;работы в главном соборе республики второстепенным художникам
+                      не поручались&rpar;. Обучение он прошёл у Таддео ди Бартоло, крупного сиенского
+                      мастера поздней готики, в боттеге которого Бенедетто трудился вместе с
+                      Грегорио ди Чекко. Наибольшее влияние на его творчество оказали работы Симоне
+                      Мартини, в частности в выборе колорита, а тонко проработанные лица его персонажей
+                      напоминают произведения Джованни да Милано.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="bergognone--ru">
+                    <img src="./img/catalog/artists/bergognone.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Амброджо Бергоньоне</h3>
+                    <p class="artist__years">1453, Фоссано, провинция Кунео — 1523, Милан</p>
+                    <p class="section-text">
+                      Итальянский художник ломбардской школы. Прозвище говорит о его тяготении к бургундской школе,
+                      по манере ему близок Винченцо Фоппа. Испытал влияние Леонардо да Винчи. Наиболее известен
+                      работами 1486—1494 в монастырской обители картезианцев Чертоза ди Павия. Позднее работал в
+                      Милане в базилике Сант-Эусторджо и церкви Сан-Сатиро, после 1497 — в Лоди, в 1512 — в Бергамо,
+                      незадолго до смерти — снова в Милане, в базилике Сан-Симпличано.
+                    </p>
+                    <p class="section-text">
+                      Его завещание датировано 4 апреля 1523, в том же году он умер. Одним из его учеников считают
+                      Бернардино Луини.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="bissolo--ru">
+                    <img src="./img/catalog/artists/bissolo.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Пьетро Франческо Биссоло</h3>
+                    <p class="artist__years">1470 или 1472, Тревизо — 20 апреля 1554, Венеция</p>
+                    <p class="section-text">
+                      Итальянский художник венецианской школы живописи. Сын художника. Ученик Джованни Беллини.
+                      С 1490 переехал в мастерскую Беллини. С 1492 по 1530 год работал в Венеции. Помогал
+                      учителю в работе над украшением Большого зала Совета Дворца дожей &lpar;Венеция&rpar;. Принимал
+                      участие в создании украшений Церкви Иль Реденторе в Венеции.</p>
+                    <p class="section-text">
+                      Художник эпохи Возрождения.
+                    </p>
+                    <p class="section-text">
+                      В своём творчестве подражал Джорджоне.
+                    </p>
+                    <p class="section-text">
+                      Работы художника хранятся ныне во многих музеях мира. В санкт-петербургском Эрмитаже находится его
+                      картина «Богоматерь с Младенцем Христом». В Британской Национальной галерее — «Мадонна с Младенцем
+                      со святыми и донатором». Ряд его полотен находится в музеях Варшавы, Лос-Анджелеса &lpar;Музей
+                      Нортона
+                      Саймона и Los Angeles County Museum of Art&rpar;, Дэйтоновском институте искусств &lpar;штат
+                      Огайо,
+                      США&rpar; и др.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="boltraffio--ru">
+                    <img src="./img/catalog/artists/boltraffio.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Джованни Антонио Больтраффио
+                      &lpar;Бельтраффио&rpar;
+                    </h3>
+                    <p class="artist__years">1466 или 1467, Милан — 1516, там же</p>
+                    <p class="section-text">
+                      Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в
+                      традициях Фоппы, Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в
+                      мастерской Леонардо. Его первое произведение «Воскресение Христа, святой Леонард
+                      и святая Лючия» выполнено в 1491 году совместно с Марко д'Оджоно для миланской
+                      церкви Сан-Джованни-сул-Муро. Был придворным художником Лодовико Моро и славился
+                      своими психологическими портретами.
+                    </p>
+                    <p class="section-text">
+                      Больтраффио умер в возрасте 49 лет и был похоронен на кладбище церкви Св. Паулы в Комито.
+                    </p>
+                    <p class="section-text">
+                      Некоторые искусствоведы предполагают, что фигура младенца на картине Леонардо да Винчи «Мадонна
+                      Литта»
+                      принадлежит кисти Джованни Антонио Больтраффио. Известны подготовительные рисунки Джованни Антонио
+                      Больтраффио, в точности воспроизводящие эту фигуру.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="bonsignori--ru">
+                    <img src="./img/catalog/artists/bonsignori.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Франческо Бонсиньори</h3>
+                    <p class="artist__years">ок. 1460, Верона, Венецианская республика — 2 июля 1519,
+                      Кальдьеро, Венецианская республика</p>
+                    <p class="section-text">
+                      Родился около 1460 года в Вероне в семье художника Альберто Бонсиньори. Обучался живописи в
+                      мастерской Франческо Бенальо. В 1480 году переехал из Вероны в Венецию, где жил до 1487 года.
+                      В ранний период творчества находился под влиянием венецианской живописной школы. Особенное
+                      впечатление на Бонсиньори оказало творчество Антонелло да Мессины, Джованни Беллини, Чима да
+                      Конельяно и Альвизе Виварини.
+                    </p>
+                    <p class="section-text">
+                      Среди известных творений этого периода самыми ранними произведениями художника являются
+                      полотна «Мадонна со спящим младенцем» 1483 года и «Алтарь Даль Бово», или «Мадонна на троне
+                      с предстоящими святыми и донатором Альтабеллой Авогадро» 1484 года, которые ныне входят в
+                      собрание Общественного музея Вероны.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="botticini--ru">
+                    <img src="./img/catalog/artists/botticini.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Рафаэль Боттичини</h3>
+                    <p class="artist__years">11 сентября 1477, Флоренция — известен до 1520 года</p>
+                    <p class="section-text">
+                      Рафаэлло принадлежал к флорентийской артистической династии — его дед, Джованни ди Доменико,
+                      был известен как художник, расписывавший игральные карты &lpar;хотя учёные не исключают, что он
+                      мог
+                      заниматься и более серьёзной живописью&rpar;; его отец — Франческо ди Джованни, был известным
+                      флорентийским мастером. Первые художественные навыки Рафаэлло получил в мастерской отца; с
+                      этой мастерской связан и ранний период его творчества. В 1490-е годы, когда формировался
+                      художественный вкус Рафаэлло, мастерская его отца занималась в основном исполнением заказов
+                      в провинциальных городках в окрестностях Флоренции. В 1498 году Франческо Боттичини скончался,
+                      Рафаэлло унаследовал мастерскую и продолжил работать в провинции. По мнению исследователей его
+                      творчества, это был художник скромного дарования, никогда не стремившийся завоевать высоких
+                      позиций в интеллектуальном и финансовом центре Тосканы — Флоренции, и довольствовавшийся
+                      заказами, которые ему давали провинциальные храмы. Его искусство было эклектичным, и наряду
+                      с влиянием отца включало связь с искусством Перуджино, Ридольфо Гирландайо, Лоренцо ди Креди,
+                      Фра Бартоломео и др.
+                    </p>
+                    <p class="section-text">
+                      Рафаэлло Боттичини был почти забыт художественной критикой; главную роль в его «возрождении»
+                      принадлежит итальянскому искусствоведу Федерико Дзери, опубликовавшему в 1968 году работу о
+                      художнике; в ней Дзери смог восстановить хронологию его творчества и более точно атрибутировать
+                      некоторые произведения.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="bramantino--ru">
+                    <img src="./img/catalog/artists/bramantino.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Бартоломео Суарди</h3>
+                    <p class="artist__years">Милан или Бергамо, ок. 1465—1530</p>
+                    <p class="section-text">
+                      Итальянский художник и архитектор.
+                    </p>
+                    <p class="section-text">
+                      Бартоломео Суарди родился около 1465 года в Милане &lpar;по другой версии — в Бергамо&rpar;.
+                    </p>
+                    <p class="section-text">
+                      В Милане, где «царил» Леонардо, Брамантино создал яркий, острый стиль, хотя и страдавший
+                      иногда недостатками в передаче перспективы и неточностью изображения архитектурных элементов.
+                    </p>
+                    <p class="section-text">
+                      Брамантино сформировался под влиянием Бутиноне и графического стиля Падуи и Феррары.
+                      Впоследствии он многому научился у Браманте, у которого долгое время состоял помощником
+                      &lpar;чем и объясняется его прозвище Брамантино — букв. «Маленький Браманте»&rpar; и у которого
+                      перенял любовь к монументальным формам и драматизму. Некоторые искусствоведы полагают,
+                      что Браманте поручал Брамантино, как живописцу, осуществление своих замыслов.
+                    </p>
+                    <p class="section-text">
+                      В зрелый период своего творчества, когда были выполнены шпалеры для созданного им
+                      мавзолея Тривульцио, художник придерживался строгой композиционной уравновешенности.
+                      Переехав в Рим в 1508 году, где он расписывал лоджии в Ватикане, Брамантино
+                      начал работать в новой манере, близкой к маньеристскому стилю.
+                    </p>
+                    <p class="section-text">
+                      Брамантино умер в 1530 году.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="brea--ru">
+                    <img src="./img/catalog/artists/brea.jpg" alt="Изображение художника" class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Людовико &lpar;Луи&rpar; Бреа</h3>
+                    <p class="artist__years">прибл. 1450, Ницца, Генуэзская республика — прибл. 1522/1525</p>
+                    <p class="section-text">
+                      Ренессансный художник итало-лигурийского происхождения, работы которого в основном сосредоточены
+                      в прибрежных городах современных Лигурии &lpar;Италия&rpar; и восточной части Приморских Альп
+                      &lpar;Франция&rpar;.
+                    </p>
+                    <p class="section-text">
+                      Бреа родился в происходившей из Монтальто-Лигуре семье бондарей в Ницце, являвшейся в то
+                      время частью Генуэзской республики.
+                    </p>
+                    <p class="section-text">
+                      Бреа был в основном клерикальным художником, и наиболее значительные его работы представляют
+                      собой алтарные картины. Первая значимая работа художника представляет собой роспись
+                      францисканского монастыря в Симье &lpar;современная Ницца&rpar;. Прочие работы художника
+                      сосредоточены прибрежных поселениях между Монако и Ментоной, между Таджей и Империей и
+                      между Савоной и Генуей.
+                    </p>
+                    <p class="section-text">
+                      Одним из учеников Людовико Бреа был Террамо Пьяджо.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="biagio--ru">
+                    <img src="./img/catalog/artists/biagio.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Бьяджо д’Антонио Туччи</h3>
+                    <p class="artist__years">1446, Флоренция — 1 июня 1516, там же</p>
+                    <p class="section-text">
+                      Итальянский художник эпохи Возрождения. Его творчество было вдохновлено работами Филиппо
+                      Липпи, Андреа Верроккьо, Доменико Гирландайо.
+                    </p>
+                    <p class="section-text">
+                      Последнюю четверть XV века работал в Фаэнце, но в его стиле мало элементов флорентийского
+                      стиля — прослеживается влияние ранней нидерландскрй живописи.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="vecchietta--ru">
+                    <img src="./img/catalog/artists/vecchietta.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Веккьетта &lpar;итал. Il Vecchietta —
+                      «Старушонка»&rpar;, настоящее имя Лоренцо ди Пьетро</h3>
+                    <p class="artist__years">ок. 1410, Сиена — 6 июня 1480, Сиена</p>
+                    <p class="section-text">
+                      Итальянский художник, скульптор, архитектор и ювелир. Сиенская школа.
+                    </p>
+                    <p class="section-text">
+                      О Веккьетте сообщает в своих «Жизнеописаниях» Джорджо Вазари и описывает его как человека мрачного
+                      и нелюдимого, вечно погружённого в раздумья, и потому прожившего недолго. Позднейшие исследователи
+                      пытались имя этого художника увязать с какими-либо архивными данными. Сейчас общепризнанной
+                      считается версия, что описанный Вазари Веккьетта — это Лоренцо ди Пьетро ди Джованни, который
+                      был крещён в Сиене в 1410 году. Имя этого человека появляется в документах в 1428 году среди
+                      членов гильдии художников Сиены.
+                    </p>
+                    <p class="section-text">
+                      Вершиной его творчества стали росписи свода в баптистерии сиенского собора&lpar;1450-53&rpar; —
+                      фрески «Символы веры», «Пророки» и «Сивиллы» &lpar;которые не сохранились, так как были записаны
+                      в XIX веке&rpar;, а также фрески в апсиде — «Избиение Христа» и «Путь на Голгофу».
+                    </p>
+                    <p class="section-text">
+                      Среди его немногочисленных станковых работ следует назвать большой триптих «Вознесение Марии со
+                      святыми» &lpar;1462. Пиенца, собор&rpar;, и алтарь «Мадонна со святыми» и «Благовещение» &lpar;ок.
+                      1460. Пиенца,
+                      епархиальный музей&rpar;.
+                    </p>
+                    <p class="section-text">
+                      Кроме того, Веккьетта был замечательным скульптором, оставившим после себя несколько прекрасных
+                      статуй, реди которых следует в первую очередь назвать большой киворий, сооружённый им в церкви
+                      госпиталя Санта Мария делла Скала, украшенный фигурами ангелов &lpar;1467—1472 гг., ныне он
+                      украшает главный алтарь этого храма&rpar;.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="verrocchio--ru">
+                    <img src="./img/catalog/artists/verrocchio.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Андре́а дель Верро́ккьо, наст. имя Андреа
+                      ди Микеле Чони</h3>
+                    <p class="artist__years"> 1435, Флоренция, Флорентийская республика — 10 октября 1488,
+                      Венеция, Венецианская республика</p>
+                    <p class="section-text">
+                      скульптор и живописец эпохи Возрождения, представитель Флорентийской школы. Среди его
+                      учеников — Сандро Боттичелли, Пьетро Перуджино, Леонардо да Винчи и Лоренцо ди Креди.
+                    </p>
+                    <p class="section-text">
+                      Андреа дель Верроккьо родился и работал во Флоренции. Своё имя &lpar;del Verrocchio — «от
+                      Верроккьо»&rpar;, он получил от своего учителя, ювелира Верроккьо. Специализировался на
+                      скульптуре, но также обращался и к живописи.
+                    </p>
+                    <p class="section-text">
+                      В эпоху Раннего Возрождения художники работали почти исключительно по заказам, поэтому в то
+                      время была велика роль меценатов. Эта практика особенно распространилась во Флоренции XV века,
+                      где художественные мастерские осуществляли любые заказы покровителей — от росписи посуды до
+                      архитектурных проектов. Верроккьо считался непревзойденным декоратором и режиссёром придворных
+                      празднеств.
+                    </p>
+                    <p class="section-text">
+                      В 1465 году он создал надгробие Козимо Медичи &lpar;1389—1464&rpar;. В 1467—1483 годах работал над
+                      скульптурной композицией «Уверение Фомы &lpar;Верроккьо&rpar;» для церкви Орсанмикеле.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="ghirlandaio--ru">
+                    <img src="./img/catalog/artists/ghirlandaio.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Доменико Гирландайо</h3>
+                    <p class="artist__years">2 июня 1448 — 11 января 1494.</p>
+                    <p class="section-text">
+                      Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                      продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в
+                      течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со
+                      всевозможными подробностями показана домашняя жизнь библейских персонажей &lpar;в их роли
+                      выступают знатные граждане Флоренции в костюмах того времени&rpar;.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="gozzoli--ru">
+                    <img src="./img/catalog/artists/gozzoli.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Бено́ццо Го́ццоли &lpar;настоящее имя
+                      Беноццо ди Лезе ди Сандро&rpar;</h3>
+                    <p class="artist__years">1420. Флоренция — 1497, Пистоя</p>
+                    <p class="section-text">
+                      Итальянский художник, автор многочисленных циклов фресок, представитель флорентийской школы
+                      живописи. Самостоятельная творческая деятельность Беноццо Гоццоли началась в 1450-е годы. Он
+                      известен в основном как автор многочисленных фресок, из которых самая знаменитая — роспись
+                      Капеллы волхвов в Палаццо Медичи-Риккарди во Флоренции. Эта фреска изображает шествие волхвов
+                      и представляет собой единую композицию, занимающую три стены небольшой капеллы. Фреска изобилует
+                      тщательно выписанными деталями: волхвы с многочисленной свитой, всадники в роскошных одеждах,
+                      деревья, животные, птицы, замки, монастыри, рощи, скалы и т. д. Несмотря на определённую
+                      идеализацию
+                      образов, в участниках шествия принято видеть изображения реальных исторических лиц, в том числе
+                      членов семьи Медичи. На картине художник изобразил и самого себя: это человек в красной шапке
+                      с надписью Opus Benotii, устремивший пристальный взгляд на зрителя.</p>
+                    <p class="section-text">
+                      Эта работа с её утончённой декоративностью и праздничным богатством красок стоит особняком в
+                      творчестве художника. В остальных своих произведениях он придерживался позднеготических традиций.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="granacci--ru">
+                    <img src="./img/catalog/artists/granacci.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Франческо Граначчи</h3>
+                    <p class="artist__years">23 июля 1469, Флоренция — 30 ноября 1543, там же</p>
+                    <p class="section-text">
+                      Итальянский художник. Франческо Граначчи учился в мастерской Доменико Гирландайо и помогал ему в
+                      написании его картин, используя вместо темперы масляные краски. По заказу Лоренцо Медичи Граначчи
+                      участвовал в росписи флорентийского Сан-Марко. Позднее он работал с Леонардо да Винчи,
+                      Микеланджело и Рафаэлем.
+                      В 1508 году Граначчи переехал в Рим, где вместе с другими художниками помогал Микеланджело в
+                      росписи Сикстинской капеллы. На стиль Граначчи оказали влияние Филиппино Липпи и Фра Бартоломео.
+                    </p>
+                    <p class="section-text">
+                      Граначчи упоминается в «Жизнеописаниях художников» Джорджо Вазари.
+                      Также упоминается в романе о Микеланджело Ирвинга Стоуна «Муки и радости».
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="di_cecco--ru">
+                    <img src="./img/catalog/artists/di_cecco.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Грегорио ди Чекко</h3>
+                    <p class="artist__years">Известен с 1418 г. по 1424 г.</p>
+                    <p class="section-text">
+                      Итальянский художник, сиенская школа.
+                    </p>
+                    <p class="section-text">
+                      О Грегорио очень мало сведений. Известно, что он был приёмным сыном и учеником Таддео ди Бартоло,
+                      работал в его мастерской, а единственным достоверным произведением является алтарь, написанный им
+                      в 1423 году для капеллы Франческо Толомеи в сиенском соборе, на котором стоит его подпись. В
+                      начале XX века его путали с упоминаемым в документах Джорджо ди Кеко ди Лука &lpar;Giorgio di
+                      Checo di Lucha&rpar;, поскольку Миланези в 1853 году неправильно транскрибировал имя Грегорио.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="da_udine--ru">
+                    <img src="./img/catalog/artists/da_udine.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Джованни да Удине &lpar;также Джованни
+                      Нанни&rpar;</h3>
+                    <p class="artist__years">1487, Удине — 1561, Рим</p>
+                    <p class="section-text">
+                      Итальянский живописец, архитектор и декоратор.
+                    </p>
+                    <p class="section-text">
+                      Учился сначала у Джованни Мартино &lpar;итал. Pellegrino da San Daniele&rpar; в Удине, затем
+                      переехал в Венецию, где стал учеником Джорджоне. В 1514 году переехал в Рим, где поступил в
+                      мастерскую Рафаэля и считался одним из наиболее талантливых его учеников. Джорджо Вазари
+                      отмечал его стремление к гротеску и большую любовь к изображению природы — как растений и
+                      животных, так и неодушевлённых предметов. После смерти Рафаэля работал на кардинала Джулио
+                      Медичи &lpar;будущего папу Климента VII&rpar; по украшению Вилла Мадама, завершив работу к
+                      1525 году; находился в конфликте с Джулио Романо.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="di_paolo--ru">
+                    <img src="./img/catalog/artists/di_paolo.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Джованни ди Паоло</h3>
+                    <p class="artist__years">ок. 1403—1482, Сиена</p>
+                    <p class="section-text">
+                      Итальянский художник эпохи кватроченто, один из самых значительных последователей сиенской
+                      школы живописи. Его произведениям присущи повышенная экспрессия, вплоть до экзальтации, и
+                      причудливая фантазия.
+                    </p>
+                    <p class="section-text">
+                      Сведений о жизни художника сохранилось крайне немного. Джованни ди Паоло родился в Сиене около
+                      1403 года. Точная дата рождения неизвестна; первый существующий документ, в котором фигурирует
+                      его имя, датирован 1417 годом. По всей видимости, учителем Джованни ди Паоло был Таддео
+                      ди Бартоло. Свою творческую карьеру ди Паоло начал как художник-миниатюрист. Расцвет
+                      его деятельности пришёлся на 1440—1450-е годы: в это время художник создаёт самые
+                      известные свои произведения. На протяжении всей своей жизни Джованни ди Паоло не
+                      покидал свой родной город и умер в Сиене в 1482 году.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="giorgione--ru">
+                    <img src="./img/catalog/artists/giorgione.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Джорджо Барбарелли да Кастельфранко</h3>
+                    <p class="artist__years">1477/1478—1510</p>
+                    <p class="section-text">
+                      Итальянский художник, представитель венецианской школы живописи; один из величайших мастеров
+                      Высокого Возрождения.
+                    </p>
+                    <p class="section-text">
+                      Джорджоне родился в небольшом городке Кастельфранко-Венето недалеко от Венеции. В 1493
+                      перебрался в Венецию и стал учеником Джованни Беллини. В 1497 появилась его первая
+                      самостоятельная работа — «Христос, Несущий Крест». Согласно Вазари, в апреле 1500
+                      встречался с Леонардо да Винчи. В 1504 исполнил в родном городе Кастельфранко заказанный
+                      ему алтарный образ «Мадонна Кастельфранко», предназначенный для семейной часовни Святого
+                      Георгия в местном соборе, чтобы увековечить память Маттео Костанцо. По распоряжению
+                      Сената республики в 1507—1508 привлекался к фресковым росписям Немецкого подворья
+                      &lpar;сохранился фрагмент с изображением женской фигуры&rpar;, работы были завершены, как об
+                      этом свидетельствует официальный документ, 14 декабря 1508. Умер в октябре-ноябре 1510
+                      года от чумы.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="parentino--ru">
+                    <img src="./img/catalog/artists/parentino.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Бернардо Парентино</h3>
+                    <p class="artist__years">1450—1500</p>
+                    <p class="section-text">
+                      Итальянский художник эпохи Ренессанса. В основном работал в Падуе.
+                    </p>
+                    <p class="section-text">
+                      Родился в городе Паренцо, принадлежащем венецианской республике и находящимся на побережье
+                      полуострова Истрия. Там же, вероятнее всего, получил начальное образование. Умер в
+                      городе Виченца. Испытал сильное влияние, а возможно и был учеником Андреа Мантеньи. Также
+                      художник известен под именами Бернардо Паренцано, Бернардо да Паренцо, Бернардино Парентино.
+                      Ошибочно отождествлялся с августинским монахом Лоренцо.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="pesellino--ru">
+                    <img src="./img/catalog/artists/pesellino.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Пезеллино, собств. Франческо ди Стефано
+                    </h3>
+                    <p class="artist__years">род. ок. 1422 г. Флоренция — ум. 1457 г. Флоренция</p>
+                    <p class="section-text">
+                      Итальянский живописец.
+                    </p>
+                    <p class="section-text">
+                      Итальянский историк искусства Джорджо Вазари составил небольшую биографию художника, в
+                      которой с восторгом отзывается о его творчестве, но, в то же время, перепутал в ней,
+                      кажется, всё, что только можно.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="perugino--ru">
+                    <img src="./img/catalog/artists/perugino.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Пьетро Перуджино &lpar;итал. Pietro
+                      Perugino, дословно «Перуджийский», настоящее имя Пьетро ди Кристофоро Ваннуччи&rpar;</h3>
+                    <p class="artist__years">1446—1524</p>
+                    <p class="section-text">
+                      Итальянский живописец эпохи Возрождения, представитель умбрийской школы.
+                    </p>
+                    <p class="section-text">
+                      Родился в местечке Читта-делла-Пьеве в 35 км от Перуджи. После обучения у местного
+                      живописца в 1470 году приехал во Флоренцию и поступил в мастерскую Андреа Верроккьо.
+                      В 1481 году, будучи уже известным мастером, в числе лучших художников Италии приглашён папой
+                      Сикстом IV в Рим для участия в работах над декорированием Сикстинской капеллы.
+                      Работал во многих городах Италии, но более всего в Перудже, где он был главой большой мастерской.
+                      В 1480—1490-х годах Перуджино был одним из самых прославленных художников Италии. Самый же
+                      знаменитый из его учеников — Рафаэль Санти.
+                      Лучшими произведениями Перуджино считаются созданные до 1500 года. Выделяется фреска «Вручение
+                      ключей апостолу Петру», которая отличается стройностью композиции. Одна из самых известных
+                      картин — «Оплакивание Христа». После смерти в 1520 году Рафаэля учитель завершил не законченные
+                      его великим учеником фрески в церкви Перуджи. Перуджино умер от чумы в Перудже в 1524 году.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="peruzzi--ru">
+                    <img src="./img/catalog/artists/peruzzi.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Бальдассаре Томмазо Перуцци</h3>
+                    <p class="artist__years">15 января 1481, Сиена — 6 января 1536, Рим</p>
+                    <p class="section-text">
+                      Итальянский архитектор и живописец эпохи Высокого Возрождения и раннего маньеризма.
+                    </p>
+                    <p class="section-text">
+                      Родился в небольшом городке близ Сиены. С 1503 года работал в Риме. Быстро
+                      получил признание как архитектор и мастер иллюзорных росписей, создающих
+                      эффект продолжения архитектурного пространства. Поэтому Перуцци считают
+                      создателем римской школы фасадных росписей, в основном гризайлью, но они
+                      не сохранились до нашего времени. Вначале Перуцци работал вместе с Донато
+                      Браманте, но затем перешёл к Рафаэлю. Биографы считают автором знаменитого
+                      «Письма Рафаэля» папе Льву Х — введения к Археологическому плану античного
+                      Рима — именно Перуцци.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="pisanello--ru">
+                    <img src="./img/catalog/artists/pisanello.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Антонио ди Пуччо Пизано</h3>
+                    <p class="artist__years">ок. 1392—1395, Пиза — вероятно, 1455, Рим</p>
+                    <p class="section-text">
+                      Один из наиболее выдающихся художников эпохи Возрождения и раннего итальянского кватроченто.
+                    </p>
+                    <p class="section-text">
+                      Родился в семье суконщика Пуччо ди Джованни да Черетта. После его смерти вдова Изабета с
+                      сыном Антонио переехала в свой родной город — Верону. Первым учителем будущего художника
+                      стал Стефано да Верона, позднее его наставником и другом стал Джентиле да Фабриано. С да
+                      Фабриано Пизанелло в 1409—1415 годах в Венеции работал над украшением Зала Большого совета
+                      во Дворце Дожей &lpar;оформление зала погибло при пожаре в 1577 году&rpar;. После внезапной смерти
+                      Джентиле &lpar;1427&rpar; Пизанелло продолжил начатую им роспись базилики Сан Джованни ин Латерано
+                      &lpar;не сохранилась&rpar;. В 1420-х годах работал над фресками в замке Висконти в Павии — этот
+                      фресковый цикл погиб во время войны с Францией в 1527 году.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="pinturicchio--ru">
+                    <img src="./img/catalog/artists/pinturicchio.jpg" alt="Изображение художника"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Пинтуриккьо, собственно Бернардино ди Бетто
+                    </h3>
+                    <p class="artist__years">1454, Перуджа — 11 декабря 1513, Сиена</p>
+                    <p class="section-text">
+                      Итальянский живописец эпохи Возрождения.
+                    </p>
+                    <p class="section-text">
+                      Представитель умбрийской школы кватроченто. Учился у Фьоренцо ди Лоренцо, вместе с Рафаэлем — у
+                      Перуджино, которому помогал при создании фресок Сикстинской капеллы Ватикана
+                      &lpar;1481—1482&rpar;, а по некоторым данным — ещё и у Бенедетто Капорали, создателя дворца
+                      кардинала Пассерини, впоследствии расписанного Синьорелли. Вероятно, испытал влияние и
+                      Бенедетто Бонфильи, учителя Перуджино. Став зрелым мастером, Пинтуриккьо отказался от
+                      некоторых принципов Перуджино — однообразности и степенности фигур, единства времени и
+                      места, — что сближает его скорее с Боттичелли.
+                    </p>
+                  </li>
+                </ul>
+                <div class="catalog__accordion">
+                  <ul class="accordion__list">
+                    <li class="accordion__item accordion__item--open" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>C 1400 по 1499 гг.</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        <ul class="accordion-artist__list">
+                          <li class="accordion-artist__item">
+                            <a href="#di_bindo--ru" class="accordion-artist__link">Бенедетто ди Биндо</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#bergognone--ru" class="accordion-artist__link">Бергоньоне, Амброджо</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#bissolo--ru" class="accordion-artist__link">Биссоло, Франческо</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#boltraffio--ru" class="accordion-artist__link">Больтраффио, Джованни</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#bonsignori--ru" class="accordion-artist__link">Бонсиньори, Франческо</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#botticini--ru" class="accordion-artist__link">Боттичини, Рафаэлло</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#bramantino--ru" class="accordion-artist__link">Брамантино</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#brea--ru" class="accordion-artist__link">Бреа, Людовико</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#biagio--ru" class="accordion-artist__link">Бьяджо д’Антонио Туччи</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#vecchietta--ru" class="accordion-artist__link">Веккьетта</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#verrocchio--ru" class="accordion-artist__link">Андреа Верроккьо</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#ghirlandaio--ru" class="accordion-artist__link">Доменико Гирландайо</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#gozzoli--ru" class="accordion-artist__link">Беноццо Гоццоли</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#granacci--ru" class="accordion-artist__link">Граначчи, Франческо</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#di_cecco--ru" class="accordion-artist__link">Грегорио ди Чекко</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#da_udine--ru" class="accordion-artist__link">Джованни да Удине</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#di_paolo--ru" class="accordion-artist__link">Джованни ди Паоло</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#giorgione--ru" class="accordion-artist__link">Джорджоне</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#parentino--ru" class="accordion-artist__link">Парентино, Бернардо</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#pesellino--ru" class="accordion-artist__link">Пезеллино</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#perugino--ru" class="accordion-artist__link">Пьетро Перуджино</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#peruzzi--ru" class="accordion-artist__link">Перуцци, Бальдассаре</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#pisanello--ru" class="accordion-artist__link">Пизанелло</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#pinturicchio--ru" class="accordion-artist__link">Пинтуриккьо</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>C 1500 по 1599 гг.</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты.
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>C 1600 по 1699 гг.</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Даль
+                        заголовок проектах от всех назад.
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>C 1700 по 1799 гг.</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Над злых
+                        маленький буквоград текст вскоре переписывается возвращайся? Ее коварный безорфографичный всеми
+                        большого, несколько вскоре.
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>C 1800 по 1899 гг.</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Алфавит
+                        назад мир продолжил одна скатился строчка всеми которое агентство путь, несколько, свою бросил
+                        имени инициал там раз коварный о диких! Наш великий первую щеке!
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>C 1900 по 1999 гг.</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Которое
+                        маленькая снова составитель свой образ свое рекламных большой несколько, пояс толку диких
+                        заголовок знаках назад рукопись своего сих дорогу за запятых, осталось имени! Которой он
+                        семантика ipsum использовало? Оксмокс взобравшись текстов однажды города дорогу!
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>C 2000 г.</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Свой,
+                        власти залетают знаках речью живет, запятой злых ему деревни lorem сбить подпоясал дороге одна
+                        подзаголовок. Ручеек его ее меня скатился парадигматическая безорфографичный снова живет
+                        пустился вершину ты послушавшись заголовок, пояс залетают взгляд, возвращайся, великий коварных
+                        о запятой вскоре? Ты послушавшись знаках всемогущая несколько языкового!
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__tab-lang" id="tab_belgium" lang="nl">
+              <p class="catalog__section-text section-text">
+                Aandeelhouders van de grootste bedrijven, een schoolvoorbeeld van het continentale Europese type
+                politieke cultuur, zal worden verklaard in strijd met universele normen van ethiek en moraliteit.
+                Alles zijn enkel en alleen onderdeel van het grote geheel, en streeft ernaar om tot op de dag van
+                vandaag traditionele productie, nanotechnologie te vervangen blijven veel liberalen, die ernaar
+                verlangen functioneel verdeeld te worden in onafhankelijke elementen.
+              </p>
+              <div class="catalog__inner">
+                <ul class="catalog__tab-list">
+                  <li class="catalog__tab-artist" id="boltraffio--nl">
+                    <img src="./img/catalog/artists/boltraffio.jpg" alt="Foto van de kunstenaar"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Giovanni Antonio Boltraffio
+                      &lpar;Beltraffio&rpar;
+                    </h3>
+                    <p class="artist__years">1466 of 1467, Milaan - 1516, ibid.</p>
+                    <p class="section-text">
+                      Vasari meldt dat de kunstenaar uit een aristocratische familie komt. Up
+                      Tradities van Foppa, Bernardo Zenale en Ambrogio Bergognone werden gevormd
+                      Leonardo's werkplaats. Zijn eerste werk "The Resurrection of Christ, Saint-Léonard
+                      en Santa Lucia "traden op in 1491 met Marco d'Ojono voor Milaan Kerken van San
+                      Giovanni sul Muro. Hij was de hofschilder van Lodovico Moro en was beroemd
+                      hun psychologische portretten.
+                    </p>
+                    <p class="section-text">
+                      Boltraffio stierf op 49-jarige leeftijd en werd begraven op de begraafplaats van de kerk van
+                      Santa Paula in Comito.
+                    </p>
+                    <p class="section-text">
+                      Sommige kunsthistorici suggereren dat de figuur van een kind in Leonardo da
+                      Win "Madonna Litta" van Giovanni Antonio Boltraffio. Bekende voorbereidende tekeningen
+                      door Giovanni Antonio Boltraffio, die deze figuur exact weergeeft.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="biagio--nl">
+                    <img src="./img/catalog/artists/biagio.jpg" alt="Foto van de kunstenaar"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Biagio door Antonio Tucci</h3>
+                    <p class="artist__years">1446, Florence - 1 juni 1516, ibid.</p>
+                    <p class="section-text">
+                      Italiaanse renaissanceschilder. Zijn werk is geïnspireerd door het werk van Filippo
+                      Lippi, Andrea Verrocchio, Domenico Ghirlandaio.
+                    </p>
+                    <p class="section-text">
+                      Hij werkte in Faenza in het laatste kwart van de 15e eeuw, maar er zit weinig in zijn stijl
+                      Elementen van de Florentijnse stijl: het is mogelijk om de invloed van de vroege Nederlandse
+                      schilderkunst te traceren
+                      willen.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="verrocchio--nl">
+                    <img src="./img/catalog/artists/verrocchio.jpg" alt="Foto van de kunstenaar"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Andrea del Verrocchio, vandaag heet hij
+                      Andrea di
+                      Michele Choni</h3>
+                    <p class="artist__years">1435 Florence, Republiek Florence - 10 oktober 1488,
+                      Venetië, Republiek Venetië</p>
+                    <p class="section-text">
+                      Renaissance beeldhouwer en schilder, vertegenwoordiger van de Florentijnse school. Onder zijn
+                      Studenten - Sandro Botticelli, Pietro Perugino, Leonardo da Vinci en Lorenzo di Credi.
+                    </p>
+                    <p class="section-text">
+                      Andrea del Verrocchio werd geboren in Florence en werkte daar. Zijn naam & lpar; van de
+                      Verrocchio - "van Verrocchio", ontvangen van zijn meester, de juwelier Verrocchio.
+                      Hij is gespecialiseerd in beeldhouwkunst maar legt zich ook toe op de schilderkunst.
+                    </p>
+                    <p class="section-text">
+                      Aan het begin van de Renaissance werkten kunstenaars bijna uitsluitend op bestelling
+                      Destijds was de rol van de opdrachtgevers uitzonderlijk. Deze praktijk was speciaal in Florence
+                      wijdverspreid in de 15e eeuw, waar de kunstateliers alle bestellingen van klanten hebben
+                      vervuld, van het schilderen van de borden tot Architectuurprojecten. Verrocchio werd beschouwd
+                      als een ongeëvenaarde decorateur en directeur van Courtisane vieringen.
+                    </p>
+                    <p class="section-text">
+                      In 1465 creëerde hij de grafsteen van Cosme Medici & lpar; 1389-1464? In de jaren 1467-1483
+                      werkte aan de sculpturale compositie "Trust di Thomas &lpar;Verrocchio&rpar;"
+                      voor de kerk van Orsanmichele.
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="ghirlandaio--nl">
+                    <img src="./img/catalog/artists/ghirlandaio.jpg" alt="Foto van de kunstenaar"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Domenico Ghirlandaio</h3>
+                    <p class="artist__years">2 juni 1448-11 januari 1494.</p>
+                    <p class="section-text">
+                      Een van de belangrijkste Florentijnse schilders van de vijftiende eeuw, stamvader van de
+                      artistieke dynastie, de achtervolgd door zijn broer David en zijn zoon Ridolfo. Verantwoordelijk
+                      van het artistiek laboratorium waar ik jongens Michelangelo in de beheersing van professionele
+                      vaardigheden gedurende het jaar.
+                      De auteur van Fresco-cycli waarin convex, met het huiselijke leven van bijbelse karakters &lpar;
+                      in zijn rol wordt getoond in alle mogelijke details nobele naakte burgers van Florence in
+                      historische kostuums &rpar;
+                    </p>
+                  </li>
+                  <li class="catalog__tab-artist" id="giorgione--nl">
+                    <img src="./img/catalog/artists/giorgione.jpg" alt="Foto van de kunstenaar"
+                      class="catalog__artist-image">
+                    <h3 class="catalog__section-subtitle section-subtitle">Giorgio Barbarelli uit Castelfranco</h3>
+                    <p class="artist__years">1477/1478—1510</p>
+                    <p class="section-text">
+                      Italiaanse kunstenaar, vertegenwoordiger van de Venetiaanse schilderschool; een van de grootste
+                      meesters
+                      Hoge Renaissance.
+                    </p>
+                    <p class="section-text">
+                      Giorgione werd geboren in het kleine stadje Castelfranco Veneto bij Venetië.
+                      In 1493 vestigde hij zich in Venetië en werd een leerling van Giovanni Bellini. In het jaar
+                      1497 zijn eerste onafhankelijke werk - "Christus draagt ​​het kruis". Volgens Vasari in april
+                      1500 ontmoette Leonardo da Vinci. In 1504 trad hij op in zijn geboorteplaats Castelfranco
+                      voor hem het altaarstuk "Madonna di Castelfranco", gemaakt voor de familiekapel van S.
+                      George naar de plaatselijke kathedraal om Matteo Costanzo's herinnering levend te houden.
+                      Volgens de volgorde van opvolging was de Senaat van de Republiek 1507-1508 op de fresco's van de
+                      Betrokken Duitse rechtbank &lpar; Er is een fragment van een vrouwenfiguur. Het werk was
+                      Dit wordt bevestigd door een officieel document van 14 december 1508.
+                      Overleden van oktober tot november 1510 jaar na de pest.
+                    </p>
+                  </li>
+                </ul>
+                <div class="catalog__accordion">
+                  <ul class="accordion__list">
+                    <li class="accordion__item accordion__item--open" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Van 1400 tot 1499</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        <ul class="accordion-artist__list">
+                          <li class="accordion-artist__item">
+                            <a href="#boltraffio--nl" class="accordion-artist__link">Boltraffio, Giovanni</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#biagio--nl" class="accordion-artist__link">Biagio door Antonio Tucci</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#verrocchio--nl" class="accordion-artist__link">Andrea Verrocchio</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#ghirlandaio--nl" class="accordion-artist__link">Domenico Ghirlandaio</a>
+                          </li>
+                          <li class="accordion-artist__item">
+                            <a href="#giorgione--nl" class="accordion-artist__link">Giorgione</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Van 1500 tot 1599</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt esse iure sunt quas quaerat
+                        voluptates repudiandae? Ex quos quia quisquam necessitatibus ipsa, iusto reiciendis consequatur
+                        suscipit maiores excepturi commodi? Dolore quasi fuga impedit in vero voluptatem culpa quia
+                        excepturi consequatur ab pariatur, id reprehenderit eveniet.
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Van 1600 tot 1699</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, exercitationem ullam modi autem
+                        consectetur in.
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Van 1700 tot 1799</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque harum voluptatibus eos! Ut
+                        aperiam commodi dolore laboriosam! Totam, odio labore?
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Van 1800 tot 1899</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, perferendis in unde
+                        architecto expedita enim ipsa aliquam molestias illo vitae id iusto molestiae nulla eos sunt
+                        repellat minima ducimus quia mollitia, suscipit porro, nemo esse.
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Van 1900 tot 1999</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, fugit. Quisquam excepturi
+                        praesentium tempora deleniti.
+                      </div>
+                    </li>
+                    <li class="accordion__item" tabindex="0">
+                      <div class="accordion__header">
+                        <h3 class="accordion__section-subtitle section-subtitle"><span>Van 2000</span></h3>
+                      </div>
+                      <div class="accordion__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ducimus assumenda enim itaque
+                        repudiandae veritatis voluptate sed delectus. Nesciunt, iure! Dolores porro adipisci quaerat
+                        alias.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section> <!-- /.catalog -->
 
     </main>
 
@@ -580,6 +2243,7 @@
   <script src="./js/simplebar.min.js"></script>
   <script src="./js/choices.min.js"></script>
   <script src="./js/sliders.js"></script>
+  <script src="./js/burger.js"></script>
   <script src="./js/dropdown.js"></script>
   <script src="./js/main.js"></script>
 </body>
