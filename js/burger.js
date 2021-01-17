@@ -44,7 +44,7 @@ menu.addEventListener('click', (e) => {
   e.preventDefault();
   console.log(e.target);
 
-  if (window.innerWidth < 1025 && e.target.classList.contains('nav__link') || e.target.classList.contains('account__link')) {
+  if (window.innerWidth < 1025 && e.target.classList.contains('nav__link') || e.target.classList.contains('personal-account__link')) {
     burger.classList.remove('active');
     menu.classList.remove('open');
     overlay.classList.remove('open');

@@ -106,19 +106,19 @@ ul {
   line-height: 1;
 }
 
-.section__link {
+.section-link {
   font-weight: 600;
   color: var(--hover-color);
   transition: color .2s ease;
 }
 
 @media (min-width: 1025px) {
-  .section__link:hover {
+  .section-link:hover {
     text-decoration: underline;
   }
 }
 
-.section__link:active {
+.section-link:active {
   color: var(--active-color);
 }
 

@@ -16,20 +16,26 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   let mySwiper_2 = new Swiper(sliderTwo, {
-    slidesPerView: 2,
-    slidesPerColumn: 2,
+    slidesPerView: 1,
+    slidesPerColumn: 1,
     slidesPerColumnFill: 'row',
-    slidesPerGroup: 2,
-    spaceBetween: 30,
+    slidesPerGroup: 1,
+    spaceBetween: 10,
     direction: 'horizontal',
-    // loop: true,
     pagination: {
       el: '.swiper-pagination__gallery',
       type: 'fraction',
     },
     breakpoints: {
+      376: {
+        slidesPerView: 2,
+        slidesPerColumn: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 30
+      },
       1025: {
         slidesPerView: 3,
+        slidesPerColumn: 2,
         slidesPerGroup: 3,
         spaceBetween: 50
       }
