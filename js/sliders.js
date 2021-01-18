@@ -47,6 +47,6 @@ window.addEventListener('DOMContentLoaded', function () {
     autoplay: {
       delay: 5000,
     },
-    speed: 1000,
+    speed: 800,
   });
 });

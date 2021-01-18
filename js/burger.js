@@ -1,6 +1,6 @@
 "use strict";
 
-let hero = document.querySelector('.hero');
+const hero = document.querySelector('.hero');
 
 const menu = document.querySelector('.nav'),
   burger = document.querySelector('.burger'),
@@ -53,5 +53,9 @@ menu.addEventListener('click', (e) => {
         menu.style.height = 'auto';
       },
       300);
-  }
+  };
+
+  if (window.innerWidth < 1025 && e.target.classList.contains('nav__link')) {
+    smoothScroll(document.getElementById(e.target.getAttribute('data-scroll').replace('#', '')));
+  };
 });

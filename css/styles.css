@@ -108,7 +108,7 @@
 .header__top {
   position: relative;
   height: 100px;
-  background: #000;
+  background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
   transition: height .2s ease .2s, background .2s ease;
 }
 
@@ -1189,6 +1189,42 @@
   background-color: var(--active-color);
 }
 
+/* To Top Button */
+
+.to-top__btn {
+  display: inline-block;
+  background: rgba(209, 209, 209, 0.25) url(../img/svg/arrow-to-top.svg) no-repeat center;
+  background-size: 20px auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s ease;
+  z-index: 1;
+}
+
+.to-top__btn--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.to-top__btn:hover:active {
+  background-color: rgba(209, 209, 209, 0.55);
+}
+
+@media (min-width: 1025px) {
+
+  .to-top__btn:hover {
+    background-color: rgba(209, 209, 209, 0.4);
+    background-size: 23px auto;
+  }
+
+}
+
 /* Media */
 
 @media (max-width: 1500px) {
@@ -1248,7 +1284,6 @@
 
   .nav.open {
     align-items: flex-start;
-    max-height: 100vh;
     opacity: 1;
     transform: translateX(0);
   }
@@ -1533,6 +1568,7 @@
   }
 
   .burger::before {
+    top: -1px;
     width: 20px;
   }
 
@@ -1628,6 +1664,11 @@
   .about__text {
     font-size: 14px;
     line-height: 28px;
+  }
+
+  .gallery__inner {
+    max-width: 295px;
+    margin: 0 auto;
   }
 
   .country__item {

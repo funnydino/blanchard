@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" href="./img/logo.png">
 </head>
 
-<body>
+<body id="top">
   <div class="overlay"></div>
   <header class="header" id="header">
     <div class="header__inner">
@@ -33,13 +33,13 @@
           <img src="./img/svg/logo.svg" alt="Логотип сайта" class="header__logo">
           <nav class="nav header__nav">
             <ul class="nav__list">
-              <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">События</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Издания</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Проекты</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+              <li class="nav__item"><a class="nav__link" href="#about" data-scroll="#about">О нас</a></li>
+              <li class="nav__item"><a class="nav__link" href="#gallery" data-scroll="#gallery">Галерея</a></li>
+              <li class="nav__item"><a class="nav__link" href="#catalog" data-scroll="#catalog">Каталог</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">События</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Издания</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Проекты</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
             </ul>
             <a href="#" class="personal-account__link">
               <svg class="personal-account__icon" width="18" height="13" viewbox="0 0 18 13" fill="none"
@@ -411,7 +411,7 @@
 
       <!-- About Section -->
 
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <h2 class="section-title">О нас</h2>
           <p class="about__text section-text">
@@ -429,7 +429,7 @@
 
       <!-- Gallery Section -->
 
-      <section class="gallery">
+      <section class="gallery" id="gallery">
         <div class="container">
           <div class="gallery__inner">
             <div class="gallery__description">
@@ -768,7 +768,7 @@
 
       <!-- Catalog Section -->
 
-      <section class="catalog">
+      <section class="catalog" id="catalog">
         <div class="container">
           <div class="catalog__heading country">
             <h2 class="section-title catalog__section-title">Каталог</h2>
@@ -2577,6 +2577,8 @@
       </section> <!-- /.catalog -->
 
     </main>
+
+    <a class="to-top__btn" href="#" data-scroll="#top" title="Подняться в начало страницы"></a>
 
   </div> <!-- /.page -->
 
