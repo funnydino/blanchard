@@ -127,18 +127,18 @@ function selectLang(item) {
     let tabId = currentLang.getAttribute('data-country');
     let currentTab = document.querySelector(tabId);
 
-    if (!parent.classList.contains('selected')) {
+    if (!parent.classList.contains('country__item--selected')) {
       langBtn.forEach(function (item) {
         let parent = item.parentNode;
-        parent.classList.remove('selected');
+        parent.classList.remove('country__item--selected');
       });
 
       langItems.forEach(function (item) {
-        item.classList.remove('active');
+        item.classList.remove('catalog-tabs__country--active');
       });
 
-      parent.classList.add('selected');
-      currentTab.classList.add('active');
+      parent.classList.add('country__item--selected');
+      currentTab.classList.add('catalog-tabs__country--active');
     }
   });
 }
@@ -160,14 +160,14 @@ document.querySelectorAll('.accordion-artists__link').forEach((item) => {
   });
 });
 
-let startTab = document.querySelector('.catalog-tabs__country.active .accordion-artists__list .accordion-artists__item:nth-child(12) .accordion-artists__link');
+let startTab = document.querySelector('.catalog-tabs__country--active .accordion-artists__list .accordion-artists__item:nth-child(12) .accordion-artists__link');
 startTab.click();
 
 langBtn.forEach(selectTab);
 
 function selectTab(item) {
   item.addEventListener('click', function () {
-    let activeTab = document.querySelector('.catalog-tabs__country.active .accordion-artists__list .accordion-artists__item:nth-child(1) .accordion-artists__link');
+    let activeTab = document.querySelector('.catalog-tabs__country--active .accordion-artists__list .accordion-artists__item:nth-child(1) .accordion-artists__link');
     activeTab.click();
   })
 };

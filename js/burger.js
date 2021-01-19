@@ -3,7 +3,7 @@
 const hero = document.querySelector('.hero');
 
 const menu = document.querySelector('.nav'),
-  burger = document.querySelector('.burger'),
+  burger = document.querySelector('.header__burger'),
   overlay = document.querySelector('.overlay');
 
 const lockScroll = () => {
@@ -15,7 +15,7 @@ const unlockScroll = () => {
 }
 
 burger.addEventListener('click', () => {
-  burger.classList.toggle('active');
+  burger.classList.toggle('header__burger--active');
   menu.classList.toggle('open');
   overlay.classList.toggle('open');
   lockScroll();
@@ -30,7 +30,7 @@ burger.addEventListener('click', () => {
 });
 
 overlay.addEventListener('click', () => {
-  burger.classList.remove('active');
+  burger.classList.remove('header__burger--active');
   menu.classList.remove('open');
   overlay.classList.remove('open');
   unlockScroll();
@@ -45,7 +45,7 @@ menu.addEventListener('click', (e) => {
   console.log(e.target);
 
   if (window.innerWidth < 1025 && e.target.classList.contains('nav__link') || e.target.classList.contains('personal-account__link')) {
-    burger.classList.remove('active');
+    burger.classList.remove('header__burger--active');
     menu.classList.remove('open');
     overlay.classList.remove('open');
     unlockScroll();

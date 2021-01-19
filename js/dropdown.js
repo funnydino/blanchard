@@ -5,16 +5,16 @@ let artistList = document.querySelectorAll('.artists__item');
 
 [...artistLink].forEach(function (artList) {
   artList.addEventListener('click', function () {
-    artList.closest('.artists__item').classList.toggle("active");
+    artList.closest('.artists__item').classList.toggle("artists__item--active");
   });
 });
 
 [...artistList].forEach(function (list) {
   list.addEventListener('mouseover', function () {
-    list.closest('.artists__item').classList.toggle("visible");
+    list.closest('.artists__item').classList.toggle("artists__item--visible");
   });
   list.addEventListener('mouseout', function () {
-    artistList.forEach(n => n.classList.remove("visible"));
-    artistList.forEach(n => n.classList.remove("active"));
+    artistList.forEach(n => n.classList.remove("artists__item--visible"));
+    artistList.forEach(n => n.classList.remove("artists__item--active"));
   });
 });
