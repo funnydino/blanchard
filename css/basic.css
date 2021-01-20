@@ -145,7 +145,7 @@ ul {
   z-index: 99;
 }
 
-.overlay.open {
+.overlay--open {
   opacity: 1;
   visibility: visible;
 }

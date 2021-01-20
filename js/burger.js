@@ -16,10 +16,10 @@ const unlockScroll = () => {
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('header__burger--active');
-  menu.classList.toggle('open');
-  overlay.classList.toggle('open');
+  menu.classList.toggle('nav--open');
+  overlay.classList.toggle('overlay--open');
   lockScroll();
-  if (menu.classList.contains('open')) {
+  if (menu.classList.contains('nav--open')) {
     menu.style.height = hero.offsetHeight + 'px';
   } else {
     setTimeout(function () {
@@ -31,8 +31,8 @@ burger.addEventListener('click', () => {
 
 overlay.addEventListener('click', () => {
   burger.classList.remove('header__burger--active');
-  menu.classList.remove('open');
-  overlay.classList.remove('open');
+  menu.classList.remove('nav--open');
+  overlay.classList.remove('overlay--open');
   unlockScroll();
   setTimeout(function () {
       menu.style.height = 'auto';
@@ -46,8 +46,8 @@ menu.addEventListener('click', (e) => {
 
   if (window.innerWidth < 1025 && e.target.classList.contains('nav__link') || e.target.classList.contains('personal-account__link')) {
     burger.classList.remove('header__burger--active');
-    menu.classList.remove('open');
-    overlay.classList.remove('open');
+    menu.classList.remove('nav--open');
+    overlay.classList.remove('overlay--open');
     unlockScroll();
     setTimeout(function () {
         menu.style.height = 'auto';
