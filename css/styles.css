@@ -427,9 +427,9 @@
 }
 
 .search__rect,
-.search__rect--top,
+.search-top__rect,
 .search__path,
-.search__path--top {
+.search-top__path {
   transition: fill .2s ease;
 }
 
@@ -506,9 +506,9 @@
   }
 
   .search:hover .search__rect,
-  .search:hover .search__rect--top,
+  .search:hover .search-top__rect,
   .search:hover .search__path,
-  .search:hover .search__path--top {
+  .search:hover .search-top__path {
     fill: var(--hover-color);
   }
 
