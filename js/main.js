@@ -20,7 +20,7 @@ const scrollTo = document.querySelectorAll('[data-scroll]');
   });
 });
 
-// Кнопка скролла в начало страницы:
+// Кнопка скролла возврата в начало страницы:
 
 const body = document.body;
 const header = document.querySelector('.header');
@@ -113,12 +113,12 @@ const choices = new Choices(selectOne, {
   searchEnabled: false,
 });
 
-// Табы (переключение языка в секции Catalog):
+// Табы (переключение страны в секции Catalog):
 
-const langBtn = document.querySelectorAll('.country__btn');
-const langItems = document.querySelectorAll('.catalog-tabs__country');
+const countryBtn = document.querySelectorAll('.country__btn');
+const countryItems = document.querySelectorAll('.catalog-tabs__country');
 
-langBtn.forEach(selectLang);
+countryBtn.forEach(selectLang);
 
 function selectLang(item) {
   item.addEventListener('click', function () {
@@ -128,12 +128,12 @@ function selectLang(item) {
     let currentTab = document.querySelector(tabId);
 
     if (!parent.classList.contains('country__item--selected')) {
-      langBtn.forEach(function (item) {
+      countryBtn.forEach(function (item) {
         let parent = item.parentNode;
         parent.classList.remove('country__item--selected');
       });
 
-      langItems.forEach(function (item) {
+      countryItems.forEach(function (item) {
         item.classList.remove('catalog-tabs__country--active');
       });
 
@@ -163,7 +163,7 @@ document.querySelectorAll('.accordion-artists__link').forEach((item) => {
 let startTab = document.querySelector('.catalog-tabs__country--active .accordion-artists__list .accordion-artists__item:nth-child(12) .accordion-artists__link');
 startTab.click();
 
-langBtn.forEach(selectTab);
+countryBtn.forEach(selectTab);
 
 function selectTab(item) {
   item.addEventListener('click', function () {
@@ -172,7 +172,7 @@ function selectTab(item) {
   })
 };
 
-// Аккордеон:
+// Аккордеон в секции Catalog:
 
 document.querySelectorAll('.catalog-accordion__header').forEach((item) => {
   item.addEventListener('click', () => {
@@ -186,6 +186,59 @@ document.querySelectorAll('.catalog-accordion__header').forEach((item) => {
         .forEach((child) => child.classList.remove('catalog-accordion__item--open'))
 
       parent.classList.add('catalog-accordion__item--open');
+    }
+  });
+});
+
+// Секция Events:
+
+const showAllBtn = document.querySelector('.events__all-btn');
+const eventsCard = document.querySelectorAll('.events__card');
+
+window.addEventListener('DOMContentLoaded', function () {
+  showAllBtn.addEventListener('click', () => {
+    showAllCards();
+  });
+
+  function showAllCards() {
+    eventsCard.forEach(function (card) {
+      if (card.classList.contains('events__card--hidden')) {
+        card.classList.remove('events__card--hidden');
+      }
+    });
+    showAllBtn.classList.add('events__all-btn--hidden');
+  };
+
+  function hiddenCards() {
+    if (window.innerWidth > 955) {
+      showAllCards();
+      document.querySelectorAll('.events__card:nth-child(n + 4)').forEach(function (card) {
+        card.classList.add('events__card--hidden');
+      });
+      showAllBtn.classList.remove('events__all-btn--hidden');
+    } else if (window.innerWidth > 669 && window.innerWidth <= 955) {
+      showAllCards();
+      document.querySelectorAll('.events__card:nth-child(n + 3)').forEach(function (card) {
+        card.classList.add('events__card--hidden');
+      });
+      showAllBtn.classList.remove('events__all-btn--hidden');
+    } else {
+      showAllCards();
+    };
+  };
+
+  hiddenCards();
+
+  window.addEventListener('resize', () => {
+    console.log('orientation change!');
+    if (!showAllBtn.classList.contains('events__all-btn--hidden')) {
+      hiddenCards();
+    };
+    if (window.innerWidth <= 669) {
+      showAllCards();
+    } else {
+      hiddenCards();
+      showAllBtn.classList.remove('events__all-btn--hidden');
     }
   });
 });

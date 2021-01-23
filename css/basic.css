@@ -100,10 +100,10 @@ ul {
   line-height: 1;
 }
 
-.section__subtitle {
+.section-subtitle {
   font-size: 24px;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 .section-link {

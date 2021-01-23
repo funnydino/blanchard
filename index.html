@@ -36,7 +36,7 @@
               <li class="nav__item"><a class="nav__link" href="#about" data-scroll="#about">О нас</a></li>
               <li class="nav__item"><a class="nav__link" href="#gallery" data-scroll="#gallery">Галерея</a></li>
               <li class="nav__item"><a class="nav__link" href="#catalog" data-scroll="#catalog">Каталог</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">События</a></li>
+              <li class="nav__item"><a class="nav__link" href="#events" data-scroll="#events">События</a></li>
               <li class="nav__item"><a class="nav__link" href="#">Издания</a></li>
               <li class="nav__item"><a class="nav__link" href="#">Проекты</a></li>
               <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
@@ -387,17 +387,9 @@
 
       <section class="hero">
         <h1 class="visually-hidden">Художественная галерея Blanchard</h1>
+        <div class="hero__bg">
+        </div>
         <div class="hero__inner">
-          <div class="swiper-container hero__swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide slide slide__one">
-              </div>
-              <div class="swiper-slide slide slide__two">
-              </div>
-              <div class="swiper-slide slide slide__three">
-              </div>
-            </div>
-          </div>
           <div class="container hero__container">
             <h2 class="hero__title">Прикоснитесь к&nbsp;прекрасному</h2>
             <p class="main__text">
@@ -413,17 +405,21 @@
 
       <section class="about" id="about">
         <div class="container">
-          <h2 class="section-title">О нас</h2>
-          <p class="about__text section-text">
-            Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
-            участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
-            Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс
-            внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных
-            исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с
-            учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов,
-            действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны
-            быть разоблачены.
-          </p>
+          <div class="about__inner">
+            <h2 class="section-title">О нас</h2>
+            <p class="about__text section-text">
+              Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно
+              определяет каждого участника как способного принимать собственные решения касаемо
+              распределения внутренних резервов и ресурсов.
+              Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за
+              собой процесс внедрения и модернизации модели развития. Повседневная практика показывает,
+              что высокое качество позиционных исследований создаёт необходимость включения в
+              производственный план целого ряда внеочередных мероприятий с учётом комплекса
+              распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов,
+              действия представителей оппозиции набирают популярность среди определенных слоев населения,
+              а значит, должны быть разоблачены.
+            </p>
+          </div>
         </div>
       </section> <!-- /.about -->
 
@@ -433,7 +429,7 @@
         <div class="container">
           <div class="gallery__inner">
             <div class="gallery__description">
-              <div>
+              <div class="gallery__description-inner">
                 <h2 class="gallery__title section-title">Галерея</h2>
                 <div class="gallery__select">
                   <span class="gallery__select-text">Фильтровать по:</span>
@@ -449,7 +445,7 @@
                 <a href="#" class="section-link">авторизуйтесь,</a> либо воспользуйтесь лицензией.
               </p>
             </div>
-            <div class="gallery__paintings paintings swiper-container gallery__swiper-container">
+            <div class="gallery__paintings paintings swiper-container gallery__swiper-container" data-loaded="false">
               <div class="swiper-button-gallery">
                 <button class="swiper-button-prev swiper-button-gallery__prev"></button>
                 <div class="swiper-pagination swiper-pagination__gallery"></div>
@@ -457,302 +453,302 @@
               </div>
               <ul class="paintings__list swiper-wrapper">
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/1/1.1.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/1/1.1.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/1/1.1.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/1/1.1.jpg">
-                      <img src="./img/gallery/pictures/main/1/1.1.jpg">
+                      <img src="./img/gallery/pictures/main/1/1.1.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/1/1.2.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/1/1.2.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/1/1.2.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/1/1.2.jpg">
-                      <img src="./img/gallery/pictures/main/1/1.2.jpg">
+                      <img src="./img/gallery/pictures/main/1/1.2.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/1/1.3.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/1/1.3.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/1/1.3.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/1/1.3.jpg">
-                      <img src="./img/gallery/pictures/main/1/1.3.jpg">
+                      <img src="./img/gallery/pictures/main/1/1.3.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/1/1.4.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/1/1.4.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/1/1.4.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/1/1.4.jpg">
-                      <img src="./img/gallery/pictures/main/1/1.4.jpg">
+                      <img src="./img/gallery/pictures/main/1/1.4.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/1/1.5.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/1/1.5.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/1/1.5.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/1/1.5.jpg">
-                      <img src="./img/gallery/pictures/main/1/1.5.jpg">
+                      <img src="./img/gallery/pictures/main/1/1.5.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/1/1.6.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/1/1.6.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/1/1.6.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/1/1.6.jpg">
-                      <img src="./img/gallery/pictures/main/1/1.6.jpg">
+                      <img src="./img/gallery/pictures/main/1/1.6.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/2/2.1.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/2/2.1.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/2/2.1.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/2/2.1.jpg">
-                      <img src="./img/gallery/pictures/main/2/2.1.jpg">
+                      <img src="./img/gallery/pictures/main/2/2.1.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/2/2.2.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/2/2.2.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/2/2.2.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/2/2.2.jpg">
-                      <img src="./img/gallery/pictures/main/2/2.2.jpg">
+                      <img src="./img/gallery/pictures/main/2/2.2.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/2/2.3.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/2/2.3.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/2/2.3.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/2/2.3.jpg">
-                      <img src="./img/gallery/pictures/main/2/2.3.jpg">
+                      <img src="./img/gallery/pictures/main/2/2.3.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/2/2.4.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/2/2.4.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/2/2.4.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/2/2.4.jpg">
-                      <img src="./img/gallery/pictures/main/2/2.4.jpg">
+                      <img src="./img/gallery/pictures/main/2/2.4.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/2/2.5.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/2/2.5.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/2/2.5.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/2/2.5.jpg">
-                      <img src="./img/gallery/pictures/main/2/2.5.jpg">
+                      <img src="./img/gallery/pictures/main/2/2.5.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/2/2.6.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/2/2.6.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/2/2.6.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/2/2.6.jpg">
-                      <img src="./img/gallery/pictures/main/2/2.6.jpg">
+                      <img src="./img/gallery/pictures/main/2/2.6.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/3/3.1.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/3/3.1.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/3/3.1.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/3/3.1.jpg">
-                      <img src="./img/gallery/pictures/main/3/3.1.jpg">
+                      <img src="./img/gallery/pictures/main/3/3.1.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/3/3.2.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/3/3.2.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/3/3.2.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/3/3.2.jpg">
-                      <img src="./img/gallery/pictures/main/3/3.2.jpg">
+                      <img src="./img/gallery/pictures/main/3/3.2.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/3/3.3.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/3/3.3.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/3/3.3.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/3/3.3.jpg">
-                      <img src="./img/gallery/pictures/main/3/3.3.jpg">
+                      <img src="./img/gallery/pictures/main/3/3.3.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/3/3.4.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/3/3.4.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/3/3.4.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/3/3.4.jpg">
-                      <img src="./img/gallery/pictures/main/3/3.4.jpg">
+                      <img src="./img/gallery/pictures/main/3/3.4.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/3/3.5.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/3/3.5.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/3/3.5.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/3/3.5.jpg">
-                      <img src="./img/gallery/pictures/main/3/3.5.jpg">
+                      <img src="./img/gallery/pictures/main/3/3.5.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/3/3.6.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/3/3.6.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/3/3.6.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/3/3.6.jpg">
-                      <img src="./img/gallery/pictures/main/3/3.6.jpg">
+                      <img src="./img/gallery/pictures/main/3/3.6.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/4/4.1.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/4/4.1.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/4/4.1.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/4/4.1.jpg">
-                      <img src="./img/gallery/pictures/main/4/4.1.jpg">
+                      <img src="./img/gallery/pictures/main/4/4.1.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/4/4.2.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/4/4.2.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/4/4.2.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/4/4.2.jpg">
-                      <img src="./img/gallery/pictures/main/4/4.2.jpg">
+                      <img src="./img/gallery/pictures/main/4/4.2.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/4/4.3.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/4/4.3.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/4/4.3.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/4/4.3.jpg">
-                      <img src="./img/gallery/pictures/main/4/4.3.jpg">
+                      <img src="./img/gallery/pictures/main/4/4.3.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/4/4.4.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/4/4.4.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/4/4.4.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/4/4.4.jpg">
-                      <img src="./img/gallery/pictures/main/4/4.4.jpg">
+                      <img src="./img/gallery/pictures/main/4/4.4.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/4/4.5.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/4/4.5.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/4/4.5.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/4/4.5.jpg">
-                      <img src="./img/gallery/pictures/main/4/4.5.jpg">
+                      <img src="./img/gallery/pictures/main/4/4.5.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/4/4.6.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/4/4.6.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/4/4.6.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/4/4.6.jpg">
-                      <img src="./img/gallery/pictures/main/4/4.6.jpg">
+                      <img src="./img/gallery/pictures/main/4/4.6.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/5/5.1.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/5/5.1.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/5/5.1.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/5/5.1.jpg">
-                      <img src="./img/gallery/pictures/main/5/5.1.jpg">
+                      <img src="./img/gallery/pictures/main/5/5.1.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/5/5.2.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/5/5.2.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/5/5.2.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/5/5.2.jpg">
-                      <img src="./img/gallery/pictures/main/5/5.2.jpg">
+                      <img src="./img/gallery/pictures/main/5/5.2.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/5/5.3.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/5/5.3.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/5/5.3.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/5/5.3.jpg">
-                      <img src="./img/gallery/pictures/main/5/5.3.jpg">
+                      <img src="./img/gallery/pictures/main/5/5.3.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/5/5.4.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/5/5.4.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/5/5.4.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/5/5.4.jpg">
-                      <img src="./img/gallery/pictures/main/5/5.4.jpg">
+                      <img src="./img/gallery/pictures/main/5/5.4.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/5/5.5.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/5/5.5.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/5/5.5.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/5/5.5.jpg">
-                      <img src="./img/gallery/pictures/main/5/5.5.jpg">
+                      <img src="./img/gallery/pictures/main/5/5.5.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
                 <li class="paintings__item swiper-slide"><a href="#" class="paintings__item-link" tabindex="-1">
-                    <picture class="paintings__item-image" alt="Изображение картины">
+                    <picture class="paintings__item-image">
                       <source media="(max-width: 375px)" srcset="./img/gallery/pictures/375/5/5.6.jpg">
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/5/5.6.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/5/5.6.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/5/5.6.jpg">
-                      <img src="./img/gallery/pictures/main/5/5.6.jpg">
+                      <img src="./img/gallery/pictures/main/5/5.6.jpg" alt="Изображение картины">
                     </picture>
                   </a>
                 </li>
@@ -2575,6 +2571,195 @@
 
         </div>
       </section> <!-- /.catalog -->
+
+      <!-- Events section -->
+
+      <section class="events" id="events">
+        <div class="container">
+          <h2 class="section-title events__section-title">События</h2>
+          <div class="swiper-container events__swiper-container" data-mobile="false">
+            <ul class="events__list swiper-wrapper">
+              <li class="events__card swiper-slide">
+                <div class="events__photo">
+                  <a class="events__link" href="#">
+                    <picture class="events__image">
+                      <source media="(max-width: 375px)" type="image/jpeg" srcset="./img/events/1024_375/card_1.jpg">
+                      <source media="(max-width: 768px)" type="image/jpeg" srcset="./img/events/768/card_1.jpg">
+                      <source media="(max-width: 1024px)" type="image/jpeg" srcset="./img/events/1024_375/card_1.jpg">
+                      <source media="(min-width: 1025px)" type="image/jpeg" srcset="./img/events/main/card_1.jpg">
+                      <img src="./img/events/main/card_1.jpg" alt="Изображение картины">
+                    </picture>
+                  </a>
+                </div>
+                <div class="events__details">
+                  <span class="events__place">
+                    Музей им. Щусева
+                  </span>
+                  <span class="events__date">
+                    с 20 марта по 30 апреля
+                  </span>
+                </div>
+                <div class="events__description">
+                  <h3 class="events__title section-subtitle">
+                    Книжная гравюра в живом восприятии
+                  </h3>
+                  <p class="events__text">
+                    Один из ведущих флорентийских художников Кватроченто, основатель художественной
+                    династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной
+                    мастерской, где юный Микеланджело.
+                  </p>
+                  <a href="#" class="events__details-link">
+                    Подробнее
+                  </a>
+                </div>
+              </li>
+              <li class="events__card swiper-slide">
+                <div class="events__photo">
+                  <a class="events__link" href="#">
+                    <picture class="events__image">
+                      <source media="(max-width: 375px)" type="image/jpeg" srcset="./img/events/1024_375/card_2.jpg">
+                      <source media="(max-width: 768px)" type="image/jpeg" srcset="./img/events/768/card_2.jpg">
+                      <source media="(max-width: 1024px)" type="image/jpeg" srcset="./img/events/1024_375/card_2.jpg">
+                      <source media="(min-width: 1025px)" type="image/jpeg" srcset="./img/events/main/card_2.jpg">
+                      <img src="./img/events/main/card_2.jpg" alt="Изображение картины">
+                    </picture>
+                  </a>
+                </div>
+                <div class="events__details">
+                  <span class="events__place">
+                    ММОМА
+                  </span>
+                  <span class="events__date">
+                    24 марта 19:00
+                  </span>
+                </div>
+                <div class="events__description">
+                  <h3 class="events__title section-subtitle">
+                    «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+                  </h3>
+                  <p class="events__text">
+                    Высокий уровень вовлечения представителей целевой аудитории является четким
+                    доказательством простого факта: постоянный количественный рост и сфера нашей
+                    активности представляет собой интересный эксперимент проверки новых принципов
+                    формирования...
+                  </p>
+                  <a href="" class="events__details-link">
+                    Подробнее
+                  </a>
+                </div>
+              </li>
+              <li class="events__card swiper-slide">
+                <div class="events__photo">
+                  <a class="events__link" href="#">
+                    <picture class="events__image">
+                      <source media="(max-width: 375px)" type="image/jpeg" srcset="./img/events/1024_375/card_3.jpg">
+                      <source media="(max-width: 768px)" type="image/jpeg" srcset="./img/events/768/card_3.jpg">
+                      <source media="(max-width: 1024px)" type="image/jpeg" srcset="./img/events/1024_375/card_3.jpg">
+                      <source media="(min-width: 1025px)" type="image/jpeg" srcset="./img/events/main/card_3.jpg">
+                      <img src="./img/events/main/card_3.jpg" alt="Изображение картины">
+                    </picture>
+                  </a>
+                </div>
+                <div class="events__details">
+                  <span class="events__place">
+                    Еврейский музей
+                  </span>
+                  <span class="events__date">
+                    с 31 марта по 21 апреля
+                  </span>
+                </div>
+                <div class="events__description">
+                  <h3 class="events__title section-subtitle">
+                    Выставка «Формация 2020»
+                  </h3>
+                  <p class="events__text">
+                    Идейные соображения высшего порядка, а также современная методология
+                    разработки играет важную роль в формировании глубокомысленных рассуждений.
+                    Также как перспективное планирование играет определяющее значение для
+                    новых принципов формирования материально-технической и кадровой базы.
+                  </p>
+                  <a href="" class="events__details-link">
+                    Подробнее
+                  </a>
+                </div>
+              </li>
+              <li class="events__card swiper-slide">
+                <div class="events__photo">
+                  <a class="events__link" href="#">
+                    <picture class="events__image">
+                      <source media="(max-width: 375px)" type="image/jpeg" srcset="./img/events/1024_375/card_4.jpg">
+                      <source media="(max-width: 768px)" type="image/jpeg" srcset="./img/events/768/card_4.jpg">
+                      <source media="(max-width: 1024px)" type="image/jpeg" srcset="./img/events/1024_375/card_4.jpg">
+                      <source media="(min-width: 1025px)" type="image/jpeg" srcset="./img/events/main/card_4.jpg">
+                      <img src="./img/events/main/card_4.jpg" alt="Изображение картины">
+                    </picture>
+                  </a>
+                </div>
+                <div class="events__details">
+                  <span class="events__place">
+                    Третьяковка на Крымском валу
+                  </span>
+                  <span class="events__date">
+                    с 30 марта по 30 апреля
+                  </span>
+                </div>
+                <div class="events__description">
+                  <h3 class="events__title section-subtitle">
+                    XXIV Международная биеннале молодого искусства
+                  </h3>
+                  <p class="events__text">
+                    Внезапно, реплицированные с зарубежных источников, современные исследования
+                    представляют собой не что иное, как квинтэссенцию победы маркетинга над
+                    разумом и должны быть рассмотрены исключительно в разрезе маркетинговых
+                    и финансовых...
+                  </p>
+                  <a href="" class="events__details-link">
+                    Подробнее
+                  </a>
+                </div>
+              </li>
+              <li class="events__card swiper-slide">
+                <div class="events__photo">
+                  <a class="events__link" href="#">
+                    <picture class="events__image">
+                      <source media="(max-width: 375px)" type="image/jpeg" srcset="./img/events/1024_375/card_5.jpg">
+                      <source media="(max-width: 768px)" type="image/jpeg" srcset="./img/events/768/card_5.jpg">
+                      <source media="(max-width: 1024px)" type="image/jpeg" srcset="./img/events/1024_375/card_5.jpg">
+                      <source media="(min-width: 1025px)" type="image/jpeg" srcset="./img/events/main/card_5.jpg">
+                      <img src="./img/events/main/card_5.jpg" alt="Изображение картины">
+                    </picture>
+                  </a>
+                </div>
+                <div class="events__details">
+                  <span class="events__place">
+                    ММАМ
+                  </span>
+                  <span class="events__date">
+                    с 8 апреля по 20 мая
+                  </span>
+                </div>
+                <div class="events__description">
+                  <h3 class="events__title section-subtitle">
+                    Джон Винзор. Фотографии из серии «Метафора серебра»
+                  </h3>
+                  <p class="events__text">
+                    Один из ведущих флорентийских художников Кватроченто, основатель
+                    художественной династии, которую продолжили его брат Давид и сын
+                    Ридольфо. Глава художественной мастерской, где юный Микеланджело.
+                  </p>
+                  <a href="" class="events__details-link">
+                    Подробнее
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-pagination swiper-pagination__events"></div>
+          </div>
+          <button class="events__all-btn">
+            Все события
+          </button>
+        </div>
+      </section> <!-- /.events -->
 
     </main>
 
