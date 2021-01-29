@@ -37,7 +37,8 @@
               <li class="nav__item"><a class="nav__link" href="#gallery" data-scroll="#gallery">Галерея</a></li>
               <li class="nav__item"><a class="nav__link" href="#catalog" data-scroll="#catalog">Каталог</a></li>
               <li class="nav__item"><a class="nav__link" href="#events" data-scroll="#events">События</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Издания</a></li>
+              <li class="nav__item"><a class="nav__link" href="#publications" data-scroll="#publications">Издания</a>
+              </li>
               <li class="nav__item"><a class="nav__link" href="#">Проекты</a></li>
               <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
             </ul>
@@ -446,7 +447,7 @@
               </p>
             </div>
             <div class="gallery__paintings paintings swiper-container gallery__swiper-container" data-loaded="false">
-              <div class="swiper-button-gallery">
+              <div class="swiper-button-gallery swiper-button">
                 <button class="swiper-button-prev swiper-button-gallery__prev"></button>
                 <div class="swiper-pagination swiper-pagination__gallery"></div>
                 <button class="swiper-button-next swiper-button-gallery__next"></button>
@@ -2760,6 +2761,312 @@
           </button>
         </div>
       </section> <!-- /.events -->
+
+      <!-- Publications Section -->
+
+      <section class="publications" id="publications">
+        <div class="container">
+          <div class="publications__inner">
+            <div class="publications__selection">
+              <h2 class="section-title publications__section-title">Издания</h2>
+              <div class="publications__checkbox">
+                <h4 class="publications__subtitle publications__checkbox-subtitle">Категории</h4>
+                <ul class="publications__checkbox-list">
+                  <li class="publications__checkbox-item">
+                    <label for="bestsellers" class="publications__checkbox-custom">
+                      <input type="checkbox" name="categories" id="bestsellers">
+                      <span class="publications__checkbox-custom-dot"></span>
+                      <span class="publications__checkbox-custom-text">Бестселлеры</span>
+                    </label>
+                  </li>
+                  <li class="publications__checkbox-item">
+                    <label for="art" class="publications__checkbox-custom">
+                      <input type="checkbox" name="categories" id="art">
+                      <span class="publications__checkbox-custom-dot"></span>
+                      <span class="publications__checkbox-custom-text">Искусство</span>
+                    </label>
+                  </li>
+                  <li class="publications__checkbox-item">
+                    <label for="architecture" class="publications__checkbox-custom">
+                      <input type="checkbox" name="categories" id="architecture">
+                      <span class="publications__checkbox-custom-dot"></span>
+                      <span class="publications__checkbox-custom-text">Архитектура</span>
+                    </label>
+                  </li>
+                  <li class="publications__checkbox-item">
+                    <label for="design" class="publications__checkbox-custom">
+                      <input type="checkbox" name="categories" id="design">
+                      <span class="publications__checkbox-custom-dot"></span>
+                      <span class="publications__checkbox-custom-text">Дизайн</span>
+                    </label>
+                  </li>
+                  <li class="publications__checkbox-item">
+                    <label for="fashion" class="publications__checkbox-custom">
+                      <input type="checkbox" name="categories" id="fashion">
+                      <span class="publications__checkbox-custom-dot"></span>
+                      <span class="publications__checkbox-custom-text">Мода</span>
+                    </label>
+                  </li>
+                  <li class="publications__checkbox-item">
+                    <label for="for_children" class="publications__checkbox-custom">
+                      <input type="checkbox" name="categories" id="for_children">
+                      <span class="publications__checkbox-custom-dot"></span>
+                      <span class="publications__checkbox-custom-text">Детям</span>
+                    </label>
+                  </li>
+                  <li class="publications__checkbox-item">
+                    <label for="fiction" class="publications__checkbox-custom">
+                      <input type="checkbox" name="categories" id="fiction">
+                      <span class="publications__checkbox-custom-dot"></span>
+                      <span class="publications__checkbox-custom-text">Художественная литература</span>
+                    </label>
+                  </li>
+                  <li class="publications__checkbox-item">
+                    <label for="journalism" class="publications__checkbox-custom">
+                      <input type="checkbox" name="categories" id="journalism">
+                      <span class="publications__checkbox-custom-dot"></span>
+                      <span class="publications__checkbox-custom-text">Публицистика</span>
+                    </label>
+                  </li>
+                  <li class="publications__checkbox-item">
+                    <label for="travel_guides" class="publications__checkbox-custom">
+                      <input type="checkbox" name="categories" id="travel_guides">
+                      <span class="publications__checkbox-custom-dot"></span>
+                      <span class="publications__checkbox-custom-text">Путеводители</span>
+                    </label>
+                  </li>
+                  <li class="publications__checkbox-item">
+                    <label for="philosophy" class="publications__checkbox-custom">
+                      <input type="checkbox" name="categories" id="philosophy">
+                      <span class="publications__checkbox-custom-dot"></span>
+                      <span class="publications__checkbox-custom-text">Философия</span>
+                    </label>
+                  </li>
+                  <li class="publications__checkbox-item">
+                    <label for="educational_literature" class="publications__checkbox-custom">
+                      <input type="checkbox" name="categories" id="educational_literature">
+                      <span class="publications__checkbox-custom-dot"></span>
+                      <span class="publications__checkbox-custom-text">Учебная литература</span>
+                    </label>
+                  </li>
+                  <li class="publications__checkbox-item">
+                    <label for="magazines_newspapers" class="publications__checkbox-custom">
+                      <input type="checkbox" name="categories" id="magazines_newspapers">
+                      <span class="publications__checkbox-custom-dot"></span>
+                      <span class="publications__checkbox-custom-text">Журналы и газеты</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="publications__price">
+                <h4
+                  class="publications__subtitle publications__checkbox-subtitle publications__checkbox-subtitle--price">
+                  Цена</h4>
+                <div class="publications__price-form price__form">
+                  <label class="price__form-label" for="startPrice">От</label>
+                  <input class="price__form-input" type="number" name="startPrice" id="startPrice" value="50">
+                  <label class="price__form-label" for="finalPrice">до</label>
+                  <input class="price__form-input" type="number" name="finalPrice" id="finalPrice" value="25000">
+                  <span class="publications__price-text">рублей</span>
+                </div>
+              </div>
+            </div>
+            <div class="publications__items swiper-container publications__swiper-container" data-loaded="false">
+              <div class="publications__items-control">
+                <div class="swiper-button-publications swiper-button">
+                  <button class="swiper-button-prev swiper-button-publications__prev"></button>
+                  <div class="swiper-pagination swiper-pagination__publications"></div>
+                  <button class="swiper-button-next swiper-button-publications__next"></button>
+                </div>
+              </div>
+              <ul class="publications__list swiper-wrapper">
+                <li class="publications__item swiper-slide">
+                  <div class="publications__item-cover">
+                    <a class="publications__item-link" href="#" tabindex="-1">
+                      <picture class="publications__item-image">
+                        <source media="(max-width: 375px)" srcset="./img/publications/cards/375/pub_1.jpg">
+                        <source media="(max-width: 1024px)" srcset="./img/publications/cards/768_1024/pub_1.jpg">
+                        <source media="(min-width: 1025px)" srcset="./img/publications/cards/main/pub_1.jpg">
+                        <img src="./img/publications/cards/main/pub_1.jpg" alt="Обложка публикации">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="publications__item-info">
+                    <h4 class="publications__subtitle publications__item-subtitle">
+                      Искусство цвета
+                    </h4>
+                    <p class="publications__item-author">
+                      Иттен, Иоханнес
+                    </p>
+                    <p class="publications__item-price">
+                      620 руб
+                    </p>
+                  </div>
+                  <a class="publications__item-order" href="#">
+                    Заказать
+                  </a>
+                </li>
+                <li class="publications__item swiper-slide">
+                  <div class="publications__item-cover">
+                    <a class="publications__item-link" href="#" tabindex="-1">
+                      <picture class="publications__item-image">
+                        <source media="(max-width: 375px)" srcset="./img/publications/cards/375/pub_2.jpg">
+                        <source media="(max-width: 1024px)" srcset="./img/publications/cards/768_1024/pub_2.jpg">
+                        <source media="(min-width: 1025px)" srcset="./img/publications/cards/main/pub_2.jpg">
+                        <img src="./img/publications/cards/main/pub_2.jpg" alt="Обложка публикации">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="publications__item-info">
+                    <h4 class="publications__subtitle publications__item-subtitle">
+                      Типографика
+                    </h4>
+                    <p class="publications__item-author">
+                      Рудер, Эмиль
+                    </p>
+                    <p class="publications__item-price">
+                      2 450 руб
+                    </p>
+                  </div>
+                  <a class="publications__item-order" href="#">
+                    Заказать
+                  </a>
+                </li>
+                <li class="publications__item swiper-slide">
+                  <div class="publications__item-cover">
+                    <a class="publications__item-link" href="#" tabindex="-1">
+                      <picture class="publications__item-image">
+                        <source media="(max-width: 375px)" srcset="./img/publications/cards/375/pub_3.jpg">
+                        <source media="(max-width: 1024px)" srcset="./img/publications/cards/768_1024/pub_3.jpg">
+                        <source media="(min-width: 1025px)" srcset="./img/publications/cards/main/pub_3.jpg">
+                        <img src="./img/publications/cards/main/pub_3.jpg" alt="Обложка публикации">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="publications__item-info">
+                    <h4 class="publications__subtitle publications__item-subtitle">
+                      Книга про буквы
+                    </h4>
+                    <p class="publications__item-author">
+                      Гордон, Юрий
+                    </p>
+                    <p class="publications__item-price">
+                      2 200 руб
+                    </p>
+                  </div>
+                  <a class="publications__item-order" href="#">
+                    Заказать
+                  </a>
+                </li>
+                <li class="publications__item swiper-slide">
+                  <div class="publications__item-cover">
+                    <a class="publications__item-link" href="#" tabindex="-1">
+                      <picture class="publications__item-image">
+                        <source media="(max-width: 375px)" srcset="./img/publications/cards/375/pub_4.jpg">
+                        <source media="(max-width: 1024px)" srcset="./img/publications/cards/768_1024/pub_4.jpg">
+                        <source media="(min-width: 1025px)" srcset="./img/publications/cards/main/pub_4.jpg">
+                        <img src="./img/publications/cards/main/pub_4.jpg" alt="Обложка публикации">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="publications__item-info">
+                    <h4 class="publications__subtitle publications__item-subtitle">
+                      Николай Ильин
+                    </h4>
+                    <p class="publications__item-author">
+                      Кричевский, Владимир
+                    </p>
+                    <p class="publications__item-price">
+                      1 100 руб
+                    </p>
+                  </div>
+                  <a class="publications__item-order" href="#">
+                    Заказать
+                  </a>
+                </li>
+                <li class="publications__item swiper-slide">
+                  <div class="publications__item-cover">
+                    <a class="publications__item-link" href="#" tabindex="-1">
+                      <picture class="publications__item-image">
+                        <source media="(max-width: 375px)" srcset="./img/publications/cards/375/pub_5.jpg">
+                        <source media="(max-width: 1024px)" srcset="./img/publications/cards/768_1024/pub_5.jpg">
+                        <source media="(min-width: 1025px)" srcset="./img/publications/cards/main/pub_5.jpg">
+                        <img src="./img/publications/cards/main/pub_5.jpg" alt="Обложка публикации">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="publications__item-info">
+                    <h4 class="publications__subtitle publications__item-subtitle">
+                      Модульные сетки в граф...
+                    </h4>
+                    <p class="publications__item-author">
+                      Мюллер-Брокманн, Йозеф
+                    </p>
+                    <p class="publications__item-price">
+                      1 450 руб
+                    </p>
+                  </div>
+                  <a class="publications__item-order" href="#">
+                    Заказать
+                  </a>
+                </li>
+                <li class="publications__item swiper-slide">
+                  <div class="publications__item-cover">
+                    <a class="publications__item-link" href="#" tabindex="-1">
+                      <picture class="publications__item-image">
+                        <source media="(max-width: 375px)" srcset="./img/publications/cards/375/pub_6.jpg">
+                        <source media="(max-width: 1024px)" srcset="./img/publications/cards/768_1024/pub_6.jpg">
+                        <source media="(min-width: 1025px)" srcset="./img/publications/cards/main/pub_6.jpg">
+                        <img src="./img/publications/cards/main/pub_6.jpg" alt="Обложка публикации">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="publications__item-info">
+                    <h4 class="publications__subtitle publications__item-subtitle">
+                      Эволюция графических ст...
+                    </h4>
+                    <p class="publications__item-author">
+                      Хеллер, Чваст
+                    </p>
+                    <p class="publications__item-price">
+                      3 200 руб
+                    </p>
+                  </div>
+                  <a class="publications__item-order" href="#">
+                    Заказать
+                  </a>
+                </li>
+                <li class="publications__item swiper-slide">
+                  <div class="publications__item-cover">
+                    <a class="publications__item-link" href="#" tabindex="-1">
+                      <picture class="publications__item-image">
+                        <source media="(max-width: 375px)" srcset="./img/publications/cards/375/pub_7.jpg">
+                        <source media="(max-width: 1024px)" srcset="./img/publications/cards/768_1024/pub_7.jpg">
+                        <source media="(min-width: 1025px)" srcset="./img/publications/cards/main/pub_7.jpg">
+                        <img src="./img/publications/cards/main/pub_7.jpg" alt="Обложка публикации">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="publications__item-info">
+                    <h4 class="publications__subtitle publications__item-subtitle">
+                      Искусство и визуальное в...
+                    </h4>
+                    <p class="publications__item-author">
+                      Арнхейм, Рудольф
+                    </p>
+                    <p class="publications__item-price">
+                      2 200 руб
+                    </p>
+                  </div>
+                  <a class="publications__item-order" href="#">
+                    Заказать
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section> <!-- /.publications -->
 
     </main>
 

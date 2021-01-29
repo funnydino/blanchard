@@ -210,13 +210,13 @@ window.addEventListener('DOMContentLoaded', function () {
   };
 
   function hiddenCards() {
-    if (window.innerWidth > 955) {
+    if (window.matchMedia("(min-width: 956px)").matches) {
       showAllCards();
       document.querySelectorAll('.events__card:nth-child(n + 4)').forEach(function (card) {
         card.classList.add('events__card--hidden');
       });
       showAllBtn.classList.remove('events__all-btn--hidden');
-    } else if (window.innerWidth > 669 && window.innerWidth <= 955) {
+    } else if (window.matchMedia("(min-width: 670px) and (max-width: 955px)").matches) {
       showAllCards();
       document.querySelectorAll('.events__card:nth-child(n + 3)').forEach(function (card) {
         card.classList.add('events__card--hidden');
@@ -230,11 +230,10 @@ window.addEventListener('DOMContentLoaded', function () {
   hiddenCards();
 
   window.addEventListener('resize', () => {
-    console.log('orientation change!');
     if (!showAllBtn.classList.contains('events__all-btn--hidden')) {
       hiddenCards();
     };
-    if (window.innerWidth <= 669) {
+    if (window.matchMedia("(max-width: 669px)").matches) {
       showAllCards();
     } else {
       hiddenCards();
