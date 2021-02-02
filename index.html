@@ -23,7 +23,7 @@
 
 <body id="top">
   <div class="overlay"></div>
-  <header class="header" id="header">
+  <header class="header fix-block" id="header">
     <div class="header__inner">
       <div class="header__top">
         <div class="container header__container">
@@ -2770,97 +2770,113 @@
             <div class="publications__selection">
               <h2 class="section-title publications__section-title">Издания</h2>
               <div class="publications__checkbox">
-                <h4 class="publications__subtitle publications__checkbox-subtitle">Категории</h4>
+                <input class="publications__checkbox-mobile" type="checkbox" id="pub-spoiler">
+                <label class="publications__subtitle publications__checkbox-subtitle publications__subtitle-mobile"
+                  for="pub-spoiler">Категории</label>
                 <ul class="publications__checkbox-list">
                   <li class="publications__checkbox-item">
                     <label for="bestsellers" class="publications__checkbox-custom">
-                      <input type="checkbox" name="categories" id="bestsellers">
+                      <input class="publications__checkbox-input" type="checkbox" name="categories" id="bestsellers">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Бестселлеры</span>
                     </label>
+                    <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
                     <label for="art" class="publications__checkbox-custom">
-                      <input type="checkbox" name="categories" id="art">
+                      <input class="publications__checkbox-input" type="checkbox" name="categories" id="art">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Искусство</span>
                     </label>
+                    <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
                     <label for="architecture" class="publications__checkbox-custom">
-                      <input type="checkbox" name="categories" id="architecture">
+                      <input class="publications__checkbox-input" type="checkbox" name="categories" id="architecture">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Архитектура</span>
                     </label>
+                    <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
                     <label for="design" class="publications__checkbox-custom">
-                      <input type="checkbox" name="categories" id="design">
+                      <input class="publications__checkbox-input" type="checkbox" name="categories" id="design">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Дизайн</span>
                     </label>
+                    <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
                     <label for="fashion" class="publications__checkbox-custom">
-                      <input type="checkbox" name="categories" id="fashion">
+                      <input class="publications__checkbox-input" type="checkbox" name="categories" id="fashion">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Мода</span>
                     </label>
+                    <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
                     <label for="for_children" class="publications__checkbox-custom">
-                      <input type="checkbox" name="categories" id="for_children">
+                      <input class="publications__checkbox-input" type="checkbox" name="categories" id="for_children">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Детям</span>
                     </label>
+                    <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
                     <label for="fiction" class="publications__checkbox-custom">
-                      <input type="checkbox" name="categories" id="fiction">
+                      <input class="publications__checkbox-input" type="checkbox" name="categories" id="fiction">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Художественная литература</span>
                     </label>
+                    <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
                     <label for="journalism" class="publications__checkbox-custom">
-                      <input type="checkbox" name="categories" id="journalism">
+                      <input class="publications__checkbox-input" type="checkbox" name="categories" id="journalism">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Публицистика</span>
                     </label>
+                    <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
                     <label for="travel_guides" class="publications__checkbox-custom">
-                      <input type="checkbox" name="categories" id="travel_guides">
+                      <input class="publications__checkbox-input" type="checkbox" name="categories" id="travel_guides">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Путеводители</span>
                     </label>
+                    <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
                     <label for="philosophy" class="publications__checkbox-custom">
-                      <input type="checkbox" name="categories" id="philosophy">
+                      <input class="publications__checkbox-input" type="checkbox" name="categories" id="philosophy">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Философия</span>
                     </label>
+                    <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
                     <label for="educational_literature" class="publications__checkbox-custom">
-                      <input type="checkbox" name="categories" id="educational_literature">
+                      <input class="publications__checkbox-input" type="checkbox" name="categories"
+                        id="educational_literature">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Учебная литература</span>
                     </label>
+                    <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
                     <label for="magazines_newspapers" class="publications__checkbox-custom">
-                      <input type="checkbox" name="categories" id="magazines_newspapers">
+                      <input class="publications__checkbox-input" type="checkbox" name="categories"
+                        id="magazines_newspapers">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Журналы и газеты</span>
                     </label>
+                    <button class="publications__checkbox-unmark"></button>
                   </li>
                 </ul>
               </div>
               <div class="publications__price">
-                <h4
-                  class="publications__subtitle publications__checkbox-subtitle publications__checkbox-subtitle--price">
+                <h4 class="publications__subtitle publications__checkbox-subtitle 
+                publications__checkbox-subtitle--price">
                   Цена</h4>
                 <div class="publications__price-form price__form">
                   <label class="price__form-label" for="startPrice">От</label>

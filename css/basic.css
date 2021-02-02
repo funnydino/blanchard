@@ -187,7 +187,7 @@ ul {
   opacity: 1;
 }
 
-/* Убираем стрелки с input.type="nomber", добавляем белый цвет шрифту: */
+/* Убираем стрелки с input.type="number", добавляем белый цвет шрифту: */
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {

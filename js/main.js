@@ -241,3 +241,81 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// Секция Publications (прячем и отображаем чекбоксы):
+
+const showAllCheckboxes = document.querySelector('.publications__subtitle-mobile');
+const checkboxItems = document.querySelectorAll('.publications__checkbox-item');
+const checkboxes = document.querySelectorAll('.publications__checkbox-custom');
+const checkboxUnmark = document.querySelectorAll('.publications__checkbox-unmark');
+
+window.addEventListener('resize', () => {
+
+  if (window.innerWidth < 376) {
+    publicationsMobile();
+  }
+
+});
+
+function publicationsMobile() {
+
+  if (window.innerWidth < 376) {
+
+    showAllCheckboxes.addEventListener('click', () => {
+      showAllCheckboxes.classList.toggle('publications__subtitle-mobile--open');
+      if (showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
+        checkboxItems.forEach((el) => {
+          el.classList.add('publications__checkbox-item--visible');
+        });
+        checkboxUnmark.forEach((el) => {
+          el.classList.remove('publications__checkbox-unmark--active');
+        });
+      } else {
+        checkboxItems.forEach((el) => {
+          if (!el.querySelector('.publications__checkbox-input').hasAttribute('checked')) {
+            el.classList.remove('publications__checkbox-item--visible');
+          }
+        });
+        checkboxUnmark.forEach((el) => {
+          if (el.parentNode.querySelector('.publications__checkbox-input').hasAttribute('checked')) {
+            el.classList.add('publications__checkbox-unmark--active');
+          }
+        });
+      };
+    });
+
+    checkboxes.forEach((item) => {
+      const parent = item.parentNode;
+      const children = item.querySelector('.publications__checkbox-input');
+      item.addEventListener('click', (e) => {
+        if (window.innerWidth < 376) {
+          e.preventDefault();
+        }
+        if (children.hasAttribute('checked')) {
+          children.removeAttribute('checked');
+        } else {
+          children.setAttribute('checked', true);
+          parent.closest('.publications__checkbox-item').classList.add('publications__checkbox-item--visible');
+        }
+        if (!showAllCheckboxes.classList.contains('publications__subtitle-mobile--open') && !children.hasAttribute('checked')) {
+          // children.removeAttribute('checked');
+          // parent.closest('.publications__checkbox-item').classList.remove('publications__checkbox-item--visible');
+          children.setAttribute('checked', true);
+        }
+      });
+    });
+
+    checkboxUnmark.forEach((item) => {
+      const parent = item.parentNode;
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        parent.querySelector('.publications__checkbox-input').removeAttribute('checked');
+        parent.closest('.publications__checkbox-item').classList.remove('publications__checkbox-item--visible');
+      });
+    });
+
+  };
+
+};
+
+publicationsMobile();

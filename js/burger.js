@@ -6,19 +6,39 @@ const menu = document.querySelector('.nav'),
   burger = document.querySelector('.header__burger'),
   overlay = document.querySelector('.overlay');
 
+// Убираем 'прыжок' фиксированных блоков (для них можно будет задать класс '.fix-block'):
+
+let fixBlocks = document.querySelectorAll('.fix-block');
+
 const lockScroll = () => {
-  document.body.classList.toggle('lock');
+  let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+  document.body.classList.add('lock');
+  fixBlocks.forEach((el) => {
+    el.style.paddingRight = paddingOffset;
+  })
+  document.body.style.paddingRight = paddingOffset;
 }
 
 const unlockScroll = () => {
   document.body.classList.remove('lock');
+  fixBlocks.forEach((el) => {
+    el.style.paddingRight = '0px';
+  })
+  document.body.style.paddingRight = '0px';
 }
 
 burger.addEventListener('click', () => {
-  burger.classList.toggle('header__burger--active');
-  menu.classList.toggle('nav--open');
-  overlay.classList.toggle('overlay--open');
-  lockScroll();
+  if (document.body.classList.contains('lock')) {
+    burger.classList.remove('header__burger--active');
+    menu.classList.remove('nav--open');
+    overlay.classList.remove('overlay--open');
+    unlockScroll();
+  } else {
+    burger.classList.add('header__burger--active');
+    menu.classList.add('nav--open');
+    overlay.classList.add('overlay--open');
+    lockScroll();
+  }
   if (menu.classList.contains('nav--open')) {
     menu.style.height = hero.offsetHeight + 'px';
   } else {
