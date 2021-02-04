@@ -249,73 +249,91 @@ const checkboxItems = document.querySelectorAll('.publications__checkbox-item');
 const checkboxes = document.querySelectorAll('.publications__checkbox-custom');
 const checkboxUnmark = document.querySelectorAll('.publications__checkbox-unmark');
 
-window.addEventListener('resize', () => {
+window.addEventListener('DOMContentLoaded', function () {
 
-  if (window.innerWidth < 376) {
-    publicationsMobile();
-  }
+  if (window.innerWidth >= 376) {
+    showAllCheckboxes.classList.add('publications__subtitle-mobile--open');
+  };
 
 });
 
-function publicationsMobile() {
+window.addEventListener('resize', () => {
 
-  if (window.innerWidth < 376) {
-
-    showAllCheckboxes.addEventListener('click', () => {
-      showAllCheckboxes.classList.toggle('publications__subtitle-mobile--open');
-      if (showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
-        checkboxItems.forEach((el) => {
-          el.classList.add('publications__checkbox-item--visible');
-        });
-        checkboxUnmark.forEach((el) => {
-          el.classList.remove('publications__checkbox-unmark--active');
-        });
-      } else {
-        checkboxItems.forEach((el) => {
-          if (!el.querySelector('.publications__checkbox-input').hasAttribute('checked')) {
-            el.classList.remove('publications__checkbox-item--visible');
-          }
-        });
-        checkboxUnmark.forEach((el) => {
-          if (el.parentNode.querySelector('.publications__checkbox-input').hasAttribute('checked')) {
-            el.classList.add('publications__checkbox-unmark--active');
-          }
-        });
-      };
+  if (window.innerWidth >= 376) {
+    showAllCheckboxes.classList.add('publications__subtitle-mobile--open');
+    checkboxItems.forEach((el) => {
+      el.classList.add('publications__checkbox-item--visible');
     });
-
-    checkboxes.forEach((item) => {
-      const parent = item.parentNode;
-      const children = item.querySelector('.publications__checkbox-input');
-      item.addEventListener('click', (e) => {
-        if (window.innerWidth < 376) {
-          e.preventDefault();
-        }
-        if (children.hasAttribute('checked')) {
-          children.removeAttribute('checked');
-        } else {
-          children.setAttribute('checked', true);
-          parent.closest('.publications__checkbox-item').classList.add('publications__checkbox-item--visible');
-        }
-        if (!showAllCheckboxes.classList.contains('publications__subtitle-mobile--open') && !children.hasAttribute('checked')) {
-          // children.removeAttribute('checked');
-          // parent.closest('.publications__checkbox-item').classList.remove('publications__checkbox-item--visible');
-          children.setAttribute('checked', true);
-        }
-      });
+    checkboxUnmark.forEach((el) => {
+      el.classList.remove('publications__checkbox-unmark--active');
     });
-
-    checkboxUnmark.forEach((item) => {
-      const parent = item.parentNode;
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        parent.querySelector('.publications__checkbox-input').removeAttribute('checked');
-        parent.closest('.publications__checkbox-item').classList.remove('publications__checkbox-item--visible');
-      });
+  } else {
+    showAllCheckboxes.classList.remove('publications__subtitle-mobile--open');
+    checkboxItems.forEach((el) => {
+      if (!el.querySelector('.publications__checkbox-input').hasAttribute('checked')) {
+        el.classList.remove('publications__checkbox-item--visible');
+      }
     });
-
+    checkboxUnmark.forEach((el) => {
+      if (el.parentNode.querySelector('.publications__checkbox-input').hasAttribute('checked')) {
+        el.classList.add('publications__checkbox-unmark--active');
+      }
+    });
   };
 
-};
+});
 
-publicationsMobile();
+showAllCheckboxes.addEventListener('click', () => {
+
+  if (window.innerWidth < 376 && !showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
+    showAllCheckboxes.classList.add('publications__subtitle-mobile--open');
+  } else if (window.innerWidth < 376 && showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
+    showAllCheckboxes.classList.remove('publications__subtitle-mobile--open');
+  };
+
+  if (showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
+    checkboxItems.forEach((el) => {
+      el.classList.add('publications__checkbox-item--visible');
+    });
+    checkboxUnmark.forEach((el) => {
+      el.classList.remove('publications__checkbox-unmark--active');
+    });
+  } else {
+    checkboxItems.forEach((el) => {
+      if (!el.querySelector('.publications__checkbox-input').hasAttribute('checked')) {
+        el.classList.remove('publications__checkbox-item--visible');
+      }
+    });
+    checkboxUnmark.forEach((el) => {
+      if (el.parentNode.querySelector('.publications__checkbox-input').hasAttribute('checked')) {
+        el.classList.add('publications__checkbox-unmark--active');
+      }
+    });
+  };
+
+});
+
+checkboxes.forEach((item) => {
+  const parent = item.parentNode;
+  const children = item.querySelector('.publications__checkbox-input');
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (children.classList.contains('checked') && showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
+      children.removeAttribute('checked');
+      children.classList.remove('checked');
+    } else if (!children.classList.contains('checked')) {
+      children.setAttribute('checked', true);
+      children.classList.add('checked');
+      parent.classList.add('publications__checkbox-item--visible');
+    };
+  });
+});
+
+checkboxUnmark.forEach((item) => {
+  const parent = item.parentNode;
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    parent.querySelector('.publications__checkbox-input').removeAttribute('checked');
+    parent.closest('.publications__checkbox-item').classList.remove('publications__checkbox-item--visible');
+  });
+});

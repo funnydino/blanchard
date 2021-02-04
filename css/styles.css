@@ -1468,10 +1468,6 @@
   margin-bottom: 10px;
 }
 
-.publications__subtitle-mobile {
-  position: relative;
-}
-
 .publications__checkbox-custom {
   position: relative;
   display: block;
@@ -2481,6 +2477,7 @@
   }
 
   .publications__subtitle-mobile {
+    position: relative;
     padding: 2px 0;
     margin-bottom: 0;
     width: 100%;
