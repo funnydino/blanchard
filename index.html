@@ -42,10 +42,10 @@
               <li class="nav__item"><a class="nav__link" href="#">Проекты</a></li>
               <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
             </ul>
-            <a href="#" class="personal-account personal-account__link">
-              <svg class="personal-account__icon" width="18" height="13" viewbox="0 0 18 13" fill="none"
+            <a href="#" class="login login__link">
+              <svg class="login__icon" width="18" height="13" viewbox="0 0 18 13" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path class="personal-account__icon-path"
+                <path class="login__icon-path"
                   d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H4.5V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"
                   fill="#fff" />
               </svg>
@@ -54,7 +54,7 @@
           </nav>
           <div class="search-top">
             <form class="search" method="GET" aria-label="Поиск по сайту">
-              <button class="search__btn search-top__btn" type="submit" aria-label="Поиск" disabled>
+              <button class="search__btn search-top__btn" type="submit" aria-label="Найти" disabled>
                 <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect class="search-top__rect" width="6.8678" height="1.71695"
                     transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
@@ -362,7 +362,7 @@
               </li>
             </ul>
           </nav>
-          <form class="search search-bottom" method="GET" tabindex="0">
+          <form class="search search-bottom" method="GET" tabindex="0" aria-label="Поиск по сайту">
             <button class="search__btn" type="submit" aria-label="Поиск" tabindex="-1">
               <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect class="search__rect" width="6.8678" height="1.71695"
@@ -769,25 +769,30 @@
         <div class="container">
           <div class="catalog__heading country">
             <h2 class="section-title catalog__section-title">Каталог</h2>
-            <ul class="country__list" aria-label="Выберите страну">
-              <li class="country__item" aria-label="Франция">
-                <button class="country__btn country__btn--french" data-country="#tab_french">
+            <ul class="country__list">
+              <li class="country__item">
+                <button class="country__btn country__btn--french" data-country="#tab_french"
+                  aria-label="Художники Франции">
                 </button>
               </li>
-              <li class="country__item" aria-label="Германия">
-                <button class="country__btn country__btn--germany" data-country="#tab_german">
+              <li class="country__item">
+                <button class="country__btn country__btn--germany" data-country="#tab_german"
+                  aria-label="Художники Германии">
                 </button>
               </li>
-              <li class="country__item" aria-label="Италия">
-                <button class="country__btn country__btn--italian" data-country="#tab_italian">
+              <li class="country__item">
+                <button class="country__btn country__btn--italian" data-country="#tab_italian"
+                  aria-label="Художники Италии">
                 </button>
               </li>
-              <li class="country__item" aria-label="Россия">
-                <button class="country__btn country__btn--russian" data-country="#tab_russian">
+              <li class="country__item">
+                <button class="country__btn country__btn--russian" data-country="#tab_russian"
+                  aria-label="Художники России">
                 </button>
               </li>
-              <li class="country__item" aria-label="Бельгия">
-                <button class="country__btn country__btn--belgium" data-country="#tab_belgium">
+              <li class="country__item">
+                <button class="country__btn country__btn--belgium" data-country="#tab_belgium"
+                  aria-label="Художники Бельгии">
                 </button>
               </li>
             </ul>
@@ -1024,8 +1029,8 @@
                 </ul>
                 <div class="catalog-accordion">
                   <ul class="catalog-accordion__list">
-                    <li class="catalog-accordion__item catalog-accordion__item--open" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item catalog-accordion__item--open">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1400 по 1499 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1054,8 +1059,8 @@
                         </ul>
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1500 по 1599 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1063,8 +1068,8 @@
                         beatae provident nam dolorem sed, in placeat alias adipisci non iure magni nisi?
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1600 по 1699 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1073,8 +1078,8 @@
                         voluptatum sequi eum quae architecto eveniet asperiores, quaerat iste!
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1700 по 1799 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1083,8 +1088,8 @@
                         Dignissimos, molestias mollitia magnam vel sint perferendis ducimus quidem tempore?
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1800 по 1899 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1094,8 +1099,8 @@
                         iusto tempora eos quo ad corporis mollitia dignissimos?
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1900 по 1999 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1106,8 +1111,8 @@
                         odit iusto voluptate obcaecati consequuntur voluptatum vitae ut.
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 2000 г.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1247,8 +1252,8 @@
                 </ul>
                 <div class="catalog-accordion">
                   <ul class="catalog-accordion__list">
-                    <li class="catalog-accordion__item catalog-accordion__item--open" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item catalog-accordion__item--open">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1400 по 1499 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1271,8 +1276,8 @@
                         </ul>
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1500 по 1599 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1280,8 +1285,8 @@
                         sequi quia rerum fugit officia qui atque vero eum numquam praesentium!
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1600 по 1699 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1292,8 +1297,8 @@
                         perferendis vitae, porro laborum magnam odit amet quos, sunt tempora nesciunt delectus?
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1700 по 1799 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1304,8 +1309,8 @@
                         praesentium itaque voluptatem perspiciatis commodi? Excepturi, obcaecati omnis?
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1800 по 1899 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1315,8 +1320,8 @@
                         nihil autem quas, porro facilis necessitatibus sunt voluptas saepe!
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1900 по 1999 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1325,8 +1330,8 @@
                         Dolor modi maxime vitae debitis facilis soluta excepturi magni?
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 2000 г.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1857,8 +1862,8 @@
                 </ul>
                 <div class="catalog-accordion">
                   <ul class="catalog-accordion__list">
-                    <li class="catalog-accordion__item catalog-accordion__item--open" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item catalog-accordion__item--open">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1400 по 1499 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1938,16 +1943,16 @@
                         </ul>
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1500 по 1599 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
                         Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты.
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1600 по 1699 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1955,8 +1960,8 @@
                         заголовок проектах от всех назад.
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1700 по 1799 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1965,8 +1970,8 @@
                         большого, несколько вскоре.
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1800 по 1899 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1975,8 +1980,8 @@
                         имени инициал там раз коварный о диких! Наш великий первую щеке!
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1900 по 1999 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -1986,8 +1991,8 @@
                         семантика ipsum использовало? Оксмокс взобравшись текстов однажды города дорогу!
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 2000 г.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2214,8 +2219,8 @@
                 </ul>
                 <div class="catalog-accordion">
                   <ul class="catalog-accordion__list">
-                    <li class="catalog-accordion__item catalog-accordion__item--open" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item catalog-accordion__item--open">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1400 по 1499 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2232,8 +2237,8 @@
                         </ul>
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1500 по 1599 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2241,8 +2246,8 @@
                         sunt sapiente rerum quibusdam error aperiam, voluptate eius cupiditate totam sint perspiciatis.
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1600 по 1699 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2250,8 +2255,8 @@
                         doloremque magnam temporibus.
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1700 по 1799 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2274,8 +2279,8 @@
                         </ul>
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1800 по 1899 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2285,8 +2290,8 @@
                         corrupti eius facere nobis ipsum!
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1900 по 1999 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2297,8 +2302,8 @@
                         repellat quas! Aliquam, quam.
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 2000 г.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2481,8 +2486,8 @@
                 </ul>
                 <div class="catalog-accordion">
                   <ul class="catalog-accordion__list">
-                    <li class="catalog-accordion__item catalog-accordion__item--open" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item catalog-accordion__item--open">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1400 по 1499 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2506,8 +2511,8 @@
                         </ul>
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1500 по 1599 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2517,8 +2522,8 @@
                         excepturi consequatur ab pariatur, id reprehenderit eveniet.
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1600 по 1699 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2526,8 +2531,8 @@
                         consectetur in.
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1700 по 1799 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2535,8 +2540,8 @@
                         aperiam commodi dolore laboriosam! Totam, odio labore?
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1800 по 1899 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2545,8 +2550,8 @@
                         repellat minima ducimus quia mollitia, suscipit porro, nemo esse.
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 1900 по 1999 гг.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2554,8 +2559,8 @@
                         praesentium tempora deleniti.
                       </div>
                     </li>
-                    <li class="catalog-accordion__item" tabindex="0">
-                      <div class="catalog-accordion__header">
+                    <li class="catalog-accordion__item">
+                      <div class="catalog-accordion__header" tabindex="0">
                         <h3 class="catalog-accordion__subtitle section-subtitle"><span>C 2000 г.</span></h3>
                       </div>
                       <div class="catalog-accordion__content accordion-artists">
@@ -2775,7 +2780,7 @@
                   for="pub-spoiler">Категории</label>
                 <ul class="publications__checkbox-list">
                   <li class="publications__checkbox-item">
-                    <label for="bestsellers" class="publications__checkbox-custom">
+                    <label for="bestsellers" class="publications__checkbox-custom" tabindex="0">
                       <input class="publications__checkbox-input" type="checkbox" name="categories" id="bestsellers">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Бестселлеры</span>
@@ -2783,7 +2788,7 @@
                     <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
-                    <label for="art" class="publications__checkbox-custom">
+                    <label for="art" class="publications__checkbox-custom" tabindex="0">
                       <input class="publications__checkbox-input" type="checkbox" name="categories" id="art">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Искусство</span>
@@ -2791,7 +2796,7 @@
                     <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
-                    <label for="architecture" class="publications__checkbox-custom">
+                    <label for="architecture" class="publications__checkbox-custom" tabindex="0">
                       <input class="publications__checkbox-input" type="checkbox" name="categories" id="architecture">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Архитектура</span>
@@ -2799,7 +2804,7 @@
                     <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
-                    <label for="design" class="publications__checkbox-custom">
+                    <label for="design" class="publications__checkbox-custom" tabindex="0">
                       <input class="publications__checkbox-input" type="checkbox" name="categories" id="design">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Дизайн</span>
@@ -2807,7 +2812,7 @@
                     <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
-                    <label for="fashion" class="publications__checkbox-custom">
+                    <label for="fashion" class="publications__checkbox-custom" tabindex="0">
                       <input class="publications__checkbox-input" type="checkbox" name="categories" id="fashion">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Мода</span>
@@ -2815,7 +2820,7 @@
                     <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
-                    <label for="for_children" class="publications__checkbox-custom">
+                    <label for="for_children" class="publications__checkbox-custom" tabindex="0">
                       <input class="publications__checkbox-input" type="checkbox" name="categories" id="for_children">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Детям</span>
@@ -2823,7 +2828,7 @@
                     <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
-                    <label for="fiction" class="publications__checkbox-custom">
+                    <label for="fiction" class="publications__checkbox-custom" tabindex="0">
                       <input class="publications__checkbox-input" type="checkbox" name="categories" id="fiction">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Художественная литература</span>
@@ -2831,7 +2836,7 @@
                     <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
-                    <label for="journalism" class="publications__checkbox-custom">
+                    <label for="journalism" class="publications__checkbox-custom" tabindex="0">
                       <input class="publications__checkbox-input" type="checkbox" name="categories" id="journalism">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Публицистика</span>
@@ -2839,7 +2844,7 @@
                     <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
-                    <label for="travel_guides" class="publications__checkbox-custom">
+                    <label for="travel_guides" class="publications__checkbox-custom" tabindex="0">
                       <input class="publications__checkbox-input" type="checkbox" name="categories" id="travel_guides">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Путеводители</span>
@@ -2847,7 +2852,7 @@
                     <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
-                    <label for="philosophy" class="publications__checkbox-custom">
+                    <label for="philosophy" class="publications__checkbox-custom" tabindex="0">
                       <input class="publications__checkbox-input" type="checkbox" name="categories" id="philosophy">
                       <span class="publications__checkbox-custom-dot"></span>
                       <span class="publications__checkbox-custom-text">Философия</span>
@@ -2855,7 +2860,7 @@
                     <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
-                    <label for="educational_literature" class="publications__checkbox-custom">
+                    <label for="educational_literature" class="publications__checkbox-custom" tabindex="0">
                       <input class="publications__checkbox-input" type="checkbox" name="categories"
                         id="educational_literature">
                       <span class="publications__checkbox-custom-dot"></span>
@@ -2864,7 +2869,7 @@
                     <button class="publications__checkbox-unmark"></button>
                   </li>
                   <li class="publications__checkbox-item">
-                    <label for="magazines_newspapers" class="publications__checkbox-custom">
+                    <label for="magazines_newspapers" class="publications__checkbox-custom" tabindex="0">
                       <input class="publications__checkbox-input" type="checkbox" name="categories"
                         id="magazines_newspapers">
                       <span class="publications__checkbox-custom-dot"></span>
@@ -2878,11 +2883,11 @@
                 <h4 class="publications__subtitle publications__checkbox-subtitle 
                 publications__checkbox-subtitle--price">
                   Цена</h4>
-                <div class="publications__price-form price__form">
-                  <label class="price__form-label" for="startPrice">От</label>
-                  <input class="price__form-input" type="number" name="startPrice" id="startPrice" value="50">
-                  <label class="price__form-label" for="finalPrice">до</label>
-                  <input class="price__form-input" type="number" name="finalPrice" id="finalPrice" value="25000">
+                <div class="publications__price-form price-form">
+                  <label class="price-form__label" for="startPrice">От</label>
+                  <input class="price-form__input" type="number" name="startPrice" id="startPrice" value="50">
+                  <label class="price-form__label" for="finalPrice">до</label>
+                  <input class="price-form__input" type="number" name="finalPrice" id="finalPrice" value="25000">
                   <span class="publications__price-text">рублей</span>
                 </div>
               </div>
@@ -3086,7 +3091,7 @@
 
     </main>
 
-    <a class="to-top__btn" href="#" data-scroll="#top" title="Подняться в начало страницы"></a>
+    <a class="page__to-top" href="#" data-scroll="#top" title="Подняться в начало страницы"></a>
 
   </div> <!-- /.page -->
 

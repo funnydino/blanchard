@@ -26,7 +26,7 @@ const body = document.body;
 const header = document.querySelector('.header');
 const headerHeight = header.offsetHeight;
 const heroHeight = hero.offsetHeight;
-const toTopBtn = document.querySelector('.to-top__btn');
+const toTopBtn = document.querySelector('.page__to-top');
 
 function myFunction() {
   if (window.pageYOffset >= headerHeight && window.pageYOffset < heroHeight) {
@@ -34,13 +34,13 @@ function myFunction() {
   } else if (window.pageYOffset >= heroHeight) {
     header.classList.remove("header--hidden");
     header.classList.add("header--fixed");
-    toTopBtn.classList.add('to-top__btn--active');
+    toTopBtn.classList.add('page__to-top--active');
     // header.style.marginTop = -header.offsetHeight + 'px';
     // body.style.paddingTop = header.offsetHeight + 'px';
   } else {
     header.classList.remove("header--hidden");
     header.classList.remove("header--fixed");
-    toTopBtn.classList.remove('to-top__btn--active');
+    toTopBtn.classList.remove('page__to-top--active');
   }
 }
 
@@ -175,7 +175,7 @@ function selectTab(item) {
 // Аккордеон в секции Catalog:
 
 document.querySelectorAll('.catalog-accordion__header').forEach((item) => {
-  item.addEventListener('click', () => {
+  function accordionClick() {
     const parent = item.parentNode;
 
     if (parent.classList.contains('catalog-accordion__item--open')) {
@@ -187,6 +187,14 @@ document.querySelectorAll('.catalog-accordion__header').forEach((item) => {
 
       parent.classList.add('catalog-accordion__item--open');
     }
+  };
+  item.addEventListener('click', () => {
+    accordionClick();
+  });
+  item.addEventListener("keydown", function () {
+    if (event.code == 'Enter') {
+      accordionClick();
+    };
   });
 });
 
@@ -251,7 +259,7 @@ const checkboxUnmark = document.querySelectorAll('.publications__checkbox-unmark
 
 window.addEventListener('DOMContentLoaded', function () {
 
-  if (window.innerWidth >= 376) {
+  if (window.innerWidth >= 577) {
     showAllCheckboxes.classList.add('publications__subtitle-mobile--open');
   };
 
@@ -259,7 +267,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 window.addEventListener('resize', () => {
 
-  if (window.innerWidth >= 376) {
+  if (window.innerWidth >= 577) {
     showAllCheckboxes.classList.add('publications__subtitle-mobile--open');
     checkboxItems.forEach((el) => {
       el.classList.add('publications__checkbox-item--visible');
@@ -285,9 +293,9 @@ window.addEventListener('resize', () => {
 
 showAllCheckboxes.addEventListener('click', () => {
 
-  if (window.innerWidth < 376 && !showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
+  if (window.innerWidth < 577 && !showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
     showAllCheckboxes.classList.add('publications__subtitle-mobile--open');
-  } else if (window.innerWidth < 376 && showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
+  } else if (window.innerWidth < 577 && showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
     showAllCheckboxes.classList.remove('publications__subtitle-mobile--open');
   };
 
@@ -316,18 +324,29 @@ showAllCheckboxes.addEventListener('click', () => {
 checkboxes.forEach((item) => {
   const parent = item.parentNode;
   const children = item.querySelector('.publications__checkbox-input');
+
+  function checkboxClick() {
+    if (children.hasAttribute('checked') && showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
+      children.removeAttribute('checked');
+    } else if (!children.hasAttribute('checked')) {
+      children.setAttribute('checked', true);
+      parent.classList.add('publications__checkbox-item--visible');
+    };
+  };
   item.addEventListener('click', (e) => {
     e.preventDefault();
-    if (children.classList.contains('checked') && showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
-      children.removeAttribute('checked');
-      children.classList.remove('checked');
-    } else if (!children.classList.contains('checked')) {
-      children.setAttribute('checked', true);
-      children.classList.add('checked');
-      parent.classList.add('publications__checkbox-item--visible');
+    checkboxClick();
+  });
+  item.addEventListener("keydown", function (e) {
+    if (event.code == 'Enter' || event.code == 'Space') {
+      e.preventDefault();
+      checkboxClick();
     };
   });
 });
+
+let startCheckbox = document.querySelector('.publications__checkbox-list .publications__checkbox-item:nth-child(4) .publications__checkbox-custom');
+startCheckbox.click();
 
 checkboxUnmark.forEach((item) => {
   const parent = item.parentNode;
