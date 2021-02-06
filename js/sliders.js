@@ -135,4 +135,42 @@ window.addEventListener('DOMContentLoaded', function () {
     eventsSlider();
     publicationsSlider();
   });
+
+  /* Перезагрузка слайдеров на определённых брейкпоинтах: */
+
+  function gallerySliderReload(resolution_2) {
+    if (resolution_2.matches) {
+      mySwiper_1.destroy();
+      sliderGallery.dataset.loaded = 'false';
+      gallerySlider();
+      console.log('Slider #1 reloaded!');
+    } else {
+      mySwiper_1.destroy();
+      sliderGallery.dataset.loaded = 'false';
+      gallerySlider();
+      console.log('Slider #1 reloaded!');
+    }
+  };
+
+  function publicationsSliderReload(resolution_1) {
+    if (resolution_1.matches) {
+      mySwiper_3.destroy();
+      sliderPublications.dataset.loaded = 'false';
+      publicationsSlider();
+      console.log('Slider #3 reloaded!');
+    } else {
+      mySwiper_3.destroy();
+      sliderPublications.dataset.loaded = 'false';
+      publicationsSlider();
+      console.log('Slider #3 reloaded!');
+    }
+  }
+
+  const resolution_1 = window.matchMedia("(max-width: 1367px) and (min-width: 577px)");
+  const resolution_2 = window.matchMedia("(max-width: 1024px) and (min-width: 376px)");
+  gallerySliderReload(resolution_2);
+  resolution_2.addListener(gallerySliderReload);
+  publicationsSliderReload(resolution_1);
+  resolution_1.addListener(publicationsSliderReload);
+
 });
