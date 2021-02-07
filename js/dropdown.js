@@ -3,9 +3,9 @@
 let artistLink = document.querySelectorAll('.artists__link');
 let artistList = document.querySelectorAll('.artists__item');
 
-[...artistLink].forEach(function (artList) {
-  artList.addEventListener('click', function () {
-    artList.closest('.artists__item').classList.toggle("artists__item--active");
+[...artistLink].forEach(function (list) {
+  list.addEventListener('click', function () {
+    list.closest('.artists__item').classList.toggle("artists__item--active");
   });
 });
 

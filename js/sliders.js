@@ -3,6 +3,7 @@
 const sliderGallery = document.querySelector('.gallery__swiper-container');
 const sliderEvents = document.querySelector('.events__swiper-container');
 const sliderPublications = document.querySelector('.publications__swiper-container');
+const sliderProjects = document.querySelector('.projects__swiper-container');
 
 // Swiper initialization:
 
@@ -65,7 +66,7 @@ window.addEventListener('DOMContentLoaded', function () {
         pagination: {
           el: '.swiper-pagination__events',
           type: 'bullets',
-          clickable: "true",
+          clickable: 'true',
         },
         autoplay: {
           delay: 5000,
@@ -130,6 +131,42 @@ window.addEventListener('DOMContentLoaded', function () {
 
   publicationsSlider();
 
+  let mySwiper_4;
+
+  function projectsSlider() {
+    mySwiper_4 = new Swiper(sliderProjects, {
+      slidesPerView: 1,
+      slidesPerColumn: 1,
+      slidesPerColumnFill: 'row',
+      slidesPerGroup: 1,
+      spaceBetween: 15,
+      direction: 'horizontal',
+      loop: true,
+      breakpoints: {
+        577: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 34,
+        },
+        1025: {
+          slidesPerView: 3,
+          slidesPerGroup: 2,
+          spaceBetween: 50,
+        }
+      },
+      navigation: {
+        prevEl: '.swiper-button-projects__prev',
+        nextEl: '.swiper-button-projects__next',
+      },
+      autoplay: {
+        delay: 5000,
+      },
+      speed: 800,
+    });
+  };
+
+  projectsSlider();
+
   window.addEventListener('resize', () => {
     gallerySlider();
     eventsSlider();
@@ -143,12 +180,12 @@ window.addEventListener('DOMContentLoaded', function () {
       mySwiper_1.destroy();
       sliderGallery.dataset.loaded = 'false';
       gallerySlider();
-      console.log('Slider #1 reloaded!');
+      console.log('Gallery slider reloaded!');
     } else {
       mySwiper_1.destroy();
       sliderGallery.dataset.loaded = 'false';
       gallerySlider();
-      console.log('Slider #1 reloaded!');
+      console.log('Gallery slider reloaded!');
     }
   };
 
@@ -157,12 +194,12 @@ window.addEventListener('DOMContentLoaded', function () {
       mySwiper_3.destroy();
       sliderPublications.dataset.loaded = 'false';
       publicationsSlider();
-      console.log('Slider #3 reloaded!');
+      console.log('Publications slider reloaded!');
     } else {
       mySwiper_3.destroy();
       sliderPublications.dataset.loaded = 'false';
       publicationsSlider();
-      console.log('Slider #3 reloaded!');
+      console.log('Publications slider reloaded!');
     }
   }
 
@@ -173,4 +210,20 @@ window.addEventListener('DOMContentLoaded', function () {
   publicationsSliderReload(resolution_1);
   resolution_1.addListener(publicationsSliderReload);
 
+  /* Добавляем возможность листать слайды свайпами на мобильных устройствах: */
+
+  const allSliders = document.querySelectorAll('.swiper-container');
+
+  window.addEventListener('resize', () => {
+
+    if (window.innerWidth > 1024) {
+      [...allSliders].forEach(function (item) {
+        item.classList.add('swiper-no-swiping');
+      });
+    } else {
+      [...allSliders].forEach(function (item) {
+        item.classList.remove('swiper-no-swiping');
+      });
+    }
+  });
 });

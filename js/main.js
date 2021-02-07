@@ -356,3 +356,56 @@ checkboxUnmark.forEach((item) => {
     parent.closest('.publications__checkbox-item').classList.remove('publications__checkbox-item--visible');
   });
 });
+
+// Секция Projects (тултипы):
+
+const tooltips = document.querySelectorAll('.tooltip');
+
+tooltips.forEach((item) => {
+
+  function tooltipOpen() {
+    item.setAttribute('focused', true);
+    item.classList.add('tooltip--focused');
+  };
+
+  function tooltipClose() {
+    item.removeAttribute('focused');
+    item.classList.remove('tooltip--focused');
+    if (item.querySelector('.tooltip__text').classList.contains('tooltip__text--right')) {
+      item.querySelector('.tooltip__text').classList.remove('tooltip__text--right');
+    };
+    if (item.querySelector('.tooltip__text').classList.contains('tooltip__text--left')) {
+      item.querySelector('.tooltip__text').classList.remove('tooltip__text--left');
+    };
+  };
+
+  function closeAllTooltips() {
+    tooltips.forEach(function (item) {
+      item.removeAttribute('focused');
+      item.classList.remove('tooltip--focused');
+      if (item.querySelector('.tooltip__text').classList.contains('tooltip__text--right')) {
+        item.querySelector('.tooltip__text').classList.remove('tooltip__text--right');
+      };
+      if (item.querySelector('.tooltip__text').classList.contains('tooltip__text--left')) {
+        item.querySelector('.tooltip__text').classList.remove('tooltip__text--left');
+      };
+    });
+  };
+
+  item.addEventListener('click', (e) => {
+    let distance = item.getBoundingClientRect();
+    let tooltipText = item.querySelector('.tooltip__text');
+    e.preventDefault();
+    if (window.innerWidth < 1367 && !item.hasAttribute('focused')) {
+      closeAllTooltips();
+      tooltipOpen();
+    } else if (window.innerWidth < 1367 && item.hasAttribute('focused')) {
+      tooltipClose();
+    };
+    if (distance.left < 120 && !tooltipText.classList.contains('tooltip__text--right')) {
+      tooltipText.classList.add('tooltip__text--right');
+    } else if ((window.innerWidth - distance.right) < 120 && !tooltipText.classList.contains('tooltip__text--left')) {
+      tooltipText.classList.add('tooltip__text--left');
+    }
+  });
+});
