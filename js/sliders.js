@@ -155,8 +155,8 @@ window.addEventListener('DOMContentLoaded', function () {
         }
       },
       navigation: {
-        prevEl: '.swiper-button-projects__prev',
-        nextEl: '.swiper-button-projects__next',
+        prevEl: '.projects__swiper-button-prev',
+        nextEl: '.projects__swiper-button-next',
       },
       autoplay: {
         delay: 5000,

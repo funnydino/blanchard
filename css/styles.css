@@ -1796,20 +1796,20 @@
   margin-bottom: 20px;
 }
 
-.partners__item {
+.projects__partners-item {
   width: 450px;
   height: 150px;
   border: 1px solid #cacaca;
 }
 
-.partners__link {
+.projects__partners-link {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.partners__link-logo {
+.projects__partners-logo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1821,7 +1821,7 @@
   transition: filter .25s ease, opacity .25s ease, transform .2s ease;
 }
 
-.partners__link:active .partners__link-logo {
+.projects__partners-link:active .projects__partners-logo {
   transform: translate(-50%, -50%) scale(1.05);
   filter: grayscale(0);
   opacity: 1;
@@ -1912,8 +1912,8 @@
   padding: 0 75px;
 }
 
-.swiper-button-projects__prev,
-.swiper-button-projects__next {
+.projects__swiper-button-prev,
+.projects__swiper-button-next {
   position: absolute;
   background-color: #ececec;
   transform: translateY(20%);
@@ -1924,14 +1924,14 @@
   color: #000;
 }
 
-.partners__item.swiper-slide {
+.projects__partners-item.swiper-slide {
   opacity: .3;
   transition: opacity .25s ease;
 }
 
-.partners__item.swiper-slide-active,
-.partners__item.swiper-slide-next,
-.partners__item.swiper-slide-next+.swiper-slide {
+.projects__partners-item.swiper-slide-active,
+.projects__partners-item.swiper-slide-next,
+.projects__partners-item.swiper-slide-next+.swiper-slide {
   opacity: 1;
   transition: opacity .25s ease;
 }
@@ -1944,7 +1944,7 @@
     visibility: visible;
   }
 
-  .partners__link:hover .partners__link-logo {
+  .projects__partners-link:hover .projects__partners-logo {
     transform: translate(-50%, -50%) scale(1.05);
     filter: grayscale(0);
     opacity: 1;
@@ -2233,12 +2233,12 @@
     background-image: url('../img/svg/tooltip-close.svg');
   }
 
-  .partners__item {
+  .projects__partners-item {
     width: 384px;
     height: 128px;
   }
 
-  .partners__item.swiper-slide-next+.swiper-slide {
+  .projects__partners-item.swiper-slide-next+.swiper-slide {
     opacity: .3;
   }
 
@@ -2407,7 +2407,7 @@
     position: relative;
   }
 
-  .partners__item {
+  .projects__partners-item {
     width: 264px;
     height: 106px;
   }
@@ -2637,7 +2637,7 @@
     overflow: hidden;
   }
 
-  .partners__item.swiper-slide-next {
+  .projects__partners-item.swiper-slide-next {
     opacity: .3;
   }
 
@@ -2819,7 +2819,7 @@
     width: 180px;
   }
 
-  .partners__item {
+  .projects__partners-item {
     width: 195px;
     height: 65px;
   }
