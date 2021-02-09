@@ -1552,9 +1552,9 @@
 
 .publications__price-form {
   padding: 0 10px;
-  /* max-width: 290px; */
-  max-width: fit-content;
-  max-width: -moz-fit-content;
+  max-width: 290px;
+  /* max-width: fit-content; */
+  /* max-width: -moz-fit-content; */
   border: 1px solid rgba(255, 255, 255, .5);
   border-radius: 5px;
   height: 40px;
@@ -2635,6 +2635,11 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+  }
+
+  .publications__item-order {
+    padding: 8px 5px;
+    max-width: none;
   }
 
   .projects__partners-item.swiper-slide-next {
