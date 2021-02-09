@@ -7,27 +7,6 @@
   --border-color: #D1A9F0;
 }
 
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*:focus,
-a:focus,
-button:focus,
-[type="submit"]:focus {
-  outline: 3px solid var(--main-color);
-  outline-offset: 2px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 body {
   position: relative;
   font-family: 'opensans', sans-serif;
@@ -38,28 +17,20 @@ body {
   background-color: #fff;
 }
 
+a:focus,
+button:focus,
+[type="submit"]:focus {
+  outline: 3px solid var(--main-color);
+  outline-offset: 2px;
+}
+
 button,
 input {
   font-family: 'opensans', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
 header {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  object-fit: cover;
 }
 
 input[type="search"]::-ms-clear {
@@ -72,14 +43,6 @@ input[type="search"]::-webkit-search-cancel-button {
 
 section {
   padding: 80px 0;
-}
-
-ul {
-  list-style: none;
-}
-
-.btn {
-  border-radius: 100px;
 }
 
 .container {
@@ -128,6 +91,48 @@ ul {
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: none;
+  z-index: -1;
+}
+
+/* Общие стили для кнопок: */
+
+.btn {
+  position: relative;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  border-color: var(--border-color);
+  background-color: var(--active-color);
+}
+
+.btn.focus-visible::after {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  content: '';
+  border-radius: 100px;
+  box-shadow: 0 0 0 2px var(--hover-color);
+}
+
+.btn:active::after {
+  box-shadow: none;
+}
+
+@media (min-width: 1025px) {
+
+  .btn:hover {
+    border-color: var(--border-color);
+  }
+
 }
 
 /* Overlay */

@@ -8,7 +8,8 @@
   <meta name="description"
     content="Обучение профессии Frontend-разработчика. Курс Веб-верстка «Базовый уровень». Курсовая работа">
   <title>Художественная галерея &QUOT;Blanchard&QUOT;</title>
-  <link rel="stylesheet" href="./css/normalize.css">
+  <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
+  <link rel="stylesheet" href="./css/custom-reset.css">
   <link rel="stylesheet" href="./css/focus-visible.css">
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/simplebar.min.css">
@@ -40,7 +41,7 @@
               <li class="nav__item"><a class="nav__link" href="#publications" data-scroll="#publications">Издания</a>
               </li>
               <li class="nav__item"><a class="nav__link" href="#" data-scroll="#projects">Проекты</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+              <li class="nav__item"><a class="nav__link" href="#" data-scroll="#contacts">Контакты</a></li>
             </ul>
             <a href="#" class="login login__link">
               <svg class="login__icon" width="18" height="13" viewbox="0 0 18 13" fill="none"
@@ -55,7 +56,8 @@
           <div class="search-top">
             <form class="search" method="GET" aria-label="Поиск по сайту">
               <button class="search__btn search-top__btn" type="submit" aria-label="Найти" disabled>
-                <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="search__btn-icon" width="23" height="22" viewbox="0 0 23 22" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <rect class="search-top__rect" width="6.8678" height="1.71695"
                     transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
                   <path class="search-top__path" fill-rule="evenodd" clip-rule="evenodd"
@@ -362,9 +364,10 @@
               </li>
             </ul>
           </nav>
-          <form class="search search-bottom" method="GET" tabindex="0" aria-label="Поиск по сайту">
-            <button class="search__btn" type="submit" aria-label="Поиск" tabindex="-1">
-              <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <form class="search search-bottom" method="GET" aria-label="Поиск по сайту">
+            <button class="search__btn" type="submit" aria-label="Поиск">
+              <svg class="search__btn-icon" width="23" height="22" viewbox="0 0 23 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <rect class="search__rect" width="6.8678" height="1.71695"
                   transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
                 <path class="search__path" fill-rule="evenodd" clip-rule="evenodd"
@@ -2761,7 +2764,7 @@
             </ul>
             <div class="swiper-pagination swiper-pagination__events"></div>
           </div>
-          <button class="events__all-btn">
+          <button class="events__all-btn btn">
             Все события
           </button>
         </div>
@@ -2888,7 +2891,7 @@
                   <input class="price-form__input" type="number" name="startPrice" id="startPrice" value="50">
                   <label class="price-form__label" for="finalPrice">до</label>
                   <input class="price-form__input" type="number" name="finalPrice" id="finalPrice" value="25000">
-                  <span class="publications__price-text">рублей</span>
+                  <span class="publications__price-text">руб.</span>
                 </div>
               </div>
             </div>
@@ -3135,55 +3138,55 @@
               <div class="swiper-button-next swiper-button-projects__next"></div>
               <ul class="projects__partners-list partners__list swiper-wrapper">
                 <li class="partners__item swiper-slide">
-                  <a class="partners__link" href="#">
+                  <a class="partners__link" href="#" tabindex="-1">
                     <img class="partners__link-logo" src="./img/projects/partner_1.png"
                       alt="Логотип компании-нашего партнёра">
                   </a>
                 </li>
                 <li class="partners__item swiper-slide">
-                  <a class="partners__link" href="#">
+                  <a class="partners__link" href="#" tabindex="-1">
                     <img class="partners__link-logo" src="./img/projects/partner_2.png"
                       alt="Логотип компании-нашего партнёра">
                   </a>
                 </li>
                 <li class="partners__item swiper-slide">
-                  <a class="partners__link" href="#">
+                  <a class="partners__link" href="#" tabindex="-1">
                     <img class="partners__link-logo" src="./img/projects/partner_3.png"
                       alt="Логотип компании-нашего партнёра">
                   </a>
                 </li>
                 <li class="partners__item swiper-slide">
-                  <a class="partners__link" href="#">
+                  <a class="partners__link" href="#" tabindex="-1">
                     <img class="partners__link-logo" src="./img/projects/partner_4.png"
                       alt="Логотип компании-нашего партнёра">
                   </a>
                 </li>
                 <li class="partners__item swiper-slide">
-                  <a class="partners__link" href="#">
+                  <a class="partners__link" href="#" tabindex="-1">
                     <img class="partners__link-logo" src="./img/projects/partner_5.png"
                       alt="Логотип компании-нашего партнёра">
                   </a>
                 </li>
                 <li class="partners__item swiper-slide">
-                  <a class="partners__link" href="#">
+                  <a class="partners__link" href="#" tabindex="-1">
                     <img class="partners__link-logo" src="./img/projects/partner_6.png"
                       alt="Логотип компании-нашего партнёра">
                   </a>
                 </li>
                 <li class="partners__item swiper-slide">
-                  <a class="partners__link" href="#">
+                  <a class="partners__link" href="#" tabindex="-1">
                     <img class="partners__link-logo" src="./img/projects/partner_7.png"
                       alt="Логотип компании-нашего партнёра">
                   </a>
                 </li>
                 <li class="partners__item swiper-slide">
-                  <a class="partners__link" href="#">
+                  <a class="partners__link" href="#" tabindex="-1">
                     <img class="partners__link-logo" src="./img/projects/partner_8.png"
                       alt="Логотип компании-нашего партнёра">
                   </a>
                 </li>
                 <li class="partners__item swiper-slide">
-                  <a class="partners__link" href="#">
+                  <a class="partners__link" href="#" tabindex="-1">
                     <img class="partners__link-logo" src="./img/projects/partner_9.png"
                       alt="Логотип компании-нашего партнёра">
                   </a>
@@ -3193,6 +3196,14 @@
           </div>
         </div>
       </section> <!-- /.projects -->
+
+      <!-- Contacts Section -->
+
+      <section class="contacts" id="contacts">
+        <div class="container">
+          <h2 class="section-title">Контакты</h2>
+        </div>
+      </section> <!-- /.contacts -->
 
     </main>
 

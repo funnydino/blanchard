@@ -214,8 +214,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   const allSliders = document.querySelectorAll('.swiper-container');
 
-  window.addEventListener('resize', () => {
-
+  function slidersSwiping() {
     if (window.innerWidth > 1024) {
       [...allSliders].forEach(function (item) {
         item.classList.add('swiper-no-swiping');
@@ -225,5 +224,10 @@ window.addEventListener('DOMContentLoaded', function () {
         item.classList.remove('swiper-no-swiping');
       });
     }
-  });
+  };
+
+  slidersSwiping();
+
+  window.addEventListener('resize', slidersSwiping);
+
 });
