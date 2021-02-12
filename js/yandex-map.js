@@ -16,49 +16,56 @@ function init() {
     zoom: 15
   });
 
-  const office4Placemark = new ymaps.Placemark([55.75846306898368, 37.601079499999905], {}, {
-    iconLayout: 'default#image',
-    iconImageHref: '../img/svg/map-pointer.svg',
-    iconImageSize: [20, 20],
-    iconImageOffset: [-5, -10]
-  });
+  //Disabled scroll
+  //myMap.behaviors.disable('scrollZoom');
+  //on mobile disable touch
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    //... отключаем перетаскивание карты
+    myMap.behaviors.disable('drag');
 
-  const office2Placemark = new ymaps.Placemark([55.81092711057776, 36.97226749999999], {}, {
-    iconLayout: 'default#image',
-    iconImageHref: '../img/svg/map-pointer.svg',
-    iconImageSize: [20, 20],
-    iconImageOffset: [-5, -10]
-  });
+    const office4Placemark = new ymaps.Placemark([55.75846306898368, 37.601079499999905], {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/svg/map-pointer.svg',
+      iconImageSize: [20, 20],
+      iconImageOffset: [-5, -10]
+    });
 
-  myMap.geoObjects.add(office4Placemark);
-  myMap.geoObjects.add(office2Placemark);
+    const office2Placemark = new ymaps.Placemark([55.81092711057776, 36.97226749999999], {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/svg/map-pointer.svg',
+      iconImageSize: [20, 20],
+      iconImageOffset: [-5, -10]
+    });
 
-  function onResizeMap() {
-    if (window.innerWidth > 1024) {
-      myMap.setCenter([55.75842072026647, 37.60186270503227]);
-      officeTitle.textContent = 'Шоурум №4';
-      officeAddress.textContent = 'Леонтьевский переулок, дом\u00A05, строение\u00A01';
-    } else {
-      myMap.setCenter([55.81085461085774, 36.97511064155579]);
-      myMap.setZoom(14);
-      officeTitle.textContent = 'Шоурум №2';
-      officeAddress.textContent = 'Покровский бульвар, дом\u00A024, строение\u00A03';
-    }
-  };
+    myMap.geoObjects.add(office4Placemark);
+    myMap.geoObjects.add(office2Placemark);
 
-  onResizeMap();
+    function onResizeMap() {
+      if (window.innerWidth > 1024) {
+        myMap.setCenter([55.75842072026647, 37.60186270503227]);
+        officeTitle.textContent = 'Шоурум №4';
+        officeAddress.textContent = 'Леонтьевский переулок, дом\u00A05, строение\u00A01';
+      } else {
+        myMap.setCenter([55.81085461085774, 36.97511064155579]);
+        myMap.setZoom(14);
+        officeTitle.textContent = 'Шоурум №2';
+        officeAddress.textContent = 'Покровский бульвар, дом\u00A024, строение\u00A03';
+      }
+    };
 
-  window.onresize = function () {
     onResizeMap();
-  };
-};
 
-// function yandexMapReload(mapResolution) {
-//   if (mapResolution.matches) {
-//     ymaps.ready(officeMap);
-//     console.log('123');
-//   } else {
-//     ymaps.ready(officeMap);
-//     console.log('321');
-//   }
-// };
+    window.onresize = function () {
+      onResizeMap();
+    };
+  };
+
+  // function yandexMapReload(mapResolution) {
+  //   if (mapResolution.matches) {
+  //     ymaps.ready(officeMap);
+  //     console.log('123');
+  //   } else {
+  //     ymaps.ready(officeMap);
+  //     console.log('321');
+  //   }
+  // };
