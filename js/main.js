@@ -409,3 +409,31 @@ tooltips.forEach((item) => {
     }
   });
 });
+
+// Секция Contacts (отступы для блока обратной связи):
+
+const feedbackBlock = document.querySelector('.contacts-data__feedback');
+const contactsTitle = document.querySelector('.contacts__section-title');
+const officeBlock = document.querySelector('.contacts-data__office');
+const officeMap = document.querySelector('.contacts-data__map');
+
+function feedbackPadding() {
+  let padding = contactsTitle.offsetLeft;
+  feedbackBlock.style.paddingLeft = padding + 'px';
+  if (window.innerWidth < 769) {
+    feedbackBlock.style.paddingRight = padding + 'px';
+  }
+  if (window.innerWidth < 577) {
+    officeMap.style.paddingTop = officeBlock.offsetHeight + 20 + 'px';
+    officeBlock.style.paddingLeft = padding + 'px';
+  } else {
+    officeMap.style.paddingTop = 0;
+    officeBlock.style.paddingLeft = 0;
+  }
+}
+
+feedbackPadding();
+
+window.addEventListener('resize', () => {
+  feedbackPadding();
+});

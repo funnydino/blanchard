@@ -27,6 +27,17 @@ const unlockScroll = () => {
   document.body.style.paddingRight = '0px';
 }
 
+const closeMenu = () => {
+  burger.classList.remove('header__burger--active');
+  menu.classList.remove('nav--open');
+  overlay.classList.remove('overlay--open');
+  unlockScroll();
+  setTimeout(function () {
+      menu.style.height = 'auto';
+    },
+    300);
+};
+
 burger.addEventListener('click', () => {
   if (document.body.classList.contains('lock')) {
     burger.classList.remove('header__burger--active');
@@ -50,14 +61,7 @@ burger.addEventListener('click', () => {
 });
 
 overlay.addEventListener('click', () => {
-  burger.classList.remove('header__burger--active');
-  menu.classList.remove('nav--open');
-  overlay.classList.remove('overlay--open');
-  unlockScroll();
-  setTimeout(function () {
-      menu.style.height = 'auto';
-    },
-    300);
+  closeMenu();
 });
 
 menu.addEventListener('click', (e) => {
@@ -65,17 +69,25 @@ menu.addEventListener('click', (e) => {
   console.log(e.target);
 
   if (window.innerWidth < 1025 && e.target.classList.contains('nav__link') || e.target.classList.contains('login__link')) {
-    burger.classList.remove('header__burger--active');
-    menu.classList.remove('nav--open');
-    overlay.classList.remove('overlay--open');
-    unlockScroll();
-    setTimeout(function () {
-        menu.style.height = 'auto';
-      },
-      300);
+    closeMenu();
   };
 
   if (window.innerWidth < 1025 && e.target.classList.contains('nav__link')) {
     smoothScroll(document.getElementById(e.target.getAttribute('data-scroll').replace('#', '')));
   };
 });
+
+const menuCloseResolution = window.matchMedia("(min-width: 1025px)");
+
+closeMenu_2(menuCloseResolution);
+menuCloseResolution.addListener(closeMenu_2);
+
+function closeMenu_2(menuCloseResolution) {
+  if (menuCloseResolution.matches) {
+    burger.classList.remove('header__burger--active');
+    menu.classList.remove('nav--open');
+    overlay.classList.remove('overlay--open');
+    unlockScroll();
+    menu.style.height = 'auto';
+  }
+};

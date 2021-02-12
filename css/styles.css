@@ -23,7 +23,6 @@
   width: 36px;
   height: 28px;
   border: none;
-  cursor: pointer;
   background-color: transparent;
   animation: fadeIn .25s ease-in-out .2s backwards;
   transition: width .35s ease, opacity .35s ease;
@@ -454,7 +453,6 @@
   height: 100%;
   font-size: 0;
   background-color: transparent;
-  cursor: pointer;
   z-index: 2;
 }
 
@@ -483,7 +481,6 @@
   width: 0;
   height: 29px;
   border: none;
-  cursor: pointer;
   background-color: transparent;
   opacity: 0;
   transform: rotate(45deg);
@@ -965,7 +962,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  cursor: pointer;
   transition: border-color .2s ease, box-shadow .2s ease;
 }
 
@@ -1352,7 +1348,6 @@
   border: 2px solid var(--main-color);
   color: var(--main-color);
   background-color: transparent;
-  cursor: pointer;
   transition: border-color .2s ease, color .2s ease, background-color .2s ease;
 }
 
@@ -1844,7 +1839,6 @@
   border: none;
   background: url('../img/svg/tooltip.svg') no-repeat center;
   background-size: contain;
-  cursor: pointer;
 }
 
 .tooltip .tooltip__text {
@@ -1950,6 +1944,173 @@
     opacity: 1;
   }
 
+}
+
+/* Contacts Section */
+
+.contacts-data {
+  position: relative;
+  display: flex;
+}
+
+.contacts-data__feedback {
+  flex: 0 0 35%;
+  padding: 124px 50px 124px 0;
+  border: 1px solid #cacaca;
+}
+
+.contacts-data__map {
+  flex: 0 1 65%;
+  padding: 0;
+  height: auto;
+}
+
+.contacts-data__office {
+  margin-bottom: 35px;
+}
+
+.contacts-data__office-address {
+  font-style: normal;
+}
+
+.feedback__form-subtitle {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.feedback__form {
+  margin-bottom: 40px;
+}
+
+.feedback__form-input {
+  display: block;
+  padding: 5px 25px;
+  margin-bottom: 23px;
+  height: 40px;
+  width: 400px;
+  border: 1px solid #333;
+  border-radius: 100px;
+  background-color: #fff;
+  transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.feedback__form-input::placeholder {
+  color: #999;
+  opacity: 1;
+  transition: opacity .2s ease;
+}
+
+.feedback__btn {
+  display: block;
+  padding: .8em 2.5em;
+  max-width: 250px;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  background-color: transparent;
+  transition: border-color .2s ease, color .2s ease, background-color .2s ease;
+}
+
+.feedback__btn:active,
+.feedback__btn:hover:active {
+  border-color: var(--border-color);
+  color: #fff;
+  background-color: var(--active-color);
+}
+
+.feedback__contacts-list {
+  display: flex;
+}
+
+.feedback__contacts-item {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+}
+
+.feedback__contacts-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.feedback__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: border-color .2s ease, opacity .2s ease, transform .2s ease;
+}
+
+.feedback__link--whatsapp {
+  background-image: url('../img/svg/social/whatsapp-icon.svg');
+}
+
+.feedback__link--telegram {
+  background-image: url('../img/svg/social/telegram_logo.svg');
+}
+
+.feedback__link:focus {
+  outline: none;
+}
+
+.feedback__link.focus-visible::before {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  content: '';
+  border: 2px solid var(--main-color);
+  border-radius: 100px;
+}
+
+@media (min-width: 1025px) {
+
+  .feedback__form-input:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 0 5px var(--main-color);
+  }
+
+  .feedback__form-input:hover::placeholder {
+    opacity: .6;
+  }
+
+  .feedback__btn:hover {
+    color: #fff;
+    border-color: var(--main-color);
+    background-color: var(--main-color);
+  }
+
+  .feedback__link:hover {
+    opacity: .8;
+    transform: scale(1.05);
+  }
+
+}
+
+.feedback__form-input:focus::placeholder {
+  opacity: 0;
+}
+
+.feedback__form-input:focus,
+.feedback__form-input:hover:focus {
+  outline: none;
+  border-color: var(--main-color);
+  /* box-shadow: 0 0 5px var(--main-color); */
+  box-shadow: 0 0 15px rgba(157, 92, 208, .5);
+}
+
+.feedback__form-input:active {
+  box-shadow: none;
+}
+
+/* Yandex Map / Яндекс карта */
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
 }
 
 /* To Top Button */
@@ -2242,6 +2403,20 @@
     opacity: .3;
   }
 
+  .contacts-data__feedback {
+    flex: 0 0 47.5%;
+    padding-bottom: 104px;
+  }
+
+  .contacts-data__map {
+    flex: 0 1 52.5%;
+  }
+
+  .feedback__form-input {
+    width: 100%;
+    max-width: 335px;
+  }
+
 }
 
 @media (max-width: 955px) {
@@ -2410,6 +2585,15 @@
   .projects__partners-item {
     width: 264px;
     height: 106px;
+  }
+
+  .contacts-data__feedback {
+    flex: 0 0 56%;
+    padding-bottom: 104px;
+  }
+
+  .contacts-data__map {
+    flex: 0 1 44%;
   }
 }
 
@@ -2644,6 +2828,27 @@
 
   .projects__partners-item.swiper-slide-next {
     opacity: .3;
+  }
+
+  .contacts-data {
+    flex-direction: column-reverse;
+  }
+
+  .contacts-data__feedback {
+    flex: auto;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .contacts-data__map {
+    flex: auto;
+    height: 320px;
+  }
+
+  .contacts-data__office {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
 }
