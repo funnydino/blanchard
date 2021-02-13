@@ -3,9 +3,6 @@
 const yandexMap = document.getElementById('mainMap');
 const officeTitle = document.querySelector('.contacts-data__office-title');
 const officeAddress = document.querySelector('.contacts-data__office-address');
-// const mapResolution = window.matchMedia("(min-width: 1025px)");
-// yandexMapReload(mapResolution);
-// mapResolution.addListener(yandexMapReload);
 
 ymaps.ready(init);
 
@@ -16,11 +13,7 @@ function init() {
     zoom: 15
   });
 
-  //Disabled scroll
-  //myMap.behaviors.disable('scrollZoom');
-  //on mobile disable touch
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    //... отключаем перетаскивание карты
     myMap.behaviors.disable('drag');
   };
 
@@ -60,13 +53,3 @@ function init() {
     onResizeMap();
   };
 };
-
-// function yandexMapReload(mapResolution) {
-//   if (mapResolution.matches) {
-//     ymaps.ready(officeMap);
-//     console.log('123');
-//   } else {
-//     ymaps.ready(officeMap);
-//     console.log('321');
-//   }
-// };
