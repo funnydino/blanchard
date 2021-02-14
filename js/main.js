@@ -438,11 +438,11 @@ window.addEventListener('resize', () => {
   feedbackPadding();
 });
 
-// Форма обратной связи (Feedback Form) - вализация, маскирование:
+// Форма обратной связи (Feedback Form) - валидация, маскирование:
 
 // Inputmask:
 
-let inputs = document.querySelectorAll('input[type="tel"]');
+let inputs = document.querySelector('input[type="tel"]');
 let im = new Inputmask('+7 (999) 999-99-99');
 im.mask(inputs);
 
@@ -454,10 +454,10 @@ function validateForms(selector, rules) {
     messages: {
       name: {
         required: 'Введите Ваше имя',
-        minLength: 'Введите корректное имя (минимум два символа)',
-        maxLength: 'Введите корректное имя (максимум 30 символов)'
+        minLength: 'Минимум два символа',
+        maxLength: 'Максимум 30 символов'
       },
-      phone: 'Пожалуйста, заполните это поле'
+      phone: 'Корректно заполните это поле'
     },
     colorWrong: '#9D5CD0',
     focusWrongField: true
@@ -466,7 +466,7 @@ function validateForms(selector, rules) {
 
     //   let formData = new FormData(form);
 
-    //   fetch("send.php", {
+    //   fetch("mail.php", {
     //       method: "POST",
     //       body: formData
     //     })
@@ -486,6 +486,11 @@ validateForms('.feedback__form', {
     maxLength: 30
   },
   phone: {
-    required: true
+    required: true,
+    function: (name, value) => {
+      const phone = inputs.inputmask.unmaskedvalue()
+      console.log(phone);
+      return Number(phone) && phone.length === 10
+    }
   }
 });
