@@ -68,12 +68,12 @@ menu.addEventListener('click', (e) => {
   e.preventDefault();
   console.log(e.target);
 
-  if (window.innerWidth < 1025 && e.target.classList.contains('nav__link') || e.target.classList.contains('login__link')) {
-    closeMenu();
-  };
-
   if (window.innerWidth < 1025 && e.target.classList.contains('nav__link')) {
-    smoothScroll(document.getElementById(e.target.getAttribute('data-scroll').replace('#', '')));
+    closeMenu();
+    setTimeout(function () {
+        smoothScroll(document.getElementById(e.target.getAttribute('data-scroll').replace('#', '')));
+      },
+      100);
   };
 });
 

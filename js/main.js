@@ -20,13 +20,20 @@ const scrollTo = document.querySelectorAll('[data-scroll]');
   });
 });
 
+// Fixed Header:
+
+window.addEventListener('scroll', function () {
+  myFunction();
+  myFunction_2();
+});
+
 // Кнопка скролла возврата в начало страницы:
 
-const body = document.body;
 const header = document.querySelector('.header');
 const headerHeight = header.offsetHeight;
 const heroHeight = hero.offsetHeight;
 const toTopBtn = document.querySelector('.page__to-top');
+let prevScrollpos = window.pageYOffset;
 
 function myFunction() {
   if (window.pageYOffset >= headerHeight && window.pageYOffset < heroHeight) {
@@ -44,9 +51,24 @@ function myFunction() {
   }
 }
 
-window.addEventListener('scroll', function () {
-  myFunction();
-});
+// Hidden Header depending on Scroll:
+
+function myFunction_2() {
+  if (window.innerWidth <= 1024) {
+    let currentScrollPos = window.pageYOffset;
+
+    if (currentScrollPos === 0) {
+      document.querySelector('.header').style.transform = "";
+      // body.classList.remove("lock");
+    } else if (prevScrollpos < currentScrollPos) {
+      document.querySelector('.header').style.transform = "scaleY(0)";
+      // body.classList.remove("lock");
+    } else {
+      document.querySelector('.header').style.transform = "scaleY(1)";
+    };
+    prevScrollpos = currentScrollPos;
+  };
+};
 
 // Поле поиска по сайту на мобильных устройствах:
 
@@ -457,6 +479,16 @@ function validateForms(selector, rules) {
         minLength: 'Минимум два символа',
         maxLength: 'Максимум 30 символов'
       },
+      login: {
+        required: 'Введите Ваш логин',
+        minLength: 'Минимум четыре символа',
+        maxLength: 'Максимум 15 символов'
+      },
+      password: {
+        required: 'Введите Ваш пароль',
+        minLength: 'Минимум четыре символа',
+        maxLength: 'Максимум восемь символов'
+      },
       phone: 'Корректно заполните это поле'
     },
     colorWrong: '#9D5CD0',
@@ -492,5 +524,18 @@ validateForms('.feedback__form', {
       console.log(phone);
       return Number(phone) && phone.length === 10
     }
+  }
+});
+
+validateForms('.popup__login-form', {
+  login: {
+    required: true,
+    minLength: 4,
+    maxLength: 15
+  },
+  password: {
+    required: true,
+    minLength: 4,
+    maxLength: 8
   }
 });
