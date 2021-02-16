@@ -19,14 +19,14 @@ function init() {
 
   const office4Placemark = new ymaps.Placemark([55.75846306898368, 37.601079499999905], {}, {
     iconLayout: 'default#image',
-    iconImageHref: '../img/svg/map-pointer.svg',
+    iconImageHref: './img/svg/pointer.svg',
     iconImageSize: [20, 20],
     iconImageOffset: [-5, -10]
   });
 
   const office2Placemark = new ymaps.Placemark([55.81092711057776, 36.97226749999999], {}, {
     iconLayout: 'default#image',
-    iconImageHref: '../img/svg/map-pointer.svg',
+    iconImageHref: './img/svg/pointer.svg',
     iconImageSize: [20, 20],
     iconImageOffset: [-5, -10]
   });
