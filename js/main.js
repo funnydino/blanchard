@@ -24,7 +24,7 @@ const scrollTo = document.querySelectorAll('[data-scroll]');
 
 window.addEventListener('scroll', function () {
   myFunction();
-  // myFunction_2();
+  myFunction_2();
 });
 
 // Кнопка скролла возврата в начало страницы:
@@ -53,22 +53,22 @@ function myFunction() {
 
 // Hidden Header depending on Scroll:
 
-// function myFunction_2() {
-//   if (window.innerWidth <= 1024) {
-//     let currentScrollPos = window.pageYOffset;
+function myFunction_2() {
+  if (window.innerWidth <= 1024) {
+    let currentScrollPos = window.pageYOffset;
 
-//     if (currentScrollPos === 0) {
-//       document.querySelector('.header').style.transform = "";
-//       // body.classList.remove("lock");
-//     } else if (prevScrollpos < currentScrollPos) {
-//       document.querySelector('.header').style.transform = "scaleY(0)";
-//       // body.classList.remove("lock");
-//     } else {
-//       document.querySelector('.header').style.transform = "scaleY(1)";
-//     };
-//     prevScrollpos = currentScrollPos;
-//   };
-// };
+    if (currentScrollPos === 0) {
+      document.querySelector('.header').style.transform = "";
+      // body.classList.remove("lock");
+    } else if (prevScrollpos < currentScrollPos) {
+      document.querySelector('.header').style.transform = "scaleY(0)";
+      // body.classList.remove("lock");
+    } else {
+      document.querySelector('.header').style.transform = "scaleY(1)";
+    };
+    prevScrollpos = currentScrollPos;
+  };
+};
 
 // Поле поиска по сайту на мобильных устройствах:
 
@@ -224,10 +224,12 @@ document.querySelectorAll('.catalog-accordion__header').forEach((item) => {
 
 const showAllBtn = document.querySelector('.events__all-btn');
 const eventsCard = document.querySelectorAll('.events__card');
+const eventsCardList = document.querySelector('.events__swiper-container');
 
 window.addEventListener('DOMContentLoaded', function () {
   showAllBtn.addEventListener('click', () => {
     showAllCards();
+    eventsCardList.setAttribute('opened', true);
   });
 
   function showAllCards() {
@@ -265,7 +267,7 @@ window.addEventListener('DOMContentLoaded', function () {
     };
     if (window.matchMedia("(max-width: 669px)").matches) {
       showAllCards();
-    } else {
+    } else if (!eventsCardList.hasAttribute('opened')) {
       hiddenCards();
       showAllBtn.classList.remove('events__all-btn--hidden');
     }
@@ -297,7 +299,7 @@ window.addEventListener('resize', () => {
     checkboxUnmark.forEach((el) => {
       el.classList.remove('publications__checkbox-unmark--active');
     });
-  } else {
+  } else if (!showAllCheckboxes.hasAttribute('opened')) {
     showAllCheckboxes.classList.remove('publications__subtitle-mobile--open');
     checkboxItems.forEach((el) => {
       if (!el.querySelector('.publications__checkbox-input').hasAttribute('checked')) {
@@ -317,9 +319,10 @@ showAllCheckboxes.addEventListener('click', () => {
 
   if (window.innerWidth < 577 && !showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
     showAllCheckboxes.classList.add('publications__subtitle-mobile--open');
-    showAllCheckboxes.classList.add('publications__subtitle-mobile--open');
+    showAllCheckboxes.setAttribute('opened', true);
   } else if (window.innerWidth < 577 && showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
     showAllCheckboxes.classList.remove('publications__subtitle-mobile--open');
+    showAllCheckboxes.removeAttribute('opened');
   };
 
   if (showAllCheckboxes.classList.contains('publications__subtitle-mobile--open')) {
