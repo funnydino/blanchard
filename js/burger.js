@@ -73,7 +73,7 @@ menu.addEventListener('click', (e) => {
     setTimeout(function () {
         smoothScroll(document.getElementById(e.target.getAttribute('data-scroll').replace('#', '')));
       },
-      100);
+      150);
   };
 });
 

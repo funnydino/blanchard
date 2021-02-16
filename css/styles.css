@@ -2121,6 +2121,12 @@
 
 }
 
+.feedback__link:active,
+.feedback__link:hover:active {
+  opacity: .8;
+  transform: scale(1.05);
+}
+
 .feedback__form-input:focus::placeholder {
   opacity: 0;
 }
@@ -2189,7 +2195,7 @@
   background-position: center;
   background-size: cover;
   opacity: .6;
-  transition: border-color .2s ease, opacity .2s ease;
+  transition: border-color .2s ease, opacity .2s ease, transform .2s ease;
 }
 
 .social__item-link--vk {
@@ -2212,6 +2218,12 @@
 
 .social__item-link:focus {
   outline: none;
+}
+
+.social__item-link:active,
+.social__item-link:hover:active {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .social__item-link.focus-visible {
