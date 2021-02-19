@@ -169,20 +169,27 @@ document.querySelector('.country__btn--italian').click();
 
 // Табы (переключение художников в секции Catalog):
 
+let startTab = document.querySelector('.catalog-tabs__country--active .accordion-artists__list .accordion-artists__item:nth-child(12) .accordion-artists__link');
+
 document.querySelectorAll('.accordion-artists__link').forEach((item) => {
   item.addEventListener('click', function (e) {
     e.preventDefault();
     const id = e.target.getAttribute('href').replace('#', '');
 
+    document.querySelectorAll('.accordion-artists__link').forEach((child) => child.removeAttribute('data-scroll'));
     document.querySelectorAll('.accordion-artists__link').forEach((child) => child.classList.remove('accordion-artists__link--active'));
     document.querySelectorAll('.catalog__tab-artist').forEach((child) => child.classList.remove('catalog__tab-artist--active'));
 
     item.classList.add('accordion-artists__link--active');
     document.getElementById(id).classList.add('catalog__tab-artist--active');
+
+    if (window.innerWidth < 769 && item != startTab) {
+      item.setAttribute('data-scroll', e.target.getAttribute('href'));
+      smoothScroll(document.getElementById(id));
+    }
   });
 });
 
-let startTab = document.querySelector('.catalog-tabs__country--active .accordion-artists__list .accordion-artists__item:nth-child(12) .accordion-artists__link');
 startTab.click();
 
 countryBtn.forEach(selectTab);

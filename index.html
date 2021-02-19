@@ -9,7 +9,6 @@
     content="Обучение профессии Frontend-разработчика. Курс Веб-верстка «Базовый уровень». Курсовая работа">
   <title>Художественная галерея &QUOT;Blanchard&QUOT;</title>
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/styles-reset.css">
   <link rel="stylesheet" href="./css/focus-visible.css">
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/simplebar.min.css">
@@ -34,7 +33,9 @@
           <button class="header__burger burger" aria-label="Открыть меню">
             <span class="header__burger-center-line"></span>
           </button>
-          <img class="header__logo logo" src="./img/svg/logo.svg" alt="Логотип сайта">
+          <svg class="header__logo logo">
+            <use xlink:href="./img/svg/sprite.svg#logo"></use>
+          </svg>
           <nav class="nav header__nav">
             <ul class="nav__list">
               <li class="nav__item"><a class="nav__link" href="#about" data-scroll="#about">О нас</a></li>
@@ -3286,12 +3287,14 @@
       <div class="container">
         <div class="footer-inner">
           <a href="#" data-scroll="#top" title="Подняться в начало страницы">
-            <img class="footer__logo logo" src="./img/svg/logo.svg" alt="Логотип сайта">
+            <svg class="footer__logo logo">
+              <use xlink:href="./img/svg/sprite.svg#logo"></use>
+            </svg>
           </a>
           <ul class="social social__list">
             <li class="social__item">
               <a class="social__item-link social__item-link--vk" href="https://vk.com/" target="_blank"
-                aria-label="Вконтакте"></a>
+                aria-label="ВКонтакте"></a>
             </li>
             <li class="social__item">
               <a class="social__item-link social__item-link--instagram" href="https://www.instagram.com/?hl=ru"
@@ -3361,7 +3364,11 @@
       </div>
     </div>
 
-    <a class="page__to-top" href="#" data-scroll="#top" title="Подняться в начало страницы"></a>
+    <a class="page__to-top" href="#" data-scroll="#top" title="Подняться в начало страницы">
+      <svg class="arrow-to-top">
+        <use xlink:href="./img/svg/sprite.svg#arrow-to-top"></use>
+      </svg>
+    </a>
 
   </div> <!-- /.page -->
 
