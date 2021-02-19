@@ -186,6 +186,7 @@ document.querySelectorAll('.accordion-artists__link').forEach((item) => {
     if (window.innerWidth < 769 && item != startTab) {
       item.setAttribute('data-scroll', e.target.getAttribute('href'));
       smoothScroll(document.getElementById(id));
+      delete startTab;
     }
   });
 });
