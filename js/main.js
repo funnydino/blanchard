@@ -163,7 +163,7 @@ function selectLang(item) {
       currentTab.classList.add('catalog-tabs__country--active');
     }
   });
-}
+};
 
 document.querySelector('.country__btn--italian').click();
 
@@ -188,12 +188,8 @@ document.querySelectorAll('.accordion-artists__link').forEach((item) => {
       smoothScroll(document.getElementById(id));
       startTab = null;
     }
-
-    console.log(startTab);
   });
 });
-
-startTab.click();
 
 countryBtn.forEach(selectTab);
 
@@ -203,6 +199,8 @@ function selectTab(item) {
     activeTab.click();
   })
 };
+
+startTab.click();
 
 // Аккордеон в секции Catalog:
 

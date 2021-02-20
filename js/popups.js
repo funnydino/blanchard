@@ -66,6 +66,7 @@ function popupOpen(currentPopup) {
         },
         300);
     };
+    focusLock.on(currentPopup);
   }
 }
 
@@ -75,6 +76,7 @@ function popupClose(popupActive, doUnlock = true) {
     if (doUnlock) {
       bodyUnLock();
     }
+    focusLock.off(popupActive);
   }
 }
 
