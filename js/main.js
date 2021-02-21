@@ -35,6 +35,12 @@ const heroHeight = hero.offsetHeight;
 const toTopBtn = document.querySelector('.page__to-top');
 let prevScrollpos = window.pageYOffset;
 
+toTopBtn.addEventListener('click', () => {
+  if (toTopBtn.getAttribute('data-scroll') != '#top') {
+    toTopBtn.setAttribute('data-scroll', '#top');
+  };
+});
+
 function myFunction() {
   if (window.pageYOffset >= headerHeight && window.pageYOffset < heroHeight) {
     header.classList.add("header--hidden");
@@ -49,7 +55,7 @@ function myFunction() {
     header.classList.remove("header--fixed");
     toTopBtn.classList.remove('page__to-top--active');
   }
-}
+};
 
 // Hidden Header depending on Scroll:
 
@@ -187,6 +193,7 @@ document.querySelectorAll('.accordion-artists__link').forEach((item) => {
       item.setAttribute('data-scroll', e.target.getAttribute('href'));
       smoothScroll(document.getElementById(id));
       startTab = null;
+      toTopBtn.setAttribute('data-scroll', '#catalog');
     }
   });
 });
