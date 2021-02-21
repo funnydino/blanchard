@@ -685,6 +685,17 @@
   height: auto;
 }
 
+.paintings__item-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.paintings__item-image img {
+  width: 100%;
+  height: 100%;
+}
+
 .paintings__item-image {
   border: 3px solid transparent;
 }
