@@ -196,7 +196,11 @@ countryBtn.forEach(selectTab);
 function selectTab(item) {
   item.addEventListener('click', function () {
     let activeTab = document.querySelector('.catalog-tabs__country--active .accordion-artists__list .accordion-artists__item:nth-child(1) .accordion-artists__link');
-    activeTab.click();
+    // activeTab.click();
+    document.querySelectorAll('.accordion-artists__link').forEach((child) => child.classList.remove('accordion-artists__link--active'));
+    document.querySelectorAll('.catalog__tab-artist').forEach((child) => child.classList.remove('catalog__tab-artist--active'));
+    activeTab.classList.add('accordion-artists__link--active');
+    document.getElementById(activeTab.getAttribute('href').replace('#', '')).classList.add('catalog__tab-artist--active');
   })
 };
 
