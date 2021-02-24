@@ -96,7 +96,7 @@ window.addEventListener('DOMContentLoaded', function () {
         slidesPerColumn: 1,
         slidesPerColumnFill: 'row',
         slidesPerGroup: 2,
-        spaceBetween: 40,
+        spaceBetween: 50,
         direction: 'horizontal',
         pagination: {
           el: '.swiper-pagination__publications',
@@ -104,8 +104,7 @@ window.addEventListener('DOMContentLoaded', function () {
         },
         breakpoints: {
           1367: {
-            slidesPerView: 3,
-            spaceBetween: 50
+            slidesPerView: 3
           }
         },
         navigation: {

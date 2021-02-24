@@ -469,10 +469,10 @@ function feedbackPadding() {
     feedbackBlock.style.paddingRight = padding + 'px';
   }
   if (window.innerWidth < 577) {
-    officeMap.style.paddingTop = officeBlock.offsetHeight + 20 + 'px';
+    officeMap.style.marginTop = officeBlock.offsetHeight + 20 + 'px';
     officeBlock.style.paddingLeft = padding + 'px';
   } else {
-    officeMap.style.paddingTop = 0;
+    officeMap.style.marginTop = 0;
     officeBlock.style.paddingLeft = 0;
   }
 }

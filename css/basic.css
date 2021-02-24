@@ -164,10 +164,10 @@ section {
 }
 
 .section-title {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-size: 48px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 .section-subtitle {
