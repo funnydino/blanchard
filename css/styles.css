@@ -3088,7 +3088,11 @@
   }
 
   .swiper-button-publications {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
+  }
+
+  .publications__item-info {
+    line-height: 1;
   }
 
   .publications__item-subtitle {
@@ -3561,6 +3565,10 @@
     right: 17px;
   }
 
+  .search-top__btn-close--active {
+    width: 22px;
+  }
+
   .hero {
     padding-top: 75px;
     padding-bottom: 45px;
@@ -3723,7 +3731,6 @@
 
   .publications__item-info {
     font-size: 12px;
-    line-height: 1;
   }
 
   .publications__item-subtitle,

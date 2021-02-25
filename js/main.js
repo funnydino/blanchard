@@ -54,7 +54,7 @@ function myFunction() {
     header.classList.remove("header--hidden");
     header.classList.remove("header--fixed");
     toTopBtn.classList.remove('page__to-top--active');
-  }
+  };
 };
 
 // Hidden Header depending on Scroll:
@@ -74,6 +74,9 @@ function myFunction_2() {
     };
     prevScrollpos = currentScrollPos;
   };
+  if (window.innerWidth > 1024 && window.pageYOffset >= heroHeight) {
+    document.querySelector('.header').style.transform = "";
+  }
 };
 
 // Поле поиска по сайту на мобильных устройствах:
