@@ -705,6 +705,10 @@
   border: 3px solid transparent;
 }
 
+.paintings__item-description {
+  display: none;
+}
+
 .paintings__item-link.focus-visible>.paintings__item-image {
   border-color: var(--active-color);
 }

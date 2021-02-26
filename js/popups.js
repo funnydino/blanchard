@@ -23,6 +23,14 @@ if (popupLinks.length > 0) {
         const children = popupLink.querySelector('.paintings__item-image img');
         const currentImage = children.getAttribute('src').replace('main', '375');
         document.querySelector('.popup__gallery-image').setAttribute('src', currentImage);
+        const author = popupLink.parentNode.querySelector('.paintings__item-author').textContent;
+        const title = popupLink.parentNode.querySelector('.paintings__item-title').textContent;
+        const date = popupLink.parentNode.querySelector('.paintings__item-date').textContent;
+        const info = popupLink.parentNode.querySelector('.paintings__item-text').textContent;
+        document.querySelector('.popup__gallery-title').textContent = author;
+        document.querySelector('.popup__gallery-subtitle').textContent = title;
+        document.querySelector('.popup__gallery-years').textContent = date;
+        document.querySelector('.popup__gallery-text').textContent = info;
       }
       popupOpen(currentPopup);
       e.preventDefault();
