@@ -519,6 +519,7 @@ function validateForms(selector, rules) {
     },
     colorWrong: '#9D5CD0',
     focusWrongField: true
+
     // submitHandler: function (form, values, ajax) {
     //   console.log(form);
 
