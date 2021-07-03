@@ -1,8 +1,7 @@
 "use strict";
 
-const hero = document.querySelector('.hero');
-
-const menu = document.querySelector('.nav'),
+const hero = document.querySelector('.hero'),
+  menu = document.querySelector('.nav'),
   burger = document.querySelector('.header__burger'),
   overlay = document.querySelector('.overlay');
 
@@ -32,10 +31,6 @@ const closeMenu = () => {
   menu.classList.remove('nav--open');
   overlay.classList.remove('overlay--open');
   unlockScroll();
-  setTimeout(function () {
-      menu.style.height = 'auto';
-    },
-    300);
 };
 
 burger.addEventListener('click', () => {
@@ -49,15 +44,7 @@ burger.addEventListener('click', () => {
     menu.classList.add('nav--open');
     overlay.classList.add('overlay--open');
     lockScroll();
-  }
-  if (menu.classList.contains('nav--open')) {
-    menu.style.height = hero.offsetHeight + 'px';
-  } else {
-    setTimeout(function () {
-        menu.style.height = 'auto';
-      },
-      300);
-  }
+  };
 });
 
 overlay.addEventListener('click', () => {
@@ -88,6 +75,5 @@ function closeMenu_2(menuCloseResolution) {
     menu.classList.remove('nav--open');
     overlay.classList.remove('overlay--open');
     unlockScroll();
-    menu.style.height = 'auto';
   }
 };

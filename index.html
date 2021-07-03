@@ -38,7 +38,7 @@
             <use xlink:href="./img/svg/sprite.svg#logo"></use>
           </svg>
           <nav class="nav header__nav">
-            <div class="header__nav-block">
+            <div class="header__nav-block" data-simplebar>
               <ul class="nav__list">
                 <li class="nav__item"><a class="nav__link" href="#about" data-scroll="#about">О нас</a></li>
                 <li class="nav__item"><a class="nav__link" href="#gallery" data-scroll="#gallery">Галерея</a></li>
@@ -48,16 +48,18 @@
                 </li>
                 <li class="nav__item"><a class="nav__link" href="#projects" data-scroll="#projects">Проекты</a></li>
                 <li class="nav__item"><a class="nav__link" href="#contacts" data-scroll="#contacts">Контакты</a></li>
+                <li class="nav__item nav__item--login"><a href="#popup__login" class="login login__link popup-link">
+                    <svg class="login__icon" width="18" height="13" viewbox="0 0 18 13" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path class="login__icon-path"
+                        d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H4.5V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"
+                        fill="#fff" />
+                    </svg>
+                    Войти
+                  </a>
+                </li>
               </ul>
-              <a href="#popup__login" class="login login__link popup-link">
-                <svg class="login__icon" width="18" height="13" viewbox="0 0 18 13" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path class="login__icon-path"
-                    d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H4.5V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"
-                    fill="#fff" />
-                </svg>
-                Войти
-              </a>
+
             </div>
           </nav>
           <div class="search-top">
@@ -453,7 +455,8 @@
               </div>
               <p class="gallery__description-text section-text">
                 Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
-                <a href="#" class="section-link">авторизуйтесь,</a> либо воспользуйтесь лицензией.
+                <a href="#popup__login" class="section-link popup-link">авторизуйтесь,</a> либо воспользуйтесь
+                лицензией.
               </p>
             </div>
             <div class="gallery__paintings paintings swiper-container gallery__swiper-container" data-loaded="false">
@@ -470,7 +473,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/1/1.1.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/1/1.1.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/1/1.1.jpg">
-                      <img src="./img/gallery/pictures/main/1/1.1.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/1/1.1.jpg" alt="Изображение картины.
                       Казимир Малевич. Торс">
                     </picture>
                   </a>
@@ -495,7 +498,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/1/1.2.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/1/1.2.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/1/1.2.jpg">
-                      <img src="./img/gallery/pictures/main/1/1.2.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/1/1.2.jpg" alt="Изображение картины.
                       Казимир Малевич. Женщина с граблями">
                     </picture>
                   </a>
@@ -517,7 +520,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/1/1.3.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/1/1.3.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/1/1.3.jpg">
-                      <img src="./img/gallery/pictures/main/1/1.3.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/1/1.3.jpg" alt="Изображение картины.
                       Казимир Малевич. Уборка ржи">
                     </picture>
                   </a>
@@ -549,7 +552,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/1/1.4.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/1/1.4.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/1/1.4.jpg">
-                      <img src="./img/gallery/pictures/main/1/1.4.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/1/1.4.jpg" alt="Изображение картины.
                       Иван Васильевич Клюн. Супрематизм">
                     </picture>
                   </a>
@@ -571,7 +574,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/1/1.5.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/1/1.5.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/1/1.5.jpg">
-                      <img src="./img/gallery/pictures/main/1/1.5.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/1/1.5.jpg" alt="Изображение картины.
                       Казимир Малевич. Женщина с ведрами">
                     </picture>
                   </a>
@@ -606,7 +609,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/1/1.6.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/1/1.6.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/1/1.6.jpg">
-                      <img src="./img/gallery/pictures/main/1/1.6.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/1/1.6.jpg" alt="Изображение картины.
                       Казимир Северинович Малевич. Супрематизм">
                     </picture>
                   </a>
@@ -627,7 +630,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/2/2.1.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/2/2.1.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/2/2.1.jpg">
-                      <img src="./img/gallery/pictures/main/2/2.1.jpg" alt="Изображение картины. Карл Брюллов. 
+                      <img src="./img/gallery/pictures/main/2/2.1.jpg" alt="Изображение картины. Карл Брюллов.
                       Итальянский полдень">
                     </picture>
                   </a>
@@ -652,7 +655,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/2/2.2.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/2/2.2.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/2/2.2.jpg">
-                      <img src="./img/gallery/pictures/main/2/2.2.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/2/2.2.jpg" alt="Изображение картины.
                       Жан Оноре Фрагонар. Игра в жмурки">
                     </picture>
                   </a>
@@ -672,7 +675,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/2/2.3.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/2/2.3.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/2/2.3.jpg">
-                      <img src="./img/gallery/pictures/main/2/2.3.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/2/2.3.jpg" alt="Изображение картины.
                       Питер Пауль Рубенс. Самсон и Далила">
                     </picture>
                   </a>
@@ -692,7 +695,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/2/2.4.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/2/2.4.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/2/2.4.jpg">
-                      <img src="./img/gallery/pictures/main/2/2.4.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/2/2.4.jpg" alt="Изображение картины.
                       Ян ван Хёйсум. Цветы и плоды">
                     </picture>
                   </a>
@@ -712,7 +715,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/2/2.5.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/2/2.5.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/2/2.5.jpg">
-                      <img src="./img/gallery/pictures/main/2/2.5.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/2/2.5.jpg" alt="Изображение картины.
                       Иван Крамской. Неизвестная">
                     </picture>
                   </a>
@@ -735,7 +738,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/2/2.6.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/2/2.6.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/2/2.6.jpg">
-                      <img src="./img/gallery/pictures/main/2/2.6.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/2/2.6.jpg" alt="Изображение картины.
                       Семирадский Генрих Ипполитович. Игра в кости">
                     </picture>
                   </a>
@@ -760,7 +763,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/3/3.1.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/3/3.1.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/3/3.1.jpg">
-                      <img src="./img/gallery/pictures/main/3/3.1.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/3/3.1.jpg" alt="Изображение картины.
                       Лоррен Клод. Морской порт с причалившей Королевой Шеба">
                     </picture>
                   </a>
@@ -780,7 +783,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/3/3.2.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/3/3.2.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/3/3.2.jpg">
-                      <img src="./img/gallery/pictures/main/3/3.2.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/3/3.2.jpg" alt="Изображение картины.
                       Поль Сезанн. Большие купальщицы">
                     </picture>
                   </a>
@@ -804,7 +807,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/3/3.3.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/3/3.3.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/3/3.3.jpg">
-                      <img src="./img/gallery/pictures/main/3/3.3.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/3/3.3.jpg" alt="Изображение картины.
                       Верне Клод Жозеф. Река с рыбаками">
                     </picture>
                   </a>
@@ -825,7 +828,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/3/3.4.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/3/3.4.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/3/3.4.jpg">
-                      <img src="./img/gallery/pictures/main/3/3.4.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/3/3.4.jpg" alt="Изображение картины.
                       Питер Брейгель. Падение Икара">
                     </picture>
                   </a>
@@ -848,7 +851,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/3/3.5.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/3/3.5.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/3/3.5.jpg">
-                      <img src="./img/gallery/pictures/main/3/3.5.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/3/3.5.jpg" alt="Изображение картины.
                       Маковский Константин Егорович. Счастливая Аркадия">
                     </picture>
                   </a>
@@ -871,7 +874,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/3/3.6.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/3/3.6.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/3/3.6.jpg">
-                      <img src="./img/gallery/pictures/main/3/3.6.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/3/3.6.jpg" alt="Изображение картины.
                       Сандро Боттичелли. Весна">
                     </picture>
                   </a>
@@ -901,7 +904,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/4/4.1.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/4/4.1.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/4/4.1.jpg">
-                      <img src="./img/gallery/pictures/main/4/4.1.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/4/4.1.jpg" alt="Изображение картины.
                       Казимир Малевич. Плотник">
                     </picture>
                   </a>
@@ -928,7 +931,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/4/4.2.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/4/4.2.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/4/4.2.jpg">
-                      <img src="./img/gallery/pictures/main/4/4.2.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/4/4.2.jpg" alt="Изображение картины.
                       Казимир Малевич. Два крестьянина на фоне полей">
                     </picture>
                   </a>
@@ -955,7 +958,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/4/4.3.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/4/4.3.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/4/4.3.jpg">
-                      <img src="./img/gallery/pictures/main/4/4.3.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/4/4.3.jpg" alt="Изображение картины.
                       Казимир Малевич. Супрематизм">
                     </picture>
                   </a>
@@ -982,7 +985,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/4/4.4.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/4/4.4.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/4/4.4.jpg">
-                      <img src="./img/gallery/pictures/main/4/4.4.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/4/4.4.jpg" alt="Изображение картины.
                       Казимир Малевич. Крестьянин в поле">
                     </picture>
                   </a>
@@ -1010,7 +1013,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/4/4.5.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/4/4.5.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/4/4.5.jpg">
-                      <img src="./img/gallery/pictures/main/4/4.5.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/4/4.5.jpg" alt="Изображение картины.
                       Казимир Малевич. Супрематизм №58, желтое и черное">
                     </picture>
                   </a>
@@ -1038,7 +1041,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/4/4.6.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/4/4.6.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/4/4.6.jpg">
-                      <img src="./img/gallery/pictures/main/4/4.6.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/4/4.6.jpg" alt="Изображение картины.
                       Казимир Малевич. Девушки в поле">
                     </picture>
                   </a>
@@ -1070,7 +1073,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/5/5.1.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/5/5.1.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/5/5.1.jpg">
-                      <img src="./img/gallery/pictures/main/5/5.1.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/5/5.1.jpg" alt="Изображение картины.
                       Казимир Малевич. Женщина с граблями">
                     </picture>
                   </a>
@@ -1097,7 +1100,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/5/5.2.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/5/5.2.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/5/5.2.jpg">
-                      <img src="./img/gallery/pictures/main/5/5.2.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/5/5.2.jpg" alt="Изображение картины.
                       Казимир Малевич. Супрематизм">
                     </picture>
                   </a>
@@ -1125,7 +1128,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/5/5.3.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/5/5.3.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/5/5.3.jpg">
-                      <img src="./img/gallery/pictures/main/5/5.3.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/5/5.3.jpg" alt="Изображение картины.
                       Казимир Малевич. Спортсмены">
                     </picture>
                   </a>
@@ -1150,7 +1153,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/5/5.4.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/5/5.4.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/5/5.4.jpg">
-                      <img src="./img/gallery/pictures/main/5/5.4.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/5/5.4.jpg" alt="Изображение картины.
                       Казимир Малевич. Письменный стол и комната">
                     </picture>
                   </a>
@@ -1178,7 +1181,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/5/5.5.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/5/5.5.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/5/5.5.jpg">
-                      <img src="./img/gallery/pictures/main/5/5.5.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/5/5.5.jpg" alt="Изображение картины.
                       Казимир Малевич. Зимний пейзаж">
                     </picture>
                   </a>
@@ -1207,7 +1210,7 @@
                       <source media="(max-width: 768px)" srcset="./img/gallery/pictures/768/5/5.6.jpg">
                       <source media="(max-width: 1024px)" srcset="./img/gallery/pictures/1024/5/5.6.jpg">
                       <source media="(min-width: 1025px)" srcset="./img/gallery/pictures/main/5/5.6.jpg">
-                      <img src="./img/gallery/pictures/main/5/5.6.jpg" alt="Изображение картины. 
+                      <img src="./img/gallery/pictures/main/5/5.6.jpg" alt="Изображение картины.
                       Казимир Малевич. Сбор урожая">
                     </picture>
                   </a>
@@ -1224,7 +1227,7 @@
             </div>
             <p class="gallery__text section-text">
               Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
-              <a href="#" class="section-link">авторизуйтесь,</a> либо воспользуйтесь лицензией.
+              <a href="#popup__login" class="section-link popup-link">авторизуйтесь,</a> либо воспользуйтесь лицензией.
             </p>
           </div>
         </div>
@@ -3494,7 +3497,7 @@
                 </ul>
               </div>
               <div class="publications__price">
-                <h4 class="publications__subtitle publications__checkbox-subtitle 
+                <h4 class="publications__subtitle publications__checkbox-subtitle
                 publications__checkbox-subtitle--price">
                   Цена</h4>
                 <div class="publications__price-form price-form">

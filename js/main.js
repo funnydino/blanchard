@@ -48,8 +48,6 @@ function myFunction() {
     header.classList.remove("header--hidden");
     header.classList.add("header--fixed");
     toTopBtn.classList.add('page__to-top--active');
-    // header.style.marginTop = -header.offsetHeight + 'px';
-    // body.style.paddingTop = header.offsetHeight + 'px';
   } else {
     header.classList.remove("header--hidden");
     header.classList.remove("header--fixed");
@@ -62,15 +60,12 @@ function myFunction() {
 function myFunction_2() {
   if (window.innerWidth <= 1024) {
     let currentScrollPos = window.pageYOffset;
-
     if (currentScrollPos === 0) {
       document.querySelector('.header').style.transform = "";
-      // body.classList.remove("lock");
     } else if (prevScrollpos < currentScrollPos) {
-      document.querySelector('.header').style.transform = "scaleY(0)";
-      // body.classList.remove("lock");
+      document.querySelector('.header').style.transform = "translateY(-120%)";
     } else {
-      document.querySelector('.header').style.transform = "scaleY(1)";
+      document.querySelector('.header').style.transform = "translateY(0)";
     };
     prevScrollpos = currentScrollPos;
   };
@@ -496,8 +491,11 @@ im.mask(inputs);
 
 // Валидация:
 
+const formBody = document.querySelector('.feedback__form');
+const feedbackSubmitBtn = document.querySelector('.feedback__btn');
+
 function validateForms(selector, rules) {
-  new window.JustValidate(selector, {
+  new JustValidate(selector, {
     rules: rules,
     messages: {
       name: {
@@ -518,23 +516,27 @@ function validateForms(selector, rules) {
       phone: 'Корректно заполните это поле'
     },
     colorWrong: '#9D5CD0',
-    focusWrongField: true
+    focusWrongField: true,
 
-    // submitHandler: function (form, values, ajax) {
-    //   console.log(form);
+    submitHandler: async function (form, values, ajax) {
+      console.log(form);
+      let formData = new FormData(form);
+      formBody.classList.add('feedback__form--sending');
 
-    //   let formData = new FormData(form);
-
-    //   fetch("mail.php", {
-    //       method: "POST",
-    //       body: formData
-    //     })
-    //     .then(function (data) {
-    //       console.log(data);
-    //       console.log('Отправлено');
-    //       form.reset();
-    //     });
-    // }
+      let response = await fetch("sendmail.php", {
+        method: "POST",
+        body: formData
+      });
+      if (response.ok) {
+        let result = await response.json;
+        form.reset();
+        formBody.classList.remove('feedback__form--sending');
+        console.log(result.message);
+      } else {
+        console.log('Возникла ошибка при отправке формы :(');
+        formBody.classList.add('feedback__form--sending');
+      };
+    },
   });
 }
 
@@ -542,14 +544,13 @@ validateForms('.feedback__form', {
   name: {
     required: true,
     minLength: 2,
-    maxLength: 30
+    maxLength: 30,
   },
   phone: {
     required: true,
     function: (name, value) => {
-      const phone = inputs.inputmask.unmaskedvalue()
-      console.log(phone);
-      return Number(phone) && phone.length === 10
+      const phone = inputs.inputmask.unmaskedvalue();
+      return Number(phone) && phone.length === 10;
     }
   }
 });
@@ -558,11 +559,11 @@ validateForms('.popup__login-form', {
   login: {
     required: true,
     minLength: 4,
-    maxLength: 15
+    maxLength: 15,
   },
   password: {
     required: true,
     minLength: 4,
-    maxLength: 8
+    maxLength: 8,
   }
 });

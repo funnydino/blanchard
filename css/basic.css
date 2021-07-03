@@ -275,6 +275,10 @@ section {
 
 /* Simplebar Styles */
 
+.simplebar-content {
+  height: 100%;
+}
+
 .simplebar-content-wrapper {
   overflow: auto;
 }
@@ -287,6 +291,10 @@ section {
   background-color: #000;
 }
 
+.header__nav-block>.simplebar-track.simplebar-vertical {
+  background-color: #fff;
+}
+
 .simplebar-scrollbar::before {
   left: 0;
   right: 0;
@@ -297,6 +305,16 @@ section {
 
 .simplebar-scrollbar.simplebar-visible::before {
   opacity: 1;
+}
+
+.header__nav-block>.simplebar-track.simplebar-vertical {
+  top: 0;
+  bottom: 0;
+}
+
+.header__nav-block>.simplebar-track.simplebar-vertical .simplebar-scrollbar,
+.header__nav-block>.simplebar-track.simplebar-vertical .simplebar-scrollbar.simplebar-visible::before {
+  background-color: var(--main-color);
 }
 
 /* Убираем стрелки с input.type="number", добавляем белый цвет шрифту: */
